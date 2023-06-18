@@ -1,30 +1,30 @@
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(GridManager))]
+[CustomEditor(typeof(WorldGenerator))]
 public class GridManagerUtils : Editor
 {
 
-    public bool AutoUpdate;
+    public bool AutoUpdate = true;
     private int oldGridWidth, oldGridHeight;
 
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
 
-        GridManager manager = (GridManager)target;
+        WorldGenerator manager = (WorldGenerator)target;
 
-        AutoUpdate = GUILayout.Toggle(AutoUpdate, "Auto Update Grid");
+        AutoUpdate = GUILayout.Toggle(AutoUpdate, "Auto Update World");
 
-        if (GUILayout.Button("Create Grid")) manager.GenerateGrid();
+        if (GUILayout.Button("Generate World")) manager.GenerateWorld();
 
         if (AutoUpdate)
         {
-            if (oldGridWidth != manager.GridWidth || oldGridHeight != manager.GridHeight)
-                manager.GenerateGrid();
+            if (oldGridWidth != manager.MapWidth || oldGridHeight != manager.MapHeight)
+                manager.GenerateWorld();
         }
 
-        oldGridWidth = manager.GridWidth;
-        oldGridHeight = manager.GridHeight;
+        oldGridWidth = manager.MapWidth;
+        oldGridHeight = manager.MapHeight;
     }
 }
