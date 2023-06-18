@@ -8,7 +8,7 @@ public class DirtTile : Tile
         //TileID = 2;
 
         // NEW BEHAVIOUR ON INIT????
-        SetTileColor(pos.x, pos.y);
+        //SetTileColor(pos.x, pos.y);
     }
 
 }

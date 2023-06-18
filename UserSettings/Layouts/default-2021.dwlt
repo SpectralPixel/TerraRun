@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Git for Unity
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 84
+  controlID: 89
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: Window
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -68,14 +68,14 @@ MonoBehaviour:
     y: 0
     width: 363.19995
     height: 722.8
-  m_MinSize: {x: 276, y: 71}
+  m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 15}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -129,7 +129,7 @@ MonoBehaviour:
   - {fileID: 19}
   - {fileID: 13}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 85
+  controlID: 96
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 86
+  controlID: 97
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -311,9 +311,9 @@ MonoBehaviour:
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 1
-  repositoryProgressHasUpdate: 1
-  appManagerProgressHasUpdate: 1
+  currentStatusEntriesHasUpdate: 0
+  repositoryProgressHasUpdate: 0
+  appManagerProgressHasUpdate: 0
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -398,8 +398,8 @@ MonoBehaviour:
     localBranches: []
     remoteBranches: []
   changesView:
-    currentBranchHasUpdate: 1
-    currentStatusEntriesHasUpdate: 1
+    currentBranchHasUpdate: 0
+    currentStatusEntriesHasUpdate: 0
     currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
@@ -407,278 +407,11 @@ MonoBehaviour:
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
-        keys:
-        - 00000000000000001000000000000000
-        - 23d79d269763c69479005830edc7e6de
-        - 3636aa724b117f84fa5e2b0208757fe9
-        - 2d8a9e0017f292c4e85cc2539caea114
-        - b3e8f82a8ee4ce84ba5fb6a70fe1d45f
-        - bd546a94c1a6c3248b090934b54f55fa
-        - 445293d43c85bd847b4c41647ffc3e78
-        - 523d672a3b28a0f4bb8b93934f9718cb
-        - b30f2a6f061c35e47a0acb6246aea5a0
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Prefabs
-          label: Prefabs
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Prefabs\Tiles
-          label: Tiles
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Prefabs\Tiles\Base Tile.prefab
-          label: Base Tile.prefab
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Prefabs\Tiles\Base Tile.prefab
-            fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Base
-              Tile.prefab
-            projectPath: Assets\Prefabs\Tiles\Base Tile.prefab
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\Tiles
-          label: Tiles
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\Tiles\GrassTile.cs
-          label: GrassTile.cs
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Tiles\GrassTile.cs
-            fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\GrassTile.cs
-            projectPath: Assets\Scripts\Tiles\GrassTile.cs
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Scripts\Tiles\StoneTile.cs
-          label: StoneTile.cs
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Tiles\StoneTile.cs
-            fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\StoneTile.cs
-            projectPath: Assets\Scripts\Tiles\StoneTile.cs
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Scripts\Tiles\Tile.cs
-          label: Tile.cs
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Tiles\Tile.cs
-            fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\Tile.cs
-            projectPath: Assets\Scripts\Tiles\Tile.cs
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
+        keys: []
+        values: []
       folders:
-        keys:
-        - Assets
-        - Assets\Prefabs
-        - Assets\Prefabs\Tiles
-        - Assets\Scripts
-        - Assets\Scripts\Tiles
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Prefabs
-          label: Prefabs
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Prefabs\Tiles
-          label: Tiles
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\Tiles
-          label: Tiles
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
+        keys: []
+        values: []
       checkedFileNodes:
         keys: []
         values: []
@@ -707,350 +440,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets
-        label: Assets
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Prefabs
-        label: Prefabs
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Prefabs\Tile.prefab
-        label: Tile.prefab
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Prefabs\Tile.prefab
-          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tile.prefab
-          projectPath: Assets\Prefabs\Tile.prefab
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 5
-      - path: Assets\Prefabs\Tile.prefab.meta
-        label: Tile.prefab.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Prefabs\Tile.prefab.meta
-          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tile.prefab.meta
-          projectPath: Assets\Prefabs\Tile.prefab.meta
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 5
-      - path: Assets\Prefabs\Tiles.meta
-        label: Tiles.meta
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Prefabs\Tiles.meta
-          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles.meta
-          projectPath: Assets\Prefabs\Tiles.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Prefabs\Tiles
-        label: Tiles
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Prefabs\Tiles\Base Tile.prefab
-        label: Base Tile.prefab
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Prefabs\Tiles\Base Tile.prefab
-          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Base
-            Tile.prefab
-          projectPath: Assets\Prefabs\Tiles\Base Tile.prefab
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Prefabs\Tiles\Base Tile.prefab.meta
-        label: Base Tile.prefab.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Prefabs\Tiles\Base Tile.prefab.meta
-          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Base
-            Tile.prefab.meta
-          projectPath: Assets\Prefabs\Tiles\Base Tile.prefab.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts
-        label: Scripts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scripts\Tile.cs
-        label: Tile.cs
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Tile.cs
-          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tile.cs
-          projectPath: Assets\Scripts\Tile.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 5
-      - path: Assets\Scripts\Tile.cs.meta
-        label: Tile.cs.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Tile.cs.meta
-          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tile.cs.meta
-          projectPath: Assets\Scripts\Tile.cs.meta
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 5
-      - path: Assets\Scripts\Tiles.meta
-        label: Tiles.meta
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Tiles.meta
-          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles.meta
-          projectPath: Assets\Scripts\Tiles.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Tiles
-        label: Tiles
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scripts\Tiles\GrassTile.cs
-        label: GrassTile.cs
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Tiles\GrassTile.cs
-          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\GrassTile.cs
-          projectPath: Assets\Scripts\Tiles\GrassTile.cs
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Tiles\GrassTile.cs.meta
-        label: GrassTile.cs.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Tiles\GrassTile.cs.meta
-          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\GrassTile.cs.meta
-          projectPath: Assets\Scripts\Tiles\GrassTile.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Tiles\StoneTile.cs
-        label: StoneTile.cs
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Tiles\StoneTile.cs
-          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\StoneTile.cs
-          projectPath: Assets\Scripts\Tiles\StoneTile.cs
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Tiles\StoneTile.cs.meta
-        label: StoneTile.cs.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Tiles\StoneTile.cs.meta
-          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\StoneTile.cs.meta
-          projectPath: Assets\Scripts\Tiles\StoneTile.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Tiles\Tile.cs
-        label: Tile.cs
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Tiles\Tile.cs
-          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\Tile.cs
-          projectPath: Assets\Scripts\Tiles\Tile.cs
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Tiles\Tile.cs.meta
-        label: Tile.cs.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Tiles\Tile.cs.meta
-          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\Tile.cs.meta
-          projectPath: Assets\Scripts\Tiles\Tile.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
       selectedNode:
         path: 
         label: 
@@ -1070,99 +459,13 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-    gitStatusEntries:
-    - path: Assets\Prefabs\Tile.prefab
-      fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tile.prefab
-      projectPath: Assets\Prefabs\Tile.prefab
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 5
-    - path: Assets\Prefabs\Tile.prefab.meta
-      fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tile.prefab.meta
-      projectPath: Assets\Prefabs\Tile.prefab.meta
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 5
-    - path: Assets\Prefabs\Tiles.meta
-      fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles.meta
-      projectPath: Assets\Prefabs\Tiles.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Prefabs\Tiles\Base Tile.prefab
-      fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Base
-        Tile.prefab
-      projectPath: Assets\Prefabs\Tiles\Base Tile.prefab
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Prefabs\Tiles\Base Tile.prefab.meta
-      fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Base
-        Tile.prefab.meta
-      projectPath: Assets\Prefabs\Tiles\Base Tile.prefab.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Tile.cs
-      fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tile.cs
-      projectPath: Assets\Scripts\Tile.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 5
-    - path: Assets\Scripts\Tile.cs.meta
-      fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tile.cs.meta
-      projectPath: Assets\Scripts\Tile.cs.meta
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 5
-    - path: Assets\Scripts\Tiles.meta
-      fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles.meta
-      projectPath: Assets\Scripts\Tiles.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Tiles\GrassTile.cs
-      fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\GrassTile.cs
-      projectPath: Assets\Scripts\Tiles\GrassTile.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Tiles\GrassTile.cs.meta
-      fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\GrassTile.cs.meta
-      projectPath: Assets\Scripts\Tiles\GrassTile.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Tiles\StoneTile.cs
-      fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\StoneTile.cs
-      projectPath: Assets\Scripts\Tiles\StoneTile.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Tiles\StoneTile.cs.meta
-      fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\StoneTile.cs.meta
-      projectPath: Assets\Scripts\Tiles\StoneTile.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Tiles\Tile.cs
-      fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\Tile.cs
-      projectPath: Assets\Scripts\Tiles\Tile.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Tiles\Tile.cs.meta
-      fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\Tile.cs.meta
-      projectPath: Assets\Scripts\Tiles\Tile.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    changedFilesText: 14 changed files
+    gitStatusEntries: []
+    changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-06-17T20:29:02.475+02:00
+      updatedTimeString: 2023-06-18T19:06:03.656+02:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-06-17T20:29:02.748+02:00
+      updatedTimeString: 2023-06-18T19:07:02.844+02:00
       cacheType: 6
     lastLocksChangedEvent:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
@@ -1370,7 +673,7 @@ MonoBehaviour:
   currentRemoteUrl: No remote configured
   statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 1
+  hasItemsToCommit: 0
   isTrackingRemoteBranch: 0
   currentBranchContent:
     m_Text: master
@@ -1381,13 +684,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Add a remote in the Settings tab
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-06-17T19:27:45.138+02:00
+    updatedTimeString: 2023-06-18T18:59:24.253+02:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-06-17T20:01:30.475+02:00
+    updatedTimeString: 2023-06-18T19:07:02.915+02:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-06-17T20:04:43.153+02:00
+    updatedTimeString: 2023-06-18T19:07:02.844+02:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -1405,7 +708,7 @@ MonoBehaviour:
     m_Text: Fetch
     m_Image: {fileID: 0}
     m_Tooltip: 
-  repositoryProgressValue: 1
+  repositoryProgressValue: 0
   repositoryProgressMessage: 
   appManagerProgressValue: 1
   appManagerProgressMessage: 
@@ -1492,23 +795,23 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 46110100
-    m_LastClickedID: 69958
-    m_ExpandedIDs: 00000000ca730000e47300001a74000000ca9a3b
+    m_SelectedIDs: dc720000
+    m_LastClickedID: 29404
+    m_ExpandedIDs: 00000000c8720000ca720000d272000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Prefabs
-      m_OriginalName: Prefabs
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 29722
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -1522,7 +825,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000c8720000ca720000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1650,9 +953,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: dcefffff
-      m_LastClickedID: -4132
-      m_ExpandedIDs: 46c6f7ff8a0cf9ff604efaff5a55faff0a63faffdcefffff18fbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 20c1fbff26fbffff60710000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

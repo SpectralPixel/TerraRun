@@ -8,7 +8,7 @@ public class StoneTile : Tile
         //TileID = 3;
 
         // NEW BEHAVIOUR ON INIT????
-        SetTileColor(pos.x, pos.y);
+        //SetTileColor(pos.x, pos.y);
     }
 
 }

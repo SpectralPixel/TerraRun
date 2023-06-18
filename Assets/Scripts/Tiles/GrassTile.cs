@@ -8,7 +8,7 @@ public class GrassTile : Tile
         //TileID = 1;
 
         // NEW BEHAVIOUR ON INIT????
-        SetTileColor(pos.x, pos.y);
+        //SetTileColor(pos.x, pos.y);
     }
 
 }

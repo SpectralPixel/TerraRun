@@ -12,6 +12,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1083101048645712265, guid: 2d8a9e0017f292c4e85cc2539caea114, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083101048645712265, guid: 2d8a9e0017f292c4e85cc2539caea114, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083101048645712265, guid: 2d8a9e0017f292c4e85cc2539caea114, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -53,7 +61,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3401815392334948863, guid: 2d8a9e0017f292c4e85cc2539caea114, type: 3}
       propertyPath: m_Name
-      value: Grass Tile
+      value: 1 Grass Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5637970324401396554, guid: 2d8a9e0017f292c4e85cc2539caea114, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3ee135d7ecb4f0b458a30712353f0bf1, type: 3}
+    - target: {fileID: 5637970324401396554, guid: 2d8a9e0017f292c4e85cc2539caea114, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5637970324401396554, guid: 2d8a9e0017f292c4e85cc2539caea114, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5637970324401396554, guid: 2d8a9e0017f292c4e85cc2539caea114, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d8a9e0017f292c4e85cc2539caea114, type: 3}
