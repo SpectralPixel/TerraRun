@@ -56,7 +56,7 @@ public class GridManager : MonoBehaviour
         {
             for (int y = 0; y < GridHeight; y++)
             {
-                CreateTileObject(x, y, allTiles[0]);
+                CreateTileObject(x, y, allTiles[1]);
             }
         }
     }
