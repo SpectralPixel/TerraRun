@@ -7,9 +7,7 @@ public class GridManagerUtils : Editor
 {
 
     public bool AutoUpdate = true;
-    private int oldGridWidth, oldGridHeight, oldFloorHeight;
-    private float oldNoiseMultiplier;
-    private List<OctaveSetting> oldOctaves;
+    private int oldSeed, oldGridWidth, oldGridHeight, oldFloorHeight;
 
     public override void OnInspectorGUI()
     {
@@ -23,17 +21,18 @@ public class GridManagerUtils : Editor
 
         if (AutoUpdate)
         {
-            if (oldGridWidth != generator.MapWidth ||
+            if (oldSeed != generator.WorldSeed ||
+                oldGridWidth != generator.MapWidth ||
                 oldGridHeight != generator.MapHeight ||
-                oldFloorHeight != generator.floorHeight)
+                oldFloorHeight != generator.FloorHeight)
             {
                 generator.GenerateWorld();
             }   
         }
 
+        oldSeed = generator.WorldSeed;
         oldGridWidth = generator.MapWidth;
         oldGridHeight = generator.MapHeight;
-        oldFloorHeight = generator.floorHeight;
-        oldOctaves = generator.octaves;
+        oldFloorHeight = generator.FloorHeight;
     }
 }

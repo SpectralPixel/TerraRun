@@ -10,8 +10,17 @@ public class GridManager : MonoBehaviour
     public static List<Tile> AllTiles;
     public static Dictionary<Vector2Int, Tile> WorldTiles;
 
-    public static void GenerateGrid(int width, int height, int worldFloorHeight, List<OctaveSetting> octaves)
+    public static void GenerateGrid(int seed, int width, int height, int worldFloorHeight, List<OctaveSetting> octaves)
     {
+        Random.InitState(seed);
+        float _seedVariation = 0.03999f;
+        float[] _seedVariationMultiplier = new float[7];
+
+        for (int m = 0; m < _seedVariationMultiplier.Length; m++)
+        {
+            _seedVariationMultiplier[m] = Random.Range(1 - _seedVariation, 1 + _seedVariation);
+        }
+
         AllTiles = new List<Tile>
         {
             (Tile)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Tiles/0 Air Tile.prefab", typeof(Tile)),
@@ -23,19 +32,33 @@ public class GridManager : MonoBehaviour
         GameObject oldGrid = GameObject.Find(gridName);
         if (oldGrid != null) DestroyImmediate(oldGrid);
 
-        GameObject gridObject = new GameObject(gridName);
+        new GameObject(gridName);
 
         WorldTiles = new Dictionary<Vector2Int, Tile>();
         for (int x = 0; x < width; x++)
         {
-            int floorHeight = Mathf.RoundToInt(NoiseGenerator.GetHeight(x, worldFloorHeight, octaves));
+            int _neighborTilesToAverage = 1;
+
+            float _floorHeightsAverage = 0;
+            for (int i = -_neighborTilesToAverage; i <= _neighborTilesToAverage; i++)
+            {
+                _floorHeightsAverage += NoiseGenerator.GetHeight(seed, x + i, worldFloorHeight, octaves, _seedVariationMultiplier);
+            }
+
+            int _floorHeight = Mathf.RoundToInt(_floorHeightsAverage / 3);
             for (int y = 0; y < height; y++)
             {
-                if (y <= floorHeight)
+                if (y <= _floorHeight)
                 {
-                    if (y == floorHeight) CreateTileObject(x, y, AllTiles[1]);
-                    else if (y > floorHeight - 3) CreateTileObject(x, y, AllTiles[2]);
-                    else CreateTileObject(x, y, AllTiles[3]);
+                    if (y == _floorHeight) CreateTileObject(x, y, AllTiles[1]);
+                    //else if (y > floorHeight - 3) CreateTileObject(x, y, AllTiles[2]);
+                    else
+                    {
+                        float randomNum = Random.Range(0f, 1f);
+                        float condition = 0.5f - 0.25f * (_floorHeight - y - 4);
+                        if (randomNum > condition) CreateTileObject(x, y, AllTiles[3]);
+                        else CreateTileObject(x, y, AllTiles[2]);
+                    }
                 }
             }
         }
