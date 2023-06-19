@@ -10,7 +10,7 @@ public class GridManager : MonoBehaviour
     public static List<Tile> AllTiles;
     public static Dictionary<Vector2Int, Tile> WorldTiles;
 
-    public static void GenerateGrid(int width, int height)
+    public static void GenerateGrid(int width, int height, int worldFloorHeight, List<OctaveSetting> octaves)
     {
         AllTiles = new List<Tile>
         {
@@ -28,12 +28,15 @@ public class GridManager : MonoBehaviour
         WorldTiles = new Dictionary<Vector2Int, Tile>();
         for (int x = 0; x < width; x++)
         {
+            int floorHeight = Mathf.RoundToInt(NoiseGenerator.GetHeight(x, worldFloorHeight, octaves));
             for (int y = 0; y < height; y++)
             {
-                int _topHeight = height - 1;
-                if (y == _topHeight) CreateTileObject(x, y, AllTiles[1]);
-                else if (y > _topHeight - 3) CreateTileObject(x, y, AllTiles[2]);
-                else CreateTileObject(x, y, AllTiles[3]);
+                if (y <= floorHeight)
+                {
+                    if (y == floorHeight) CreateTileObject(x, y, AllTiles[1]);
+                    else if (y > floorHeight - 3) CreateTileObject(x, y, AllTiles[2]);
+                    else CreateTileObject(x, y, AllTiles[3]);
+                }
             }
         }
     }

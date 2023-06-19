@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 89
+  controlID: 96
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 96
+  controlID: 16
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 97
+  controlID: 17
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -326,8 +326,19 @@ MonoBehaviour:
     treeLocals:
       IsRemote: 0
       folders:
-        keys: []
-        values: []
+        keys:
+        - Local branches
+        values:
+        - path: Local branches
+          label: Local branches
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
       checkedFileNodes:
         keys: []
         values: []
@@ -336,7 +347,27 @@ MonoBehaviour:
       displayRootNode: 1
       isSelectable: 1
       isCheckable: 0
-      nodes: []
+      nodes:
+      - path: Local branches
+        label: Local branches
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: master
+        label: master
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 1
+        treeIsCheckable: 0
+        checkState: 0
       selectedNode:
         path: 
         label: 
@@ -351,8 +382,30 @@ MonoBehaviour:
     treeRemotes:
       IsRemote: 1
       folders:
-        keys: []
-        values: []
+        keys:
+        - Remote branches
+        - origin
+        values:
+        - path: Remote branches
+          label: Remote branches
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+        - path: origin
+          label: origin
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
       checkedFileNodes:
         keys: []
         values: []
@@ -361,11 +414,51 @@ MonoBehaviour:
       displayRootNode: 1
       isSelectable: 1
       isCheckable: 0
-      nodes: []
-      selectedNode:
-        path: 
-        label: 
+      nodes:
+      - path: Remote branches
+        label: Remote branches
         level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin
+        label: origin
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin/main
+        label: main
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin/master
+        label: master
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      selectedNode:
+        path: origin/main
+        label: main
+        level: 2
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -376,27 +469,33 @@ MonoBehaviour:
     mode: 0
     newBranchName: 
     scroll: {x: 0, y: 0}
-    disableDelete: 0
-    disableCreate: 0
+    disableDelete: 1
+    disableCreate: 1
     lastLocalAndRemoteBranchListChangedEvent:
-      updatedTimeString: 
-      cacheType: 0
+      updatedTimeString: 2023-06-18T21:59:23.831+02:00
+      cacheType: 2
     lastCurrentBranchAndRemoteChange:
-      updatedTimeString: 
-      cacheType: 0
+      updatedTimeString: 2023-06-18T21:59:23.834+02:00
+      cacheType: 1
     currentBranch:
-      name: 
-      tracking: 
+      name: master
+      tracking: origin/master
     currentRemote:
-      name: 
-      url: 
+      name: origin
+      url: https://github.com/SpectralPixel/TerraRun.git
       login: 
       user: 
       host: 
       function: 0
       token: 
-    localBranches: []
-    remoteBranches: []
+    localBranches:
+    - name: master
+      tracking: origin/master
+    remoteBranches:
+    - name: origin/main
+      tracking: '[None]'
+    - name: origin/master
+      tracking: '[None]'
   changesView:
     currentBranchHasUpdate: 0
     currentStatusEntriesHasUpdate: 0
@@ -462,10 +561,10 @@ MonoBehaviour:
     gitStatusEntries: []
     changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-06-18T19:06:03.656+02:00
+      updatedTimeString: 2023-06-18T22:04:18.870+02:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-06-18T19:07:02.844+02:00
+      updatedTimeString: 2023-06-18T22:04:19.664+02:00
       cacheType: 6
     lastLocksChangedEvent:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
@@ -474,6 +573,886 @@ MonoBehaviour:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: ce6a6bdf9a57434421eda00f043b4eb46fde80b1
+      mergeA: 
+      mergeB: 
+      authorName: SpectralPixel
+      authorEmail: encrypteddvjjrxv@gmail.com
+      commitEmail: encrypteddvjjrxv@gmail.com
+      commitName: SpectralPixel
+      summary: Bump
+      description: 
+      timeString: 2023-06-18T21:55:20.000+02:00
+      commitTimeString: 2023-06-18T21:55:20.000+02:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 9391c949d9d9c063eaf7dad4c98f6dabf52d9f25
+      mergeA: 
+      mergeB: 
+      authorName: SpectralPixel
+      authorEmail: encrypteddvjjrxv@gmail.com
+      commitEmail: encrypteddvjjrxv@gmail.com
+      commitName: SpectralPixel
+      summary: Major Refactoring + Simple Worldgen
+      description: 
+      timeString: 2023-06-18T21:54:59.000+02:00
+      commitTimeString: 2023-06-18T21:54:59.000+02:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Editor\GridManagerUtils.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Editor\GridManagerUtils.cs
+        projectPath: Assets\Scripts\Editor\GridManagerUtils.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\GridManager.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\GridManager.cs
+        projectPath: Assets\Scripts\GridManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\PlayerHand.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\PlayerHand.cs
+        projectPath: Assets\Scripts\PlayerHand.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\PlayerHand.cs.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\PlayerHand.cs.meta
+        projectPath: Assets\Scripts\PlayerHand.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\TempCamControl.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\TempCamControl.cs
+        projectPath: Assets\Scripts\TempCamControl.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\WorldGenerator.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\WorldGenerator.cs
+        projectPath: Assets\Scripts\WorldGenerator.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\WorldGenerator.cs.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\WorldGenerator.cs.meta
+        projectPath: Assets\Scripts\WorldGenerator.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: 5f54f2e8b5834ad82c8a612c8255538c03db20e3
+      mergeA: 
+      mergeB: 
+      authorName: SpectralPixel
+      authorEmail: encrypteddvjjrxv@gmail.com
+      commitEmail: encrypteddvjjrxv@gmail.com
+      commitName: SpectralPixel
+      summary: Tiles now have sprites
+      description: 
+      timeString: 2023-06-18T20:49:54.000+02:00
+      commitTimeString: 2023-06-18T20:49:54.000+02:00
+      changes:
+      - path: Assets\Prefabs\Tiles\0 Air Tile.prefab
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\0
+          Air Tile.prefab
+        projectPath: Assets\Prefabs\Tiles\0 Air Tile.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\1 Grass Tile.prefab
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\1
+          Grass Tile.prefab
+        projectPath: Assets\Prefabs\Tiles\1 Grass Tile.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\2 Dirt Tile.prefab
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\2
+          Dirt Tile.prefab
+        projectPath: Assets\Prefabs\Tiles\2 Dirt Tile.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\3 Stone Tile.prefab
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\3
+          Stone Tile.prefab
+        projectPath: Assets\Prefabs\Tiles\3 Stone Tile.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\DirtTile.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\DirtTile.cs
+        projectPath: Assets\Scripts\Tiles\DirtTile.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\GrassTile.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\GrassTile.cs
+        projectPath: Assets\Scripts\Tiles\GrassTile.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\StoneTile.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\StoneTile.cs
+        projectPath: Assets\Scripts\Tiles\StoneTile.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Sprites.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Sprites.meta
+        projectPath: Assets\Sprites.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Tiles.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Sprites\Tiles.meta
+        projectPath: Assets\Sprites\Tiles.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Tiles\Dirt.jpg
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Sprites\Tiles\Dirt.jpg
+        projectPath: Assets\Sprites\Tiles\Dirt.jpg
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Tiles\Dirt.jpg.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Sprites\Tiles\Dirt.jpg.meta
+        projectPath: Assets\Sprites\Tiles\Dirt.jpg.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Tiles\Grass.jpg
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Sprites\Tiles\Grass.jpg
+        projectPath: Assets\Sprites\Tiles\Grass.jpg
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Tiles\Grass.jpg.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Sprites\Tiles\Grass.jpg.meta
+        projectPath: Assets\Sprites\Tiles\Grass.jpg.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Tiles\Stone.jpg
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Sprites\Tiles\Stone.jpg
+        projectPath: Assets\Sprites\Tiles\Stone.jpg
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Tiles\Stone.jpg.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Sprites\Tiles\Stone.jpg.meta
+        projectPath: Assets\Sprites\Tiles\Stone.jpg.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2021.dwlt
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\UserSettings\Layouts\default-2021.dwlt
+        projectPath: UserSettings\Layouts\default-2021.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 76f5e367ebb888545d78d56802e983942349b977
+      mergeA: 
+      mergeB: 
+      authorName: SpectralPixel
+      authorEmail: encrypteddvjjrxv@gmail.com
+      commitEmail: encrypteddvjjrxv@gmail.com
+      commitName: SpectralPixel
+      summary: Added air tiles
+      description: 
+      timeString: 2023-06-18T19:07:02.000+02:00
+      commitTimeString: 2023-06-18T19:07:02.000+02:00
+      changes:
+      - path: Assets\Prefabs\Tiles\-1 Base Tile.prefab
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\-1
+          Base Tile.prefab
+        projectPath: Assets\Prefabs\Tiles\-1 Base Tile.prefab
+        originalPath: Assets\Prefabs\Tiles\Base Tile.prefab
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\-1 Base Tile.prefab.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\-1
+          Base Tile.prefab.meta
+        projectPath: Assets\Prefabs\Tiles\-1 Base Tile.prefab.meta
+        originalPath: Assets\Prefabs\Tiles\Base Tile.prefab.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\0 Air Tile.prefab
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\0
+          Air Tile.prefab
+        projectPath: Assets\Prefabs\Tiles\0 Air Tile.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\0 Air Tile.prefab.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\0
+          Air Tile.prefab.meta
+        projectPath: Assets\Prefabs\Tiles\0 Air Tile.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\1 Grass Tile.prefab
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\1
+          Grass Tile.prefab
+        projectPath: Assets\Prefabs\Tiles\1 Grass Tile.prefab
+        originalPath: Assets\Prefabs\Tiles\Grass Tile.prefab
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\1 Grass Tile.prefab.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\1
+          Grass Tile.prefab.meta
+        projectPath: Assets\Prefabs\Tiles\1 Grass Tile.prefab.meta
+        originalPath: Assets\Prefabs\Tiles\Grass Tile.prefab.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\2 Dirt Tile.prefab
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\2
+          Dirt Tile.prefab
+        projectPath: Assets\Prefabs\Tiles\2 Dirt Tile.prefab
+        originalPath: Assets\Prefabs\Tiles\Dirt Tile.prefab
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\2 Dirt Tile.prefab.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\2
+          Dirt Tile.prefab.meta
+        projectPath: Assets\Prefabs\Tiles\2 Dirt Tile.prefab.meta
+        originalPath: Assets\Prefabs\Tiles\Dirt Tile.prefab.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\3 Stone Tile.prefab
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\3
+          Stone Tile.prefab
+        projectPath: Assets\Prefabs\Tiles\3 Stone Tile.prefab
+        originalPath: Assets\Prefabs\Tiles\Stone Tile.prefab
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\3 Stone Tile.prefab.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\3
+          Stone Tile.prefab.meta
+        projectPath: Assets\Prefabs\Tiles\3 Stone Tile.prefab.meta
+        originalPath: Assets\Prefabs\Tiles\Stone Tile.prefab.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\GridManager.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\GridManager.cs
+        projectPath: Assets\Scripts\GridManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\AirTile.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\AirTile.cs
+        projectPath: Assets\Scripts\Tiles\AirTile.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\AirTile.cs.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\AirTile.cs.meta
+        projectPath: Assets\Scripts\Tiles\AirTile.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\DirtTile.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\DirtTile.cs
+        projectPath: Assets\Scripts\Tiles\DirtTile.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\GrassTile.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\GrassTile.cs
+        projectPath: Assets\Scripts\Tiles\GrassTile.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\StoneTile.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\StoneTile.cs
+        projectPath: Assets\Scripts\Tiles\StoneTile.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: b88112f0a0970382d3a9f93a4b121e90d00ed432
+      mergeA: 
+      mergeB: 
+      authorName: SpectralPixel
+      authorEmail: encrypteddvjjrxv@gmail.com
+      commitEmail: encrypteddvjjrxv@gmail.com
+      commitName: SpectralPixel
+      summary: Added different tile types and map interaction
+      description: 
+      timeString: 2023-06-18T18:58:56.000+02:00
+      commitTimeString: 2023-06-18T18:58:56.000+02:00
+      changes:
+      - path: Assets\Prefabs\Tiles.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles.meta
+        projectPath: Assets\Prefabs\Tiles.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\Base Tile.prefab
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Base
+          Tile.prefab
+        projectPath: Assets\Prefabs\Tiles\Base Tile.prefab
+        originalPath: Assets\Prefabs\Tile.prefab
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\Base Tile.prefab.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Base
+          Tile.prefab.meta
+        projectPath: Assets\Prefabs\Tiles\Base Tile.prefab.meta
+        originalPath: Assets\Prefabs\Tile.prefab.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\Dirt Tile.prefab
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Dirt
+          Tile.prefab
+        projectPath: Assets\Prefabs\Tiles\Dirt Tile.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\Dirt Tile.prefab.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Dirt
+          Tile.prefab.meta
+        projectPath: Assets\Prefabs\Tiles\Dirt Tile.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\Grass Tile.prefab
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Grass
+          Tile.prefab
+        projectPath: Assets\Prefabs\Tiles\Grass Tile.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\Grass Tile.prefab.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Grass
+          Tile.prefab.meta
+        projectPath: Assets\Prefabs\Tiles\Grass Tile.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\Stone Tile.prefab
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Stone
+          Tile.prefab
+        projectPath: Assets\Prefabs\Tiles\Stone Tile.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tiles\Stone Tile.prefab.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Stone
+          Tile.prefab.meta
+        projectPath: Assets\Prefabs\Tiles\Stone Tile.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\GridManager.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\GridManager.cs
+        projectPath: Assets\Scripts\GridManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tile.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tile.cs
+        projectPath: Assets\Scripts\Tile.cs
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles.meta
+        projectPath: Assets\Scripts\Tiles.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\DirtTile.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\DirtTile.cs
+        projectPath: Assets\Scripts\Tiles\DirtTile.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\DirtTile.cs.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\DirtTile.cs.meta
+        projectPath: Assets\Scripts\Tiles\DirtTile.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\GrassTile.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\GrassTile.cs
+        projectPath: Assets\Scripts\Tiles\GrassTile.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\GrassTile.cs.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\GrassTile.cs.meta
+        projectPath: Assets\Scripts\Tiles\GrassTile.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\StoneTile.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\StoneTile.cs
+        projectPath: Assets\Scripts\Tiles\StoneTile.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\StoneTile.cs.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\StoneTile.cs.meta
+        projectPath: Assets\Scripts\Tiles\StoneTile.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\Tile.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\Tile.cs
+        projectPath: Assets\Scripts\Tiles\Tile.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\Tile.cs.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\Tile.cs.meta
+        projectPath: Assets\Scripts\Tiles\Tile.cs.meta
+        originalPath: Assets\Scripts\Tile.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2021.dwlt
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\UserSettings\Layouts\default-2021.dwlt
+        projectPath: UserSettings\Layouts\default-2021.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 22efae30ae7be74236933951f142def5a24b48d2
+      mergeA: 
+      mergeB: 
+      authorName: SpectralPixel
+      authorEmail: encrypteddvjjrxv@gmail.com
+      commitEmail: encrypteddvjjrxv@gmail.com
+      commitName: SpectralPixel
+      summary: Added simple camera movement and tile selection
+      description: 
+      timeString: 2023-06-17T20:00:59.000+02:00
+      commitTimeString: 2023-06-17T20:00:59.000+02:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\GridManager.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\GridManager.cs
+        projectPath: Assets\Scripts\GridManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\TempCamControl.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\TempCamControl.cs
+        projectPath: Assets\Scripts\TempCamControl.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\TempCamControl.cs.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\TempCamControl.cs.meta
+        projectPath: Assets\Scripts\TempCamControl.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: a64de26e318682f559e434ce0bdea40eea3667e2
+      mergeA: 
+      mergeB: 
+      authorName: SpectralPixel
+      authorEmail: encrypteddvjjrxv@gmail.com
+      commitEmail: encrypteddvjjrxv@gmail.com
+      commitName: SpectralPixel
+      summary: Created grid with support for more than 2 colors
+      description: 
+      timeString: 2023-06-17T19:28:53.000+02:00
+      commitTimeString: 2023-06-17T19:28:53.000+02:00
+      changes:
+      - path: .vsconfig
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\.vsconfig
+        projectPath: .vsconfig
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Prefabs.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs.meta
+        projectPath: Assets\Prefabs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tile.prefab
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tile.prefab
+        projectPath: Assets\Prefabs\Tile.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Tile.prefab.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tile.prefab.meta
+        projectPath: Assets\Prefabs\Tile.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes.meta
+        projectPath: Assets\Scenes.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes\SampleScene.unity.meta
+        projectPath: Assets\Scenes\SampleScene.unity.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts.meta
+        projectPath: Assets\Scripts.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Editor.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Editor.meta
+        projectPath: Assets\Scripts\Editor.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Editor\GridManagerUtils.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Editor\GridManagerUtils.cs
+        projectPath: Assets\Scripts\Editor\GridManagerUtils.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Editor\GridManagerUtils.cs.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Editor\GridManagerUtils.cs.meta
+        projectPath: Assets\Scripts\Editor\GridManagerUtils.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\GridManager.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\GridManager.cs
+        projectPath: Assets\Scripts\GridManager.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\GridManager.cs.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\GridManager.cs.meta
+        projectPath: Assets\Scripts\GridManager.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tile.cs
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tile.cs
+        projectPath: Assets\Scripts\Tile.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tile.cs.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tile.cs.meta
+        projectPath: Assets\Scripts\Tile.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings.meta
+        projectPath: Assets\Settings.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Lit2DSceneTemplate.scenetemplate
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\Lit2DSceneTemplate.scenetemplate
+        projectPath: Assets\Settings\Lit2DSceneTemplate.scenetemplate
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Lit2DSceneTemplate.scenetemplate.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\Lit2DSceneTemplate.scenetemplate.meta
+        projectPath: Assets\Settings\Lit2DSceneTemplate.scenetemplate.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Renderer2D.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\Renderer2D.asset
+        projectPath: Assets\Settings\Renderer2D.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Renderer2D.asset.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\Renderer2D.asset.meta
+        projectPath: Assets\Settings\Renderer2D.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Scenes.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\Scenes.meta
+        projectPath: Assets\Settings\Scenes.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Scenes\URP2DSceneTemplate.unity
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\Scenes\URP2DSceneTemplate.unity
+        projectPath: Assets\Settings\Scenes\URP2DSceneTemplate.unity
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Scenes\URP2DSceneTemplate.unity.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\Scenes\URP2DSceneTemplate.unity.meta
+        projectPath: Assets\Settings\Scenes\URP2DSceneTemplate.unity.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\UniversalRP.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\UniversalRP.asset
+        projectPath: Assets\Settings\UniversalRP.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\UniversalRP.asset.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\UniversalRP.asset.meta
+        projectPath: Assets\Settings\UniversalRP.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UniversalRenderPipelineGlobalSettings.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\UniversalRenderPipelineGlobalSettings.asset
+        projectPath: Assets\UniversalRenderPipelineGlobalSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UniversalRenderPipelineGlobalSettings.asset.meta
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\UniversalRenderPipelineGlobalSettings.asset.meta
+        projectPath: Assets\UniversalRenderPipelineGlobalSettings.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Packages\manifest.json
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Packages\manifest.json
+        projectPath: Packages\manifest.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Packages\packages-lock.json
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Packages\packages-lock.json
+        projectPath: Packages\packages-lock.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\AudioManager.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\AudioManager.asset
+        projectPath: ProjectSettings\AudioManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\BurstAotSettings_StandaloneWindows.json
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\BurstAotSettings_StandaloneWindows.json
+        projectPath: ProjectSettings\BurstAotSettings_StandaloneWindows.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\BurstAotSettings_WebGL.json
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\BurstAotSettings_WebGL.json
+        projectPath: ProjectSettings\BurstAotSettings_WebGL.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ClusterInputManager.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\ClusterInputManager.asset
+        projectPath: ProjectSettings\ClusterInputManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\CommonBurstAotSettings.json
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\CommonBurstAotSettings.json
+        projectPath: ProjectSettings\CommonBurstAotSettings.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\DynamicsManager.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\DynamicsManager.asset
+        projectPath: ProjectSettings\DynamicsManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\EditorBuildSettings.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\EditorBuildSettings.asset
+        projectPath: ProjectSettings\EditorBuildSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\EditorSettings.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\EditorSettings.asset
+        projectPath: ProjectSettings\EditorSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\GraphicsSettings.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\GraphicsSettings.asset
+        projectPath: ProjectSettings\GraphicsSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\InputManager.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\InputManager.asset
+        projectPath: ProjectSettings\InputManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\MemorySettings.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\MemorySettings.asset
+        projectPath: ProjectSettings\MemorySettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\NavMeshAreas.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\NavMeshAreas.asset
+        projectPath: ProjectSettings\NavMeshAreas.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\NetworkManager.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\NetworkManager.asset
+        projectPath: ProjectSettings\NetworkManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\PackageManagerSettings.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\PackageManagerSettings.asset
+        projectPath: ProjectSettings\PackageManagerSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\Physics2DSettings.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\Physics2DSettings.asset
+        projectPath: ProjectSettings\Physics2DSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\PresetManager.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\PresetManager.asset
+        projectPath: ProjectSettings\PresetManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ProjectSettings.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\ProjectSettings.asset
+        projectPath: ProjectSettings\ProjectSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ProjectVersion.txt
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\ProjectVersion.txt
+        projectPath: ProjectSettings\ProjectVersion.txt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\QualitySettings.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\QualitySettings.asset
+        projectPath: ProjectSettings\QualitySettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\SceneTemplateSettings.json
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\SceneTemplateSettings.json
+        projectPath: ProjectSettings\SceneTemplateSettings.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\TagManager.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\TagManager.asset
+        projectPath: ProjectSettings\TagManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\TimeManager.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\TimeManager.asset
+        projectPath: ProjectSettings\TimeManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\URPProjectSettings.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\URPProjectSettings.asset
+        projectPath: ProjectSettings\URPProjectSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\UnityConnectSettings.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\UnityConnectSettings.asset
+        projectPath: ProjectSettings\UnityConnectSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\VFXManager.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\VFXManager.asset
+        projectPath: ProjectSettings\VFXManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\VersionControlSettings.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\VersionControlSettings.asset
+        projectPath: ProjectSettings\VersionControlSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\XRSettings.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\XRSettings.asset
+        projectPath: ProjectSettings\XRSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\boot.config
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\boot.config
+        projectPath: ProjectSettings\boot.config
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\UserSettings\EditorUserSettings.asset
+        projectPath: UserSettings\EditorUserSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2021.dwlt
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\UserSettings\Layouts\default-2021.dwlt
+        projectPath: UserSettings\Layouts\default-2021.dwlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Search.settings
+        fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\UserSettings\Search.settings
+        projectPath: UserSettings\Search.settings
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
     - commitID: bf6961eb6b5a8e56d980884cdd61ce344faf4a10
       mergeA: 
       mergeB: 
@@ -506,14 +1485,894 @@ MonoBehaviour:
         workTreeStatus: 0
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 2023-06-17T19:27:45.338+02:00
+      updatedTimeString: 2023-06-18T22:01:20.208+02:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2023-06-17T19:27:45.080+02:00
+      updatedTimeString: 2023-06-18T22:01:19.534+02:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: ce6a6bdf9a57434421eda00f043b4eb46fde80b1
+        mergeA: 
+        mergeB: 
+        authorName: SpectralPixel
+        authorEmail: encrypteddvjjrxv@gmail.com
+        commitEmail: encrypteddvjjrxv@gmail.com
+        commitName: SpectralPixel
+        summary: Bump
+        description: 
+        timeString: 2023-06-18T21:55:20.000+02:00
+        commitTimeString: 2023-06-18T21:55:20.000+02:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 9391c949d9d9c063eaf7dad4c98f6dabf52d9f25
+        mergeA: 
+        mergeB: 
+        authorName: SpectralPixel
+        authorEmail: encrypteddvjjrxv@gmail.com
+        commitEmail: encrypteddvjjrxv@gmail.com
+        commitName: SpectralPixel
+        summary: Major Refactoring + Simple Worldgen
+        description: 
+        timeString: 2023-06-18T21:54:59.000+02:00
+        commitTimeString: 2023-06-18T21:54:59.000+02:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Editor\GridManagerUtils.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Editor\GridManagerUtils.cs
+          projectPath: Assets\Scripts\Editor\GridManagerUtils.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\GridManager.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\GridManager.cs
+          projectPath: Assets\Scripts\GridManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\PlayerHand.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\PlayerHand.cs
+          projectPath: Assets\Scripts\PlayerHand.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\PlayerHand.cs.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\PlayerHand.cs.meta
+          projectPath: Assets\Scripts\PlayerHand.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\TempCamControl.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\TempCamControl.cs
+          projectPath: Assets\Scripts\TempCamControl.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\WorldGenerator.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\WorldGenerator.cs
+          projectPath: Assets\Scripts\WorldGenerator.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\WorldGenerator.cs.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\WorldGenerator.cs.meta
+          projectPath: Assets\Scripts\WorldGenerator.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: 5f54f2e8b5834ad82c8a612c8255538c03db20e3
+        mergeA: 
+        mergeB: 
+        authorName: SpectralPixel
+        authorEmail: encrypteddvjjrxv@gmail.com
+        commitEmail: encrypteddvjjrxv@gmail.com
+        commitName: SpectralPixel
+        summary: Tiles now have sprites
+        description: 
+        timeString: 2023-06-18T20:49:54.000+02:00
+        commitTimeString: 2023-06-18T20:49:54.000+02:00
+        changes:
+        - path: Assets\Prefabs\Tiles\0 Air Tile.prefab
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\0
+            Air Tile.prefab
+          projectPath: Assets\Prefabs\Tiles\0 Air Tile.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\1 Grass Tile.prefab
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\1
+            Grass Tile.prefab
+          projectPath: Assets\Prefabs\Tiles\1 Grass Tile.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\2 Dirt Tile.prefab
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\2
+            Dirt Tile.prefab
+          projectPath: Assets\Prefabs\Tiles\2 Dirt Tile.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\3 Stone Tile.prefab
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\3
+            Stone Tile.prefab
+          projectPath: Assets\Prefabs\Tiles\3 Stone Tile.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\DirtTile.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\DirtTile.cs
+          projectPath: Assets\Scripts\Tiles\DirtTile.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\GrassTile.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\GrassTile.cs
+          projectPath: Assets\Scripts\Tiles\GrassTile.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\StoneTile.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\StoneTile.cs
+          projectPath: Assets\Scripts\Tiles\StoneTile.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Sprites.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Sprites.meta
+          projectPath: Assets\Sprites.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Tiles.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Sprites\Tiles.meta
+          projectPath: Assets\Sprites\Tiles.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Tiles\Dirt.jpg
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Sprites\Tiles\Dirt.jpg
+          projectPath: Assets\Sprites\Tiles\Dirt.jpg
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Tiles\Dirt.jpg.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Sprites\Tiles\Dirt.jpg.meta
+          projectPath: Assets\Sprites\Tiles\Dirt.jpg.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Tiles\Grass.jpg
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Sprites\Tiles\Grass.jpg
+          projectPath: Assets\Sprites\Tiles\Grass.jpg
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Tiles\Grass.jpg.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Sprites\Tiles\Grass.jpg.meta
+          projectPath: Assets\Sprites\Tiles\Grass.jpg.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Tiles\Stone.jpg
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Sprites\Tiles\Stone.jpg
+          projectPath: Assets\Sprites\Tiles\Stone.jpg
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Tiles\Stone.jpg.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Sprites\Tiles\Stone.jpg.meta
+          projectPath: Assets\Sprites\Tiles\Stone.jpg.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2021.dwlt
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\UserSettings\Layouts\default-2021.dwlt
+          projectPath: UserSettings\Layouts\default-2021.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 76f5e367ebb888545d78d56802e983942349b977
+        mergeA: 
+        mergeB: 
+        authorName: SpectralPixel
+        authorEmail: encrypteddvjjrxv@gmail.com
+        commitEmail: encrypteddvjjrxv@gmail.com
+        commitName: SpectralPixel
+        summary: Added air tiles
+        description: 
+        timeString: 2023-06-18T19:07:02.000+02:00
+        commitTimeString: 2023-06-18T19:07:02.000+02:00
+        changes:
+        - path: Assets\Prefabs\Tiles\-1 Base Tile.prefab
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\-1
+            Base Tile.prefab
+          projectPath: Assets\Prefabs\Tiles\-1 Base Tile.prefab
+          originalPath: Assets\Prefabs\Tiles\Base Tile.prefab
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\-1 Base Tile.prefab.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\-1
+            Base Tile.prefab.meta
+          projectPath: Assets\Prefabs\Tiles\-1 Base Tile.prefab.meta
+          originalPath: Assets\Prefabs\Tiles\Base Tile.prefab.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\0 Air Tile.prefab
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\0
+            Air Tile.prefab
+          projectPath: Assets\Prefabs\Tiles\0 Air Tile.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\0 Air Tile.prefab.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\0
+            Air Tile.prefab.meta
+          projectPath: Assets\Prefabs\Tiles\0 Air Tile.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\1 Grass Tile.prefab
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\1
+            Grass Tile.prefab
+          projectPath: Assets\Prefabs\Tiles\1 Grass Tile.prefab
+          originalPath: Assets\Prefabs\Tiles\Grass Tile.prefab
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\1 Grass Tile.prefab.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\1
+            Grass Tile.prefab.meta
+          projectPath: Assets\Prefabs\Tiles\1 Grass Tile.prefab.meta
+          originalPath: Assets\Prefabs\Tiles\Grass Tile.prefab.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\2 Dirt Tile.prefab
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\2
+            Dirt Tile.prefab
+          projectPath: Assets\Prefabs\Tiles\2 Dirt Tile.prefab
+          originalPath: Assets\Prefabs\Tiles\Dirt Tile.prefab
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\2 Dirt Tile.prefab.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\2
+            Dirt Tile.prefab.meta
+          projectPath: Assets\Prefabs\Tiles\2 Dirt Tile.prefab.meta
+          originalPath: Assets\Prefabs\Tiles\Dirt Tile.prefab.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\3 Stone Tile.prefab
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\3
+            Stone Tile.prefab
+          projectPath: Assets\Prefabs\Tiles\3 Stone Tile.prefab
+          originalPath: Assets\Prefabs\Tiles\Stone Tile.prefab
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\3 Stone Tile.prefab.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\3
+            Stone Tile.prefab.meta
+          projectPath: Assets\Prefabs\Tiles\3 Stone Tile.prefab.meta
+          originalPath: Assets\Prefabs\Tiles\Stone Tile.prefab.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\GridManager.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\GridManager.cs
+          projectPath: Assets\Scripts\GridManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\AirTile.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\AirTile.cs
+          projectPath: Assets\Scripts\Tiles\AirTile.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\AirTile.cs.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\AirTile.cs.meta
+          projectPath: Assets\Scripts\Tiles\AirTile.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\DirtTile.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\DirtTile.cs
+          projectPath: Assets\Scripts\Tiles\DirtTile.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\GrassTile.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\GrassTile.cs
+          projectPath: Assets\Scripts\Tiles\GrassTile.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\StoneTile.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\StoneTile.cs
+          projectPath: Assets\Scripts\Tiles\StoneTile.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: b88112f0a0970382d3a9f93a4b121e90d00ed432
+        mergeA: 
+        mergeB: 
+        authorName: SpectralPixel
+        authorEmail: encrypteddvjjrxv@gmail.com
+        commitEmail: encrypteddvjjrxv@gmail.com
+        commitName: SpectralPixel
+        summary: Added different tile types and map interaction
+        description: 
+        timeString: 2023-06-18T18:58:56.000+02:00
+        commitTimeString: 2023-06-18T18:58:56.000+02:00
+        changes:
+        - path: Assets\Prefabs\Tiles.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles.meta
+          projectPath: Assets\Prefabs\Tiles.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\Base Tile.prefab
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Base
+            Tile.prefab
+          projectPath: Assets\Prefabs\Tiles\Base Tile.prefab
+          originalPath: Assets\Prefabs\Tile.prefab
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\Base Tile.prefab.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Base
+            Tile.prefab.meta
+          projectPath: Assets\Prefabs\Tiles\Base Tile.prefab.meta
+          originalPath: Assets\Prefabs\Tile.prefab.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\Dirt Tile.prefab
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Dirt
+            Tile.prefab
+          projectPath: Assets\Prefabs\Tiles\Dirt Tile.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\Dirt Tile.prefab.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Dirt
+            Tile.prefab.meta
+          projectPath: Assets\Prefabs\Tiles\Dirt Tile.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\Grass Tile.prefab
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Grass
+            Tile.prefab
+          projectPath: Assets\Prefabs\Tiles\Grass Tile.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\Grass Tile.prefab.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Grass
+            Tile.prefab.meta
+          projectPath: Assets\Prefabs\Tiles\Grass Tile.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\Stone Tile.prefab
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Stone
+            Tile.prefab
+          projectPath: Assets\Prefabs\Tiles\Stone Tile.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tiles\Stone Tile.prefab.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tiles\Stone
+            Tile.prefab.meta
+          projectPath: Assets\Prefabs\Tiles\Stone Tile.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\GridManager.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\GridManager.cs
+          projectPath: Assets\Scripts\GridManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tile.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tile.cs
+          projectPath: Assets\Scripts\Tile.cs
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles.meta
+          projectPath: Assets\Scripts\Tiles.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\DirtTile.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\DirtTile.cs
+          projectPath: Assets\Scripts\Tiles\DirtTile.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\DirtTile.cs.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\DirtTile.cs.meta
+          projectPath: Assets\Scripts\Tiles\DirtTile.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\GrassTile.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\GrassTile.cs
+          projectPath: Assets\Scripts\Tiles\GrassTile.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\GrassTile.cs.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\GrassTile.cs.meta
+          projectPath: Assets\Scripts\Tiles\GrassTile.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\StoneTile.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\StoneTile.cs
+          projectPath: Assets\Scripts\Tiles\StoneTile.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\StoneTile.cs.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\StoneTile.cs.meta
+          projectPath: Assets\Scripts\Tiles\StoneTile.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\Tile.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\Tile.cs
+          projectPath: Assets\Scripts\Tiles\Tile.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\Tile.cs.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tiles\Tile.cs.meta
+          projectPath: Assets\Scripts\Tiles\Tile.cs.meta
+          originalPath: Assets\Scripts\Tile.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2021.dwlt
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\UserSettings\Layouts\default-2021.dwlt
+          projectPath: UserSettings\Layouts\default-2021.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 22efae30ae7be74236933951f142def5a24b48d2
+        mergeA: 
+        mergeB: 
+        authorName: SpectralPixel
+        authorEmail: encrypteddvjjrxv@gmail.com
+        commitEmail: encrypteddvjjrxv@gmail.com
+        commitName: SpectralPixel
+        summary: Added simple camera movement and tile selection
+        description: 
+        timeString: 2023-06-17T20:00:59.000+02:00
+        commitTimeString: 2023-06-17T20:00:59.000+02:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\GridManager.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\GridManager.cs
+          projectPath: Assets\Scripts\GridManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\TempCamControl.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\TempCamControl.cs
+          projectPath: Assets\Scripts\TempCamControl.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\TempCamControl.cs.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\TempCamControl.cs.meta
+          projectPath: Assets\Scripts\TempCamControl.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: a64de26e318682f559e434ce0bdea40eea3667e2
+        mergeA: 
+        mergeB: 
+        authorName: SpectralPixel
+        authorEmail: encrypteddvjjrxv@gmail.com
+        commitEmail: encrypteddvjjrxv@gmail.com
+        commitName: SpectralPixel
+        summary: Created grid with support for more than 2 colors
+        description: 
+        timeString: 2023-06-17T19:28:53.000+02:00
+        commitTimeString: 2023-06-17T19:28:53.000+02:00
+        changes:
+        - path: .vsconfig
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\.vsconfig
+          projectPath: .vsconfig
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Prefabs.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs.meta
+          projectPath: Assets\Prefabs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tile.prefab
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tile.prefab
+          projectPath: Assets\Prefabs\Tile.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Tile.prefab.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Prefabs\Tile.prefab.meta
+          projectPath: Assets\Prefabs\Tile.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes.meta
+          projectPath: Assets\Scenes.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scenes\SampleScene.unity.meta
+          projectPath: Assets\Scenes\SampleScene.unity.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts.meta
+          projectPath: Assets\Scripts.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Editor.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Editor.meta
+          projectPath: Assets\Scripts\Editor.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Editor\GridManagerUtils.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Editor\GridManagerUtils.cs
+          projectPath: Assets\Scripts\Editor\GridManagerUtils.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Editor\GridManagerUtils.cs.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Editor\GridManagerUtils.cs.meta
+          projectPath: Assets\Scripts\Editor\GridManagerUtils.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\GridManager.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\GridManager.cs
+          projectPath: Assets\Scripts\GridManager.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\GridManager.cs.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\GridManager.cs.meta
+          projectPath: Assets\Scripts\GridManager.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tile.cs
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tile.cs
+          projectPath: Assets\Scripts\Tile.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tile.cs.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Scripts\Tile.cs.meta
+          projectPath: Assets\Scripts\Tile.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings.meta
+          projectPath: Assets\Settings.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Lit2DSceneTemplate.scenetemplate
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\Lit2DSceneTemplate.scenetemplate
+          projectPath: Assets\Settings\Lit2DSceneTemplate.scenetemplate
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Lit2DSceneTemplate.scenetemplate.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\Lit2DSceneTemplate.scenetemplate.meta
+          projectPath: Assets\Settings\Lit2DSceneTemplate.scenetemplate.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Renderer2D.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\Renderer2D.asset
+          projectPath: Assets\Settings\Renderer2D.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Renderer2D.asset.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\Renderer2D.asset.meta
+          projectPath: Assets\Settings\Renderer2D.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Scenes.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\Scenes.meta
+          projectPath: Assets\Settings\Scenes.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Scenes\URP2DSceneTemplate.unity
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\Scenes\URP2DSceneTemplate.unity
+          projectPath: Assets\Settings\Scenes\URP2DSceneTemplate.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Scenes\URP2DSceneTemplate.unity.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\Scenes\URP2DSceneTemplate.unity.meta
+          projectPath: Assets\Settings\Scenes\URP2DSceneTemplate.unity.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\UniversalRP.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\UniversalRP.asset
+          projectPath: Assets\Settings\UniversalRP.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\UniversalRP.asset.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\Settings\UniversalRP.asset.meta
+          projectPath: Assets\Settings\UniversalRP.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UniversalRenderPipelineGlobalSettings.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\UniversalRenderPipelineGlobalSettings.asset
+          projectPath: Assets\UniversalRenderPipelineGlobalSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UniversalRenderPipelineGlobalSettings.asset.meta
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Assets\UniversalRenderPipelineGlobalSettings.asset.meta
+          projectPath: Assets\UniversalRenderPipelineGlobalSettings.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Packages\manifest.json
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Packages\manifest.json
+          projectPath: Packages\manifest.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Packages\packages-lock.json
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\Packages\packages-lock.json
+          projectPath: Packages\packages-lock.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\AudioManager.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\AudioManager.asset
+          projectPath: ProjectSettings\AudioManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\BurstAotSettings_StandaloneWindows.json
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\BurstAotSettings_StandaloneWindows.json
+          projectPath: ProjectSettings\BurstAotSettings_StandaloneWindows.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\BurstAotSettings_WebGL.json
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\BurstAotSettings_WebGL.json
+          projectPath: ProjectSettings\BurstAotSettings_WebGL.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ClusterInputManager.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\ClusterInputManager.asset
+          projectPath: ProjectSettings\ClusterInputManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\CommonBurstAotSettings.json
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\CommonBurstAotSettings.json
+          projectPath: ProjectSettings\CommonBurstAotSettings.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\DynamicsManager.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\DynamicsManager.asset
+          projectPath: ProjectSettings\DynamicsManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\EditorBuildSettings.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\EditorBuildSettings.asset
+          projectPath: ProjectSettings\EditorBuildSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\EditorSettings.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\EditorSettings.asset
+          projectPath: ProjectSettings\EditorSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\GraphicsSettings.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\GraphicsSettings.asset
+          projectPath: ProjectSettings\GraphicsSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\InputManager.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\InputManager.asset
+          projectPath: ProjectSettings\InputManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\MemorySettings.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\MemorySettings.asset
+          projectPath: ProjectSettings\MemorySettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\NavMeshAreas.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\NavMeshAreas.asset
+          projectPath: ProjectSettings\NavMeshAreas.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\NetworkManager.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\NetworkManager.asset
+          projectPath: ProjectSettings\NetworkManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\PackageManagerSettings.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\PackageManagerSettings.asset
+          projectPath: ProjectSettings\PackageManagerSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\Physics2DSettings.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\Physics2DSettings.asset
+          projectPath: ProjectSettings\Physics2DSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\PresetManager.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\PresetManager.asset
+          projectPath: ProjectSettings\PresetManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ProjectSettings.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\ProjectSettings.asset
+          projectPath: ProjectSettings\ProjectSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ProjectVersion.txt
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\ProjectVersion.txt
+          projectPath: ProjectSettings\ProjectVersion.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\QualitySettings.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\QualitySettings.asset
+          projectPath: ProjectSettings\QualitySettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\SceneTemplateSettings.json
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\SceneTemplateSettings.json
+          projectPath: ProjectSettings\SceneTemplateSettings.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\TagManager.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\TagManager.asset
+          projectPath: ProjectSettings\TagManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\TimeManager.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\TimeManager.asset
+          projectPath: ProjectSettings\TimeManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\URPProjectSettings.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\URPProjectSettings.asset
+          projectPath: ProjectSettings\URPProjectSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\UnityConnectSettings.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\UnityConnectSettings.asset
+          projectPath: ProjectSettings\UnityConnectSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\VFXManager.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\VFXManager.asset
+          projectPath: ProjectSettings\VFXManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\VersionControlSettings.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\VersionControlSettings.asset
+          projectPath: ProjectSettings\VersionControlSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\XRSettings.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\XRSettings.asset
+          projectPath: ProjectSettings\XRSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\boot.config
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\ProjectSettings\boot.config
+          projectPath: ProjectSettings\boot.config
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2021.dwlt
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\UserSettings\Layouts\default-2021.dwlt
+          projectPath: UserSettings\Layouts\default-2021.dwlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Search.settings
+          fullPath: C:\Users\coolk\OneDrive\Documents\Projects\Coding\Unity\TerraRun\UserSettings\Search.settings
+          projectPath: UserSettings\Search.settings
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
       - commitID: bf6961eb6b5a8e56d980884cdd61ce344faf4a10
         mergeA: 
         mergeB: 
@@ -598,36 +2457,36 @@ MonoBehaviour:
     detailsScroll: {x: 0, y: 0}
   settingsView:
     gitPathView:
-      gitPath: 
-      gitLfsPath: 
+      gitPath: C:\Users\coolk\AppData\Local\GitForUnity\git\cmd\git.exe
+      gitLfsPath: C:\Users\coolk\AppData\Local\GitForUnity\git\mingw64\libexec\git-core\git-lfs.exe
       errorMessage: 
       resetToBundled: 0
       resetToSystem: 0
       changingManually: 0
-    hasRemote: 0
+    hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 
-      cacheType: 0
-    newRepositoryRemoteUrl: 
-    repositoryRemoteName: 
-    repositoryRemoteUrl: 
+      updatedTimeString: 2023-06-18T21:59:11.907+02:00
+      cacheType: 1
+    newRepositoryRemoteUrl: https://github.com/SpectralPixel/TerraRun.git
+    repositoryRemoteName: origin
+    repositoryRemoteUrl: https://github.com/SpectralPixel/TerraRun.git
     scroll: {x: 0, y: 0}
     userSettingsView:
-      gitName: 
-      gitEmail: 
-      newGitName: 
-      newGitEmail: 
+      gitName: SpectralPixel
+      gitEmail: encrypteddvjjrxv@gmail.com
+      newGitName: SpectralPixel
+      newGitEmail: encrypteddvjjrxv@gmail.com
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 
-        cacheType: 0
-    webTimeout: 0
-    gitTimeout: 0
+        updatedTimeString: 2023-06-18T21:55:29.387+02:00
+        cacheType: 8
+    webTimeout: 100000
+    gitTimeout: 5000
   locksView:
-    currentRemoteHasUpdate: 0
+    currentRemoteHasUpdate: 1
     currentStatusEntriesHasUpdate: 0
     currentLocksHasUpdate: 0
-    keychainHasUpdate: 0
+    keychainHasUpdate: 1
     locksControl:
       scroll: {x: 0, y: 0}
       gitLockEntries: []
@@ -646,16 +2505,16 @@ MonoBehaviour:
             email: 
           lockedAtString: 
         gitFileStatus: 0
-        lockedAt: 
+        lockedAt: 1 Jan 0001, 01:00
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 
-      cacheType: 0
+      updatedTimeString: 2023-06-18T21:59:23.834+02:00
+      cacheType: 1
     lastLocksChangedEvent:
-      updatedTimeString: 
-      cacheType: 0
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      cacheType: 7
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 
-      cacheType: 0
+      updatedTimeString: 2023-06-18T22:01:19.492+02:00
+      cacheType: 6
     lockedFiles: []
     gitStatusEntries: []
     currentUsername: 
@@ -667,30 +2526,30 @@ MonoBehaviour:
       m_Text: Release Lock (forced)
       m_Image: {fileID: 0}
       m_Tooltip: 
-  hasRemote: 0
-  currentRemoteName: 
+  hasRemote: 1
+  currentRemoteName: origin
   currentBranch: master
-  currentRemoteUrl: No remote configured
+  currentRemoteUrl: https://github.com/SpectralPixel/TerraRun.git
   statusAhead: 0
   statusBehind: 0
   hasItemsToCommit: 0
-  isTrackingRemoteBranch: 0
+  isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: master
     m_Image: {fileID: 0}
     m_Tooltip: Active branch
   currentRemoteUrlContent:
-    m_Text: No remote configured
+    m_Text: https://github.com/SpectralPixel/TerraRun.git
     m_Image: {fileID: 0}
-    m_Tooltip: Add a remote in the Settings tab
+    m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-06-18T18:59:24.253+02:00
+    updatedTimeString: 2023-06-18T22:04:18.870+02:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-06-18T19:07:02.915+02:00
+    updatedTimeString: 2023-06-18T22:07:30.419+02:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-06-18T19:07:02.844+02:00
+    updatedTimeString: 2023-06-18T22:04:19.664+02:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -795,9 +2654,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: dc720000
-    m_LastClickedID: 29404
-    m_ExpandedIDs: 00000000c8720000ca720000d272000000ca9a3b
+    m_SelectedIDs: 7e740000
+    m_LastClickedID: 29822
+    m_ExpandedIDs: 00000000e8720000ea72000074740000ee74000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -825,7 +2684,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c8720000ca720000
+    m_ExpandedIDs: 00000000e8720000ea720000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -953,9 +2812,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 20c1fbff26fbffff60710000
+      m_SelectedIDs: a4710000
+      m_LastClickedID: 29092
+      m_ExpandedIDs: 26fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -971,7 +2830,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 4}
+        m_ClientGUIView: {fileID: 11}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1259,9 +3118,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 7.654431, y: 4.6679273, z: 0.017201692}
+    m_Target: {x: 11.72844, y: 6.3700776, z: 0.051661223}
     speed: 2
-    m_Value: {x: 7.654431, y: 4.6679273, z: 0.017201692}
+    m_Value: {x: 11.72844, y: 6.3700776, z: 0.051661223}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1312,9 +3171,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.004825
+    m_Target: 11.276509
     speed: 2
-    m_Value: 5.004825
+    m_Value: 11.276509
   m_Ortho:
     m_Target: 1
     speed: 2
