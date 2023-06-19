@@ -15,10 +15,12 @@ public class GridManager : MonoBehaviour
         Random.InitState(seed);
         float _seedVariation = 0.03999f;
         float[] _seedVariationMultiplier = new float[7];
+        int _seedXOffset = Mathf.RoundToInt(Random.Range(1 - _seedVariation, 1 + _seedVariation) * 100000);
 
         for (int m = 0; m < _seedVariationMultiplier.Length; m++)
         {
-            _seedVariationMultiplier[m] = Random.Range(1 - _seedVariation, 1 + _seedVariation);
+            float randNum = Random.Range(1 - _seedVariation, 1 + _seedVariation);
+            _seedVariationMultiplier[m] = randNum;
         }
 
         AllTiles = new List<Tile>
@@ -42,7 +44,7 @@ public class GridManager : MonoBehaviour
             float _floorHeightsAverage = 0;
             for (int i = -_neighborTilesToAverage; i <= _neighborTilesToAverage; i++)
             {
-                _floorHeightsAverage += NoiseGenerator.GetHeight(seed, x + i, worldFloorHeight, octaves, _seedVariationMultiplier);
+                _floorHeightsAverage += NoiseGenerator.GetHeight(seed, x + i + _seedXOffset, worldFloorHeight, octaves, _seedVariationMultiplier);
             }
 
             int _floorHeight = Mathf.RoundToInt(_floorHeightsAverage / 3);
