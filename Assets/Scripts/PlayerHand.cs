@@ -51,13 +51,13 @@ public class PlayerHand : MonoBehaviour
         {
             int curTileIndex = clickedTile.TileID;
             Debug.Log(curTileIndex.ToString());
-            if (curTileIndex + 1 < GridManager.AllTiles.Count) GridManager.UpdateGrid(selectedTile, GridManager.AllTiles[curTileIndex + 1]);
+            if (curTileIndex + 1 < GridManager.AllTiles.Count) GridManager.UpdateGrid(selectedTile.x, selectedTile.y, GridManager.AllTiles[curTileIndex + 1]);
         }
         else
         {
             int curTileIndex = clickedTile.TileID;
             Debug.Log(curTileIndex.ToString());
-            if (curTileIndex - 1 >= 0) GridManager.UpdateGrid(selectedTile, GridManager.AllTiles[curTileIndex - 1]);
+            if (curTileIndex - 1 >= 0) GridManager.UpdateGrid(selectedTile.x, selectedTile.y, GridManager.AllTiles[curTileIndex - 1]);
         }
     }
 }
