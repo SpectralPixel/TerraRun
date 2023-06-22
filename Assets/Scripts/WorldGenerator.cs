@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,21 +27,33 @@ public class WorldGenerator : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        GameManager.OnGameStateChanged += OnGameStateChanged;
+    }
+
+    private void OnGameStateChanged(GameManager.GameState newState)
+    {
+        if (newState == GameManager.GameState.GeneratingTerrain) GenerateWorld();
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.OnGameStateChanged -= OnGameStateChanged;
     }
 
     private void Start()
     {
         tilesToRemove = new List<Vector2Int>();
-
-        GenerateWorld();
     }
 
     public void GenerateWorld()
     {
-        (SeedXOffset, SeedVariationMultipliers) = GridManager.GenerateGrid(WorldSeed, MapWidth, MapHeight, FloorHeight, Octaves);
+        CancelInvoke("UpdateWorld");
+        (SeedXOffset, SeedVariationMultipliers) = GridManager.InitializeWorld(WorldSeed, MapWidth, MapHeight, FloorHeight, Octaves);
+        if (Application.isPlaying) InvokeRepeating("UpdateWorld", 0f, 0.1f);
+        GameManager.instance.UpdateGameState(GameManager.GameState.GameStart);
     }
 
-    private void FixedUpdate()
+    private void UpdateWorld()
     {
         tilesToRemove.Clear();
         foreach (Vector2Int pos in GridManager.ActiveTiles.Keys)

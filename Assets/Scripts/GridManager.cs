@@ -12,7 +12,7 @@ public class GridManager : MonoBehaviour
     public static Dictionary<Vector2Int, GameObject> ActiveTiles;
     public static Dictionary<int, int> FloorHeights;
 
-    public static (int, float[]) GenerateGrid(int seed, int width, int height, int worldFloorHeight, List<OctaveSetting> octaves)
+    public static (int, float[]) InitializeWorld(int seed, int width, int height, int worldFloorHeight, List<OctaveSetting> octaves)
     {
         Random.InitState(seed);
         float _seedVariation = 0.03999f;
