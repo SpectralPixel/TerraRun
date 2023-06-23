@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
             StopJump();
             jumpReleased = false;
         }
+
+        if (IsGrounded()) jumpReleased = false;
     }
 
     private void FixedUpdate()
