@@ -59,8 +59,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void JumpButton(InputAction.CallbackContext context)
     {
-        timeSinceJump = 0f;
-        if (context.started) jumpPressed = true;
+        if (context.started)
+        {
+            jumpPressed = true;
+            timeSinceJump = 0f;
+        }
         if (context.canceled) jumpReleased = true;
     }
 

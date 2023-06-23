@@ -48,9 +48,14 @@ public class WorldGenerator : MonoBehaviour
     public void GenerateWorld()
     {
         CancelInvoke("UpdateWorld");
+
         (SeedXOffset, SeedVariationMultipliers) = GridManager.InitializeWorld(WorldSeed, MapWidth, MapHeight, FloorHeight, Octaves);
-        if (Application.isPlaying) InvokeRepeating("UpdateWorld", 0f, 0.1f);
-        GameManager.instance.UpdateGameState(GameManager.GameState.GameStart);
+
+        if (Application.isPlaying)
+        {
+            InvokeRepeating("UpdateWorld", 0f, 0.1f);
+            GameManager.instance.UpdateGameState(GameManager.GameState.GameStart);
+        }
     }
 
     private void UpdateWorld()
