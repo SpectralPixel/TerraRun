@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
             jumpPressed = false;
+            jumpReleased = false;
         }
         if (jumpReleased && rb.velocity.y > 0f)
         {
