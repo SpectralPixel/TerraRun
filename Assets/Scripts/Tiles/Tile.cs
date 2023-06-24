@@ -1,26 +1,13 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Tile : MonoBehaviour
+[CreateAssetMenu(fileName = "Item", menuName = "ScriptableObjects/Tile")]
+public class Tile : ScriptableObject
 {
 
-    [SerializeField] protected List<Color> tileColors;
+    public string TileID = "Tile";
+    public Sprite Sprite;
 
-    public int TileID = -1;
 
-    public virtual void Init(Vector2Int pos)
-    {
-        SetTileColor(pos.x, pos.y);
-    }
+    [HideInInspector] public GameObject gameObject;
 
-    protected void SetTileColor(int x, int y)
-    {
-        for (int i = 0; i < tileColors.Count; i++)
-        {
-            if ((x + y) % tileColors.Count == i)
-            {
-                GetComponent<SpriteRenderer>().color = tileColors[i];
-            }
-        }
-    }
 }

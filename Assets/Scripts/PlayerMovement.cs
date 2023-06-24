@@ -7,16 +7,22 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
 
-    [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
     [SerializeField] [Min(0f)] private float moveSpeed, jumpHeight, jumpBuffer;
 
+    private Rigidbody2D rb;
+
     private float velX;
     private float timeSinceJump;
     private bool jumpPressed = false;
     private bool jumpReleased = false;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     private void Update()
     {
