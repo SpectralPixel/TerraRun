@@ -4,10 +4,19 @@ using UnityEngine;
 public class Tile : ScriptableObject
 {
 
+    public TileType Type;
+    [Space]
     public string TileID = "Tile";
-    public Sprite Sprite;
+    [HideIfEnumValue("Type", HideIf.Equal, (int)TileType.Gas)] public Sprite Sprite;
 
 
     [HideInInspector] public GameObject gameObject;
 
+}
+
+public enum TileType
+{
+    Solid,
+    Liquid,
+    Gas
 }

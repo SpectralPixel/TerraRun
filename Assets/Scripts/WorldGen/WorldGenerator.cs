@@ -16,7 +16,7 @@ public class WorldGenerator : MonoBehaviour
     public List<Tile> Tiles;
     public List<OctaveSetting> Octaves;
 
-    public PhysicsMaterial2D TileMaterial;
+    public GameObject TilePrefab;
 
     [HideInInspector] public int SeedXOffset;
     [HideInInspector] public float[] SeedVariationMultipliers;
@@ -52,7 +52,8 @@ public class WorldGenerator : MonoBehaviour
     {
         CancelInvoke("UpdateWorld");
 
-        (SeedXOffset, SeedVariationMultipliers) = GridManager.InitializeWorld(WorldSeed, MapWidth, MapHeight, FloorHeight, Tiles, Octaves, TileMaterial);
+        if (!Application.isPlaying) GridManager.InitializeWorld(WorldSeed, Tiles, Octaves, TilePrefab, true, MapWidth, MapHeight, FloorHeight);
+        else (SeedXOffset, SeedVariationMultipliers) = GridManager.InitializeWorld(WorldSeed, Tiles, Octaves, TilePrefab);
 
         if (Application.isPlaying)
         {

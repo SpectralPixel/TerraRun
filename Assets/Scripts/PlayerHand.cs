@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using static UnityEditor.PlayerSettings;
-using static UnityEditor.Progress;
 
 public class PlayerHand : MonoBehaviour
 {
@@ -15,12 +13,16 @@ public class PlayerHand : MonoBehaviour
     private Vector2Int selectedTile;
     private int itemInHand;
 
+    private bool mouseDown;
+
     private void Start()
     {
         inventory = GetComponent<PlayerInventory>();
+        tileInHandObj.sprite = inventory.Inventory[itemInHand].Icon;
 
         selectionObj = Instantiate(selectionObj);
         selectionObj.name = "Selection";
+        Destroy(selectionObj.GetComponent<BoxCollider2D>());
         SpriteRenderer selectionRenderer = selectionObj.GetComponent<SpriteRenderer>();
         selectionRenderer.color = new Color(1f, 1f, 1f, 0.4f);
         selectionRenderer.sortingOrder = 1;
@@ -29,6 +31,7 @@ public class PlayerHand : MonoBehaviour
     private void Update()
     {
         TileSelection();
+        if (mouseDown) TileClicked();
     }
 
     public void TileSelection()
@@ -48,19 +51,22 @@ public class PlayerHand : MonoBehaviour
             case ItemType.Weapon:
                 break;
             case ItemType.Tool:
-                GridManager.UpdateGrid(selectedTile);
+                GridManager.UpdateGrid(selectedTile, GridManager.AllTiles["AirTile"]);
                 break;
             case ItemType.Consumable:
                 break;
             case ItemType.Tile:
-                GridManager.UpdateGrid(selectedTile, GridManager.AllTiles[itemID]);
+                GridManager.ActiveTiles.TryGetValue(selectedTile, out GameObject obj);
+                GridManager.WorldTiles.TryGetValue(selectedTile, out Tile tile);
+                if (tile == null || tile.Type == TileType.Gas) GridManager.UpdateGrid(selectedTile, GridManager.AllTiles[itemID]);
                 break;
         }
     }
 
     public void Use(InputAction.CallbackContext context)
     {
-        if (context.started) TileClicked();
+        if (context.started) mouseDown = true;
+        if (context.canceled) mouseDown = false;
     }
 
     public void CycleHotbar(InputAction.CallbackContext context)
@@ -79,7 +85,6 @@ public class PlayerHand : MonoBehaviour
                 if (itemInHand < 0) itemInHand = inventory.Inventory.Count - 1;
             }
 
-            Debug.Log(itemInHand.ToString());
             tileInHandObj.sprite = inventory.Inventory[itemInHand].Icon;
         }
     }

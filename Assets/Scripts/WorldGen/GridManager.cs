@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class GridManager : MonoBehaviour
 {
@@ -12,9 +13,10 @@ public class GridManager : MonoBehaviour
     public static Dictionary<Vector2Int, Tile> WorldTiles;
     public static Dictionary<Vector2Int, GameObject> ActiveTiles;
     public static Dictionary<int, int> FloorHeights;
-    public static PhysicsMaterial2D TileMaterial;
+    public static GameObject TilePrefab;
+    public static GameObject AirTile;
 
-    public static (int, float[]) InitializeWorld(int seed, int width, int height, int worldFloorHeight, List<Tile> allTiles, List<OctaveSetting> octaves, PhysicsMaterial2D tileMaterial)
+    public static (int, float[]) InitializeWorld(int seed, List<Tile> allTiles, List<OctaveSetting> octaves, GameObject tilePrefab, bool generateWorld = false, int mapWidth = 0, int mapHeight = 0, int worldFloorHeight = 0)
     {
         Random.InitState(seed);
         float _seedVariation = 0.03999f;
@@ -35,24 +37,37 @@ public class GridManager : MonoBehaviour
 
         GameObject oldGrid = GameObject.Find(gridName);
         if (oldGrid != null) DestroyImmediate(oldGrid);
-
         new GameObject(gridName);
 
         WorldTiles = new Dictionary<Vector2Int, Tile>();
         ActiveTiles = new Dictionary<Vector2Int, GameObject>();
         FloorHeights = new Dictionary<int, int>();
-        TileMaterial = tileMaterial;
-        for (int x = 0; x < width; x++)
-        {
-            GenerateFloorHeight(x, seed, _seedXOffset, worldFloorHeight, octaves, _seedVariationMultipliers);
 
-            for (int y = 0; y < height; y++)
+        TilePrefab = tilePrefab;
+
+        GameObject _airTile = GameObject.Find("Air Tile");
+        if (_airTile == null) AirTile = new GameObject("Air Tile");
+        else AirTile = _airTile;
+
+        if (generateWorld)
+        {
+            for (int x = 0; x < mapWidth; x++)
             {
-                GenerateTile(new Vector2Int(x, y));
+                GenerateFloorHeight(x, seed, _seedXOffset, worldFloorHeight, octaves, _seedVariationMultipliers);
+
+                for (int y = 0; y < mapHeight; y++)
+                {
+                    GenerateTile(new Vector2Int(x, y));
+                }
             }
         }
 
         return (_seedXOffset, _seedVariationMultipliers);
+    }
+
+    public static void GenerateFloorHeight(int x)
+    {
+        GridManager.GenerateFloorHeight(x, WorldGenerator.Instance.WorldSeed, WorldGenerator.Instance.SeedXOffset, WorldGenerator.Instance.FloorHeight, WorldGenerator.Instance.Octaves, WorldGenerator.Instance.SeedVariationMultipliers);
     }
 
     public static void GenerateFloorHeight(int x, int seed, int seedXOffset, int worldFloorHeight, List<OctaveSetting> octaves, float[] seedVariationMultipliers)
@@ -92,7 +107,7 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    public static void UpdateGrid(Vector2Int pos, Tile newTile = null)
+    public static void UpdateGrid(Vector2Int pos, Tile newTile)
     {
         WorldTiles.TryGetValue(pos, out Tile tile);
         if (tile != null) // if the tile exists in the dictionary
@@ -101,25 +116,31 @@ public class GridManager : MonoBehaviour
             if (oldTile != null) Destroy(oldTile); // destroy the old copy
         }
 
-        if (newTile != null) CreateTileObject(pos, newTile); // and replace it with a new copy (if you want to)
+        CreateTileObject(pos, newTile);
     }
 
     public static void CreateTileObject(Vector2Int pos, Tile tile)
     {
-        GameObject newTile = new GameObject();
-        newTile.transform.parent = GameObject.Find("/Grid").transform;
-        
-        newTile.name = $"Tile {pos.x} {pos.y}";
-        newTile.transform.position = new Vector3(pos.x + 0.5f, pos.y + 0.5f);
-        newTile.layer = 10;
+        if (tile.Type != TileType.Gas)
+        {
+            GameObject newTile = Instantiate(TilePrefab);
+            newTile.transform.parent = GameObject.Find("/Grid").transform;
 
-        newTile.AddComponent<SpriteRenderer>().sprite = tile.Sprite;
-        newTile.AddComponent<BoxCollider2D>().sharedMaterial = TileMaterial;
+            newTile.name = $"Tile {pos.x} {pos.y}";
+            newTile.transform.position = new Vector3(pos.x + 0.5f, pos.y + 0.5f);
 
-        tile.gameObject = newTile;
+            newTile.GetComponent<SpriteRenderer>().sprite = tile.Sprite;
+
+            tile.gameObject = newTile;
+
+            ActiveTiles[pos] = newTile;
+        }
+        else
+        {
+            ActiveTiles[pos] = AirTile;
+        }
 
         WorldTiles[pos] = tile;
-        ActiveTiles[pos] = newTile;
     }
 
     public static Tile GetTileAtPos(Vector2Int pos)
