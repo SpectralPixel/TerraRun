@@ -1,16 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
 
-    [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
-    [SerializeField] [Min(0f)] private float moveSpeed, jumpHeight, jumpBuffer;
+    [SerializeField] [Min(0f)] private float moveSpeed, jumpHeight, jumpBuffer, stepDistance;
 
     private Rigidbody2D rb;
 
@@ -39,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (IsGrounded()) jumpReleased = false;
+
+        if (CanStep()) transform.position = new Vector2(transform.position.x, transform.position.y + 0.2f);
     }
 
     private void FixedUpdate()
@@ -76,5 +74,16 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics2D.OverlapBox(new Vector3(transform.position.x, transform.position.y - transform.localScale.y / 2, transform.position.z), new Vector2(transform.localScale.x, 0.5f), 0f, groundLayer);
+    }
+
+    private bool CanStep()
+    {
+        return 
+            // if you are moving and
+            Mathf.Abs(velX) > 0.1f &&
+            // there is a tile next to you that you should be stepping up
+            Physics2D.OverlapBox(new Vector3(transform.position.x, (transform.position.y - transform.localScale.y / 2) + 0.5f, transform.position.z), new Vector2(transform.localScale.x + stepDistance, 0.9f), 0f, groundLayer) &&
+            // and there isn't another tile above the tile you want to be stepping up (you're not trying to step up a two tile tall wall)
+            !Physics2D.OverlapBox(new Vector3(transform.position.x, (transform.position.y - transform.localScale.y / 2) + 1.5f, transform.position.z), new Vector2(transform.localScale.x + stepDistance, 0.9f), 0f, groundLayer);
     }
 }
