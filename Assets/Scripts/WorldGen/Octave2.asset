@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b30f2a6f061c35e47a0acb6246aea5a0, type: 3}
-  m_Name: EmptyTile
+  m_Script: {fileID: 11500000, guid: a6d9a3b5b7a0173449a91e6501778703, type: 3}
+  m_Name: Octave2
   m_EditorClassIdentifier: 
-  Type: 0
-  TileID: EmptyTile
-  Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  gameObject: {fileID: 0}
-  Value: 0
+  multiplier: 0.25
+  factor1: -6.8
+  scale1: 0.31
+  factorE: 0.5
+  scaleE: -0.14
+  factorPI: 2.5
+  scalePI: -0.41
