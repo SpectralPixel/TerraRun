@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +5,8 @@ public class WorldGenerator : MonoBehaviour
 {
 
     public static WorldGenerator Instance;
+
+    public GenerationType GenerationType;
 
     public int WorldSeed;
 
@@ -19,7 +20,7 @@ public class WorldGenerator : MonoBehaviour
     public GameObject TilePrefab;
 
     [HideInInspector] public int SeedXOffset;
-    [HideInInspector] public float[] SeedVariationMultipliers;
+    [HideInInspector] public float[] SeedVariations;
 
     [Space]
     [SerializeField] private Transform trackedObject;
@@ -52,8 +53,8 @@ public class WorldGenerator : MonoBehaviour
     {
         CancelInvoke("UpdateWorld");
 
-        if (!Application.isPlaying) GridManager.InitializeWorld(WorldSeed, Tiles, Octaves, TilePrefab, true, MapWidth, MapHeight, FloorHeight);
-        else (SeedXOffset, SeedVariationMultipliers) = GridManager.InitializeWorld(WorldSeed, Tiles, Octaves, TilePrefab);
+        if (!Application.isPlaying) GridManager.InitializeWorld(GenerationType, WorldSeed, Tiles, Octaves, TilePrefab, true, MapWidth, MapHeight, FloorHeight);
+        else (SeedXOffset, SeedVariations) = GridManager.InitializeWorld(GenerationType, WorldSeed, Tiles, Octaves, TilePrefab);
 
         if (Application.isPlaying)
         {
@@ -70,17 +71,33 @@ public class WorldGenerator : MonoBehaviour
             tilesToRemove.Add(pos);
         }
 
+        for (int x = -renderDistance + (int)trackedObject.position.x - 2; x < renderDistance + (int)trackedObject.position.x + 2; x++)
+        {
+            for (int y = -renderDistance + (int)trackedObject.position.y - 2; y < renderDistance + (int)trackedObject.position.y + 2; y++)
+            {
+                Vector2Int pos = new Vector2Int(x, y);
+
+                GridManager.RawWorldTiles.TryGetValue(pos, out Tile tile);
+                if (tile == null)
+                {
+                    GridManager.GenerateTile(pos); // generate new Tile
+                }
+            }
+        }
+
         for (int x = -renderDistance + (int)trackedObject.position.x; x < renderDistance + (int)trackedObject.position.x; x++)
         {
             for (int y = -renderDistance + (int)trackedObject.position.y; y < renderDistance + (int)trackedObject.position.y; y++)
             {
                 Vector2Int pos = new Vector2Int(x, y);
-                
-                GridManager.ActiveTiles.TryGetValue(pos, out GameObject obj);
-                if (obj == null)
+
+                GridManager.WorldTiles.TryGetValue(pos, out Tile tile);
+                if (tile == null)
                 {
-                    GridManager.GenerateTile(pos); // generate new Tile
+                    Tile smoothedTile = GridManager.SmoothTile(pos);
+                    if (smoothedTile != null) GridManager.CreateTileObject(pos, smoothedTile);
                 }
+                else GridManager.CreateTileObject(pos, tile);
 
                 tilesToRemove.Remove(pos);
             }
@@ -93,4 +110,10 @@ public class WorldGenerator : MonoBehaviour
             GridManager.ActiveTiles.Remove(pos);
         }
     }
+}
+
+public enum GenerationType
+{
+    Terrain,
+    PerlinNoise
 }
