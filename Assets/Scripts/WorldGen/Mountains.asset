@@ -15,7 +15,10 @@ MonoBehaviour:
   multiplier: 0.3
   factor1: 17.14
   scale1: 21.9
+  pos1: 5
   factorE: 8.81
   scaleE: -30.9
+  posE: 10
   factorPI: 3.57
   scalePI: 23.1
+  posPI: 15

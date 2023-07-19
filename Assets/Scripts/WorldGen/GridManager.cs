@@ -20,14 +20,11 @@ public class GridManager : MonoBehaviour
     {
         Random.InitState(seed);
         float _seedVariation = 0.03999f;
-        float[] _seedVariationMultipliers = new float[7];
+        float[] _seedVariationMultipliers = new float[10];
         int _seedXOffset = Mathf.RoundToInt(Random.Range(1 - _seedVariation, 1 + _seedVariation) * 100000);
 
-        for (int m = 0; m < _seedVariationMultipliers.Length; m++)
-        {
-            float randNum = Random.Range(1 - _seedVariation, 1 + _seedVariation);
-            _seedVariationMultipliers[m] = randNum;
-        }
+        for (int m = 0; m < 7; m++) _seedVariationMultipliers[m] = Random.Range(1 - _seedVariation, 1 + _seedVariation);
+        for (int m = 7; m < 10; m++) _seedVariationMultipliers[m] = Random.Range(-10000, 10000);
 
         AllTiles = new Dictionary<string, Tile>();
         foreach (Tile tile in allTiles)
@@ -51,11 +48,14 @@ public class GridManager : MonoBehaviour
 
         if (generateWorld)
         {
+            int generationStart = worldFloorHeight - mapHeight / 2;
+            int generationEnd = worldFloorHeight + mapHeight / 2;
+
             for (int x = 0; x < mapWidth; x++)
             {
                 GenerateFloorHeight(x, seed, _seedXOffset, worldFloorHeight, octaves, _seedVariationMultipliers);
 
-                for (int y = 0; y < mapHeight; y++)
+                for (int y = generationStart; y < generationEnd; y++)
                 {
                     GenerateTile(new Vector2Int(x, y));
                 }
@@ -67,7 +67,7 @@ public class GridManager : MonoBehaviour
 
     public static void GenerateFloorHeight(int x)
     {
-        GridManager.GenerateFloorHeight(x, WorldGenerator.Instance.WorldSeed, WorldGenerator.Instance.SeedXOffset, WorldGenerator.Instance.FloorHeight, WorldGenerator.Instance.Octaves, WorldGenerator.Instance.SeedVariationMultipliers);
+        GenerateFloorHeight(x, WorldGenerator.Instance.WorldSeed, WorldGenerator.Instance.SeedXOffset, WorldGenerator.Instance.FloorHeight, WorldGenerator.Instance.Octaves, WorldGenerator.Instance.SeedVariationMultipliers);
     }
 
     public static void GenerateFloorHeight(int x, int seed, int seedXOffset, int worldFloorHeight, List<OctaveSetting> octaves, float[] seedVariationMultipliers)

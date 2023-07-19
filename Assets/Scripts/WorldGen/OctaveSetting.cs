@@ -7,10 +7,13 @@ public class OctaveSetting : ScriptableObject
     [Space]
     public float factor1;
     public float scale1;
+    public float pos1;
     [Space]
     public float factorE;
     public float scaleE;
+    public float posE;
     [Space]
     public float factorPI;
     public float scalePI;
+    public float posPI;
 }
