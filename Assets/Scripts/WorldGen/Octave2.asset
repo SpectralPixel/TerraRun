@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6d9a3b5b7a0173449a91e6501778703, type: 3}
-  m_Name: Octave
+  m_Name: Octave2
   m_EditorClassIdentifier: 
-  multiplier: 0
-  factor1: 0
-  scale1: 0
-  factorE: 0
-  scaleE: 0
-  factorPI: 0
-  scalePI: 0
+  multiplier: 0.25
+  factor1: -6.8
+  scale1: 0.31
+  factorE: 0.5
+  scaleE: -0.14
+  factorPI: 2.5
+  scalePI: -0.41
