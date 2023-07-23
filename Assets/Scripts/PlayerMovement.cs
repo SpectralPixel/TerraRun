@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] [Min(0f)] private float moveSpeed, jumpHeight, jumpBuffer, stepDistance;
 
+    [SerializeField] private bool drawGizmos;
+
     private Rigidbody2D rb;
 
     private float velX;
@@ -36,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (IsGrounded()) jumpReleased = false;
 
-        if (CanStep()) transform.position = new Vector2(transform.position.x, transform.position.y + 0.2f);
+        while (CanStep()) transform.position = new Vector2(transform.position.x, transform.position.y + 0.2f);
     }
 
     private void FixedUpdate()
@@ -73,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapBox(new Vector3(transform.position.x, transform.position.y - transform.localScale.y / 2, transform.position.z), new Vector2(transform.localScale.x, 0.5f), 0f, groundLayer);
+        return Physics2D.OverlapBox(new Vector3(transform.position.x, transform.position.y - transform.localScale.y / 2, transform.position.z), new Vector2(transform.localScale.x * 0.95f, 0.5f), 0f, groundLayer);
     }
 
     private bool CanStep()
@@ -81,9 +83,21 @@ public class PlayerMovement : MonoBehaviour
         return 
             // if you are moving and
             Mathf.Abs(velX) > 0.1f &&
-            // there is a tile next to you that you should be stepping up
-            Physics2D.OverlapBox(new Vector3(transform.position.x, (transform.position.y - transform.localScale.y / 2) + 0.5f, transform.position.z), new Vector2(transform.localScale.x + stepDistance, 0.9f), 0f, groundLayer) &&
-            // and there isn't another tile above the tile you want to be stepping up (you're not trying to step up a two tile tall wall)
-            !Physics2D.OverlapBox(new Vector3(transform.position.x, (transform.position.y - transform.localScale.y / 2) + 1.5f, transform.position.z), new Vector2(transform.localScale.x + stepDistance, 0.9f), 0f, groundLayer);
+            // there is a tile next to you that you should be stepping up (size only set to 0.9f to avoid trying to step up when walking normally)
+            Physics2D.OverlapBox(new Vector3(transform.position.x, (transform.position.y - transform.localScale.y / 2f) + 0.5f, transform.position.z), new Vector2(transform.localScale.x + stepDistance, 0.9f), 0f, groundLayer) &&
+            // and there aren't any tiles solid tiles up to head height (so the player doesn't try to step up a two block wall or into a gap they won't fit into)
+            !Physics2D.OverlapBox(new Vector3(transform.position.x, ((transform.position.y + transform.localScale.y / 2f + 0.7f) + ((transform.position.y - transform.localScale.y / 2f) + 1.1f)) / 2f, transform.position.z), new Vector2(transform.localScale.x + stepDistance, (transform.position.y + transform.localScale.y / 2 + 0.7f) - ((transform.position.y - transform.localScale.y / 2) + 1.1f)), 0f, groundLayer);
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (drawGizmos)
+        {
+            // Jumping
+            Gizmos.DrawWireCube(new Vector3(transform.position.x, transform.position.y - transform.localScale.y / 2, transform.position.z), new Vector2(transform.localScale.x - 0.05f, 0.5f));
+            // Stepping
+            Gizmos.DrawWireCube(new Vector3(transform.position.x, (transform.position.y - transform.localScale.y / 2f) + 0.5f, transform.position.z), new Vector2(transform.localScale.x + stepDistance, 0.9f));
+            Gizmos.DrawWireCube(new Vector3(transform.position.x, ((transform.position.y + transform.localScale.y / 2f + 0.7f) + ((transform.position.y - transform.localScale.y / 2f) + 1.1f)) / 2f, transform.position.z), new Vector2(transform.localScale.x + stepDistance, (transform.position.y + transform.localScale.y / 2 + 0.7f) - ((transform.position.y - transform.localScale.y / 2) + 1.1f)));
+        }
     }
 }

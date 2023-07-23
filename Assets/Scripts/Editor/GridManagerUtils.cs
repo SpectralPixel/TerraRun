@@ -25,6 +25,7 @@ public class GridManagerUtils : Editor
                 oldGridHeight != generator.MapHeight ||
                 oldFloorHeight != generator.FloorHeight)
             {
+                GameUtilities.SetupVariables();
                 generator.GenerateWorld();
             }   
         }

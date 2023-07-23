@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+        GameUtilities.SetupVariables();
     }
 
     private void Start()

@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Toggle Smart Cursor",
+                    "type": "Button",
+                    "id": "d85ec10f-9a59-4ed2-b152-1458c5c0f165",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -262,6 +271,17 @@
                     "action": "Cycle Item",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "2e1c49db-040a-4e0d-a637-d39eaf9a09e9",
+                    "path": "<Keyboard>/leftCtrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Toggle Smart Cursor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },

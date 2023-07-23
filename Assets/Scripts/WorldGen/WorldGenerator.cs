@@ -17,6 +17,7 @@ public class WorldGenerator : MonoBehaviour
     public List<OctaveSetting> Octaves;
 
     public GameObject TilePrefab;
+    public PhysicsMaterial2D TilePhysicsMaterial;
 
     [HideInInspector] public int SeedXOffset;
     [HideInInspector] public float[] SeedVariationMultipliers;
@@ -52,8 +53,8 @@ public class WorldGenerator : MonoBehaviour
     {
         CancelInvoke("UpdateWorld");
 
-        if (!Application.isPlaying) GridManager.InitializeWorld(WorldSeed, Tiles, Octaves, TilePrefab, true, MapWidth, MapHeight, FloorHeight);
-        else (SeedXOffset, SeedVariationMultipliers) = GridManager.InitializeWorld(WorldSeed, Tiles, Octaves, TilePrefab);
+        if (!Application.isPlaying) GridManager.InitializeWorld(WorldSeed, Tiles, Octaves, TilePrefab, TilePhysicsMaterial, true, MapWidth, MapHeight, FloorHeight);
+        else (SeedXOffset, SeedVariationMultipliers) = GridManager.InitializeWorld(WorldSeed, Tiles, Octaves, TilePrefab, TilePhysicsMaterial);
 
         if (Application.isPlaying)
         {
@@ -70,16 +71,31 @@ public class WorldGenerator : MonoBehaviour
             tilesToRemove.Add(pos);
         }
 
+        for (int x = -renderDistance - 1 + (int)trackedObject.position.x; x < renderDistance + 1 + (int)trackedObject.position.x; x++)
+        {
+            for (int y = -renderDistance - 1 + (int)trackedObject.position.y; y < renderDistance + 1 + (int)trackedObject.position.y; y++)
+            {
+                Vector2Int pos = new Vector2Int(x, y);
+
+                GridManager.WorldTiles.TryGetValue(pos, out Tile _tile);
+                if (_tile == null)
+                {
+                    GridManager.GenerateTile(pos); // generate new Tile 1 block ahead of render distance
+                }
+            }
+        }
+
         for (int x = -renderDistance + (int)trackedObject.position.x; x < renderDistance + (int)trackedObject.position.x; x++)
         {
             for (int y = -renderDistance + (int)trackedObject.position.y; y < renderDistance + (int)trackedObject.position.y; y++)
             {
                 Vector2Int pos = new Vector2Int(x, y);
-                
-                GridManager.ActiveTiles.TryGetValue(pos, out GameObject obj);
-                if (obj == null)
+
+                GridManager.ActiveTiles.TryGetValue(pos, out GameObject _obj);
+                if (_obj == null)
                 {
-                    GridManager.GenerateTile(pos); // generate new Tile
+                    GridManager.WorldTiles.TryGetValue(pos, out Tile _tile);
+                    if (_tile != null) GridManager.CreateTileObject(pos, _tile); // create tile object
                 }
 
                 tilesToRemove.Remove(pos);

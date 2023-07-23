@@ -1,24 +1,25 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class PlayerHand : MonoBehaviour
 {
 
     [SerializeField] private GameObject selectionObj;
-    [SerializeField] private Image tileInHandObj;
 
     private PlayerInventory inventory;
 
     private Vector2Int selectedTile;
-    private int itemInHand;
+    private Vector2Int oldSelectedTile;
+
+    private float timeClicked;
 
     private bool mouseDown;
+    private bool smartCursor;
 
     private void Start()
     {
         inventory = GetComponent<PlayerInventory>();
-        tileInHandObj.sprite = inventory.Inventory[itemInHand].Icon;
 
         selectionObj = Instantiate(selectionObj);
         selectionObj.name = "Selection";
@@ -31,34 +32,96 @@ public class PlayerHand : MonoBehaviour
     private void Update()
     {
         TileSelection();
-        if (mouseDown) TileClicked();
+        if (oldSelectedTile != selectedTile) timeClicked = 0f;
+
+        if (mouseDown)
+        {
+            TileClicked();
+            timeClicked += Time.deltaTime;
+        }
+
+        oldSelectedTile = selectedTile;
     }
 
     public void TileSelection()
     {
         Vector3 mouseCoords = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        selectedTile = new Vector2Int(Mathf.FloorToInt(mouseCoords.x), Mathf.FloorToInt(mouseCoords.y));
+        if (smartCursor)
+        {
+            selectedTile = new Vector2Int(Mathf.FloorToInt(mouseCoords.x), Mathf.FloorToInt(mouseCoords.y));
 
-        selectionObj.transform.position = new Vector3(selectedTile.x + 0.5f, selectedTile.y + 0.5f, 0f);
+            GridManager.WorldTiles.TryGetValue(selectedTile, out Tile tile);
+            if ((tile == null || tile.Type == TileType.Gas) && inventory.GetCurrentStack().Item.Type == ItemType.Tool)
+            {
+                /*
+                 * Basic implementation of smart cursor.
+                 * 
+                 * All four neighboring tiles are checked in the order of "directionsToCheck" to see if they can be mined.
+                 * If the checked tile can be mined, select it.
+                 * 
+                 * The tile that is closest to the player on the x-axis is prioritized to make tunnelling downwards easy.
+                 * The tile furthest to the player on the x-axis has the lowest priority to aid when tunnelling sideways.
+                 */
+
+                List<Vector2Int> directionsToCheck = new List<Vector2Int>()
+                {
+                    Vector2Int.down,
+                    Vector2Int.up,
+                    new Vector2Int(1, 1),
+                    new Vector2Int(-1, 1),
+                    new Vector2Int(-1, -1),
+                    new Vector2Int(1, -1),
+                };
+
+                int directionFromPlayer = (int)Mathf.Sign(transform.position.x - mouseCoords.x);
+                directionsToCheck.Insert(0, new Vector2Int(directionFromPlayer, 0));
+                directionsToCheck.Insert(3, new Vector2Int(-directionFromPlayer, 0));
+
+                foreach (Vector2Int direction in directionsToCheck)
+                {
+                    GridManager.WorldTiles.TryGetValue(selectedTile + direction, out tile);
+                    if (tile != null && tile.Type != TileType.Gas)
+                    {
+                        selectedTile += direction;
+                        break;
+                    }
+                }
+            }
+
+            selectionObj.transform.position = new Vector3(selectedTile.x + 0.5f, selectedTile.y + 0.5f);
+        }
+        else
+        {
+            selectedTile = new Vector2Int(Mathf.FloorToInt(mouseCoords.x), Mathf.FloorToInt(mouseCoords.y));
+            selectionObj.transform.position = new Vector3(selectedTile.x + 0.5f, selectedTile.y + 0.5f, 0f);
+        }
     }
 
     void TileClicked()
     {
-        ItemType itemType = inventory.Inventory[itemInHand].Type;
-        string itemID = inventory.Inventory[itemInHand].ItemID;
+        Item curItem = inventory.GetCurrentStack().Item;
+        ItemType itemType = curItem.Type;
         switch (itemType)
         {
             case ItemType.Weapon:
                 break;
             case ItemType.Tool:
-                GridManager.UpdateGrid(selectedTile, GridManager.AllTiles["AirTile"]);
+                GridManager.WorldTiles.TryGetValue(selectedTile, out Tile tileToAdd);
+                if (tileToAdd != null && timeClicked * curItem.Power > tileToAdd.Hardness && tileToAdd.Type != TileType.Gas)
+                {
+                    inventory.AddItems(GameUtilities.TileToItem(tileToAdd), 1);
+                    GridManager.UpdateGrid(selectedTile, GameUtilities.AllTiles["AirTile"]);
+                }
                 break;
             case ItemType.Consumable:
                 break;
             case ItemType.Tile:
-                GridManager.ActiveTiles.TryGetValue(selectedTile, out GameObject obj);
                 GridManager.WorldTiles.TryGetValue(selectedTile, out Tile tile);
-                if (tile == null || tile.Type == TileType.Gas) GridManager.UpdateGrid(selectedTile, GridManager.AllTiles[itemID]);
+                if ((tile == null || tile.Type == TileType.Gas) && inventory.GetCurrentStack().Count > 0)
+                {
+                    inventory.RemoveItems(inventory.GetCurrentStack().Item, 1);
+                    GridManager.UpdateGrid(selectedTile, GameUtilities.ItemToTile(inventory.GetCurrentStack().Item));
+                }
                 break;
         }
     }
@@ -69,23 +132,11 @@ public class PlayerHand : MonoBehaviour
         if (context.canceled) mouseDown = false;
     }
 
-    public void CycleHotbar(InputAction.CallbackContext context)
+    public void ToggleSmartCursor(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            float cycle = context.ReadValue<float>();
-
-            if (cycle > 0f) // if switching to the next item
-            {
-                itemInHand = (itemInHand + 1) % inventory.Inventory.Count;
-            }
-            else
-            {
-                itemInHand--;
-                if (itemInHand < 0) itemInHand = inventory.Inventory.Count - 1;
-            }
-
-            tileInHandObj.sprite = inventory.Inventory[itemInHand].Icon;
+            smartCursor = !smartCursor;
         }
     }
 }

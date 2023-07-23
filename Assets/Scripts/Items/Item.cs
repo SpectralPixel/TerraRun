@@ -9,7 +9,8 @@ public class Item : ScriptableObject
     public string ItemID = "Item";
     public Sprite Icon;
 
-    [HideIfEnumValue("Type", HideIf.NotEqual, (int)ItemType.Weapon)] public float damage;
+    [HideIfEnumValue("Type", HideIf.NotEqual, (int)ItemType.Weapon)] public float Damage;
+    [HideIfEnumValue("Type", HideIf.NotEqual, (int)ItemType.Tool)] public float Power;
 
     [HideIfEnumValue("Type", HideIf.NotEqual, (int)ItemType.Tile)] public Tile tile;
 
