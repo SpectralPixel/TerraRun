@@ -15,5 +15,5 @@ MonoBehaviour:
   Type: 0
   TileID: GrassTile
   Sprite: {fileID: 21300000, guid: 3ee135d7ecb4f0b458a30712353f0bf1, type: 3}
-  Hardness: 2
+  Hardness: 4
   gameObject: {fileID: 0}

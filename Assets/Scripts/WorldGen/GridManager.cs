@@ -1,6 +1,7 @@
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GridManager : MonoBehaviour
 {
@@ -9,20 +10,23 @@ public class GridManager : MonoBehaviour
 
     public static Dictionary<Vector2Int, Tile> WorldTiles;
     public static Dictionary<Vector2Int, GameObject> ActiveTiles;
+    public static Dictionary<int, int> RawFloorHeights;
     public static Dictionary<int, int> FloorHeights;
+    public static Dictionary<Vector2Int, Tree> Trees;
+    public static int FloorSmoothing;
     public static GameObject TilePrefab;
     public static PhysicsMaterial2D TilePhysicsMaterial;
     public static GameObject AirTile;
 
-    public static (int, float[]) InitializeWorld(int seed, List<Tile> allTiles, List<OctaveSetting> octaves, GameObject tilePrefab, PhysicsMaterial2D _tilePhysicsMaterial, bool generateWorld = false, int mapWidth = 0, int mapHeight = 0, int worldFloorHeight = 0)
+    public static (int, float[]) InitializeWorld(int seed, List<Tile> allTiles, List<OctaveSetting> octaves, int _floorSmoothing, GameObject tilePrefab, PhysicsMaterial2D _tilePhysicsMaterial, bool generateWorld = false, int mapWidth = 0, int mapHeight = 0, int worldFloorHeight = 0)
     {
         Random.InitState(seed);
         float _seedVariation = 0.03999f;
         float[] _seedVariationMultipliers = new float[10];
-        int _seedXOffset = Mathf.RoundToInt(Random.Range(1 - _seedVariation, 1 + _seedVariation) * 100000);
+        int _seedXOffset = Mathf.RoundToInt(Random.Range(1 - _seedVariation, 1 + _seedVariation) * 1000);
 
         for (int m = 0; m < 7; m++) _seedVariationMultipliers[m] = Random.Range(1 - _seedVariation, 1 + _seedVariation);
-        for (int m = 7; m < 10; m++) _seedVariationMultipliers[m] = Random.Range(-10000, 10000);
+        for (int m = 7; m < 10; m++) _seedVariationMultipliers[m] = Random.Range(-1000, 1000);
 
         GameUtilities.AllTiles = new Dictionary<string, Tile>();
         foreach (Tile tile in allTiles)
@@ -36,7 +40,11 @@ public class GridManager : MonoBehaviour
 
         WorldTiles = new Dictionary<Vector2Int, Tile>();
         ActiveTiles = new Dictionary<Vector2Int, GameObject>();
+        RawFloorHeights = new Dictionary<int, int>();
         FloorHeights = new Dictionary<int, int>();
+        Trees = new Dictionary<Vector2Int, Tree>();
+
+        FloorSmoothing = _floorSmoothing;
 
         TilePrefab = tilePrefab;
         TilePhysicsMaterial = _tilePhysicsMaterial;
@@ -50,9 +58,20 @@ public class GridManager : MonoBehaviour
             int generationStart = worldFloorHeight - mapHeight / 2;
             int generationEnd = worldFloorHeight + mapHeight / 2;
 
-            for (int x = 0; x < mapWidth; x++)
+            for (int x = -FloorSmoothing; x < mapWidth + FloorSmoothing; x++)
             {
                 GenerateFloorHeight(x, seed, _seedXOffset, worldFloorHeight, octaves, _seedVariationMultipliers);
+            }
+
+            for (int x = 0; x < mapWidth; x++)
+            {
+                SmoothFloorHeight(x);
+
+                Vector2Int _newTreeBasePos = new Vector2Int(x, FloorHeights[x] + 1);
+                if (Tree.CanGenerateTree(_newTreeBasePos))
+                {
+                    Trees[_newTreeBasePos] = new Tree(_newTreeBasePos);
+                }
 
                 for (int y = generationStart; y < generationEnd; y++)
                 {
@@ -76,35 +95,42 @@ public class GridManager : MonoBehaviour
 
     public static void GenerateFloorHeight(int _x, int _seed, int _seedXOffset, int _worldFloorHeight, List<OctaveSetting> _octaves, float[] _seedVariationMultipliers)
     {
-        int _neighborTilesToAverage = 1;
-
-        float _floorHeightsAverage = 0;
-        for (int i = -_neighborTilesToAverage; i <= _neighborTilesToAverage; i++)
-        {
-            _floorHeightsAverage += NoiseGenerator.GetHeight(_seed, _x + i + _seedXOffset, _worldFloorHeight, _octaves, _seedVariationMultipliers);
-        }
-
-        int _floorHeight = Mathf.RoundToInt(_floorHeightsAverage / ((_neighborTilesToAverage * 2) + 1));
-        FloorHeights[_x] = _floorHeight;
+        RawFloorHeights[_x] = Mathf.RoundToInt(NoiseGenerator.GetHeight(_seed, _x + _seedXOffset, _worldFloorHeight, _octaves, _seedVariationMultipliers));
     }
 
-    public static void GenerateTile(Vector2Int pos)
+    public static void SmoothFloorHeight(int _x)
     {
-        WorldTiles.TryGetValue(pos, out Tile tile);
+        if (FloorSmoothing > 0)
+        {
+            float _floorHeightsAverage = 0;
+            for (int i = -FloorSmoothing; i <= FloorSmoothing; i++)
+            {
+                RawFloorHeights.TryGetValue(_x + i, out int _currentHeight);
+                if (_currentHeight == 0) GenerateFloorHeight(_x + i);
+                
+                _floorHeightsAverage += RawFloorHeights[_x + i];
+            }
+
+            int _floorHeight = Mathf.RoundToInt(_floorHeightsAverage / ((FloorSmoothing * 2) + 1));
+            FloorHeights[_x] = _floorHeight;
+        }
+        else FloorHeights[_x] = RawFloorHeights[_x];
+    }
+
+    public static void GenerateTile(Vector2Int _pos)
+    {
+        WorldTiles.TryGetValue(_pos, out Tile tile);
         if (tile == null) 
         {
-            FloorHeights.TryGetValue(pos.x, out int height);
-            if (height == 0) GenerateFloorHeight(pos.x, WorldGenerator.Instance.WorldSeed, WorldGenerator.Instance.SeedXOffset, WorldGenerator.Instance.FloorHeight, WorldGenerator.Instance.Octaves, WorldGenerator.Instance.SeedVariationMultipliers);
-
-            if (pos.y <= FloorHeights[pos.x])
+            if (_pos.y <= FloorHeights[_pos.x])
             {
-                if (pos.y == FloorHeights[pos.x]) WorldTiles[pos] = GameUtilities.AllTiles["GrassTile"];// CreateTileObject(pos, GameUtilities.AllTiles["GrassTile"]);
+                if (_pos.y == FloorHeights[_pos.x]) WorldTiles[_pos] = GameUtilities.AllTiles["GrassTile"];
                 else
                 {
-                    float randomNum = Random.Range(0f, 1f);
-                    float condition = 0.5f - 0.25f * (FloorHeights[pos.x] - pos.y - 4);
-                    if (randomNum > condition) WorldTiles[pos] = GameUtilities.AllTiles["StoneTile"];//CreateTileObject(pos, GameUtilities.AllTiles["StoneTile"]);
-                    else WorldTiles[pos] = GameUtilities.AllTiles["DirtTile"];//CreateTileObject(pos, GameUtilities.AllTiles["DirtTile"]);
+                    float value = Mathf.PerlinNoise(_pos.x / 2f, _pos.y / 2f) - (Mathf.Cos(_pos.x / 2f + _pos.y / 3f) + Mathf.Sin(_pos.x / 5f + _pos.y / 3f)) / 6f;
+                    float condition = 0.5f - 0.25f * (FloorHeights[_pos.x] - _pos.y - 4);
+                    if (value > condition) WorldTiles[_pos] = GameUtilities.AllTiles["StoneTile"];
+                    else WorldTiles[_pos] = GameUtilities.AllTiles["DirtTile"];
                 }
             }
         }
@@ -115,8 +141,10 @@ public class GridManager : MonoBehaviour
         WorldTiles.TryGetValue(_pos, out Tile tile);
         if (tile != null) // if the tile exists in the dictionary
         {
-            GameObject _oldTile = GameObject.Find($"/Grid/Tile {_pos.x} {_pos.y}");
+            ActiveTiles.TryGetValue(_pos, out GameObject _oldTile);
+            if (_oldTile == null) _oldTile = GameObject.Find($"/Grid/Tile {_pos.x} {_pos.y}");
             if (_oldTile != null) Destroy(_oldTile); // destroy the old copy
+            else Debug.Log($"Tile at {_pos} not found...");
         }
 
         WorldTiles[_pos] = _newTile;
@@ -171,7 +199,7 @@ public class GridManager : MonoBehaviour
         BoxCollider2D _col = _tile.GetComponent<BoxCollider2D>();
 
         if (!_borderingEmptyTile) Destroy(_col);
-        else if (_borderingEmptyTile && _col == null) // if we are bordering air and we don't have a collider
+        else if (_borderingEmptyTile && _col == null && WorldTiles[_pos].Type == TileType.Solid) // if we are bordering air and we don't have a collider
         {
             BoxCollider2D _newCol = _tile.AddComponent<BoxCollider2D>();
             _newCol.sharedMaterial = TilePhysicsMaterial;

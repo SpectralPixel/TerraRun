@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
                 // Set the player's position to the floor procedurally
                 Vector2 _startPosition = transform.position;
                 GridManager.GenerateFloorHeight((int)_startPosition.x);
-                _startPosition.y = GridManager.FloorHeights[(int)transform.position.x] + transform.localScale.y * 2;
+                _startPosition.y = GridManager.RawFloorHeights[(int)transform.position.x] + transform.localScale.y * 2;
                 _startPosition.x = Mathf.RoundToInt(_startPosition.x) + 0.5f;
 
                 GameObject.FindWithTag("Player").transform.position = _startPosition;

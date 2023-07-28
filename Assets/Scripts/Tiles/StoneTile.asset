@@ -15,5 +15,5 @@ MonoBehaviour:
   Type: 0
   TileID: StoneTile
   Sprite: {fileID: 21300000, guid: f8987e3596cb44149a998ad5a8164d48, type: 3}
-  Hardness: 5
+  Hardness: 10
   gameObject: {fileID: 0}

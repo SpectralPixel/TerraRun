@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Debug 1",
+                    "type": "Button",
+                    "id": "49ee8876-a39d-49b2-a445-387eebc9d706",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -280,6 +289,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Toggle Smart Cursor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6edc4c92-3926-4035-b6a5-f8527d73c606",
+                    "path": "<Keyboard>/numpad1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Debug 1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

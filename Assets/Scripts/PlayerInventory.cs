@@ -68,25 +68,29 @@ public class PlayerInventory : MonoBehaviour
     {
         if (context.started)
         {
-            float cycle = context.ReadValue<float>();
-
-            if (cycle > 0f) // if switching to the next item
+            Vector2 _mousePos = Input.mousePosition;
+            if (_mousePos.x >= 0f && _mousePos.y >= 0f && _mousePos.x < Screen.width && _mousePos.y < Screen.height) // if the mouse is in the game window
             {
-                do
-                {
-                    currentInventorySlot = (currentInventorySlot + 1) % Inventory.Count;
-                } while (Inventory[currentInventorySlot].Count <= 0);
-            }
-            else
-            {
-                do
-                {
-                    currentInventorySlot--;
-                    if (currentInventorySlot < 0) currentInventorySlot = Inventory.Count - 1;
-                } while (Inventory[currentInventorySlot].Count <= 0);
-            }
+                float cycle = context.ReadValue<float>();
 
-            UpdateInventoryUI();
+                if (cycle > 0f) // if switching to the next item
+                {
+                    do
+                    {
+                        currentInventorySlot = (currentInventorySlot + 1) % Inventory.Count;
+                    } while (Inventory[currentInventorySlot].Count <= 0);
+                }
+                else
+                {
+                    do
+                    {
+                        currentInventorySlot--;
+                        if (currentInventorySlot < 0) currentInventorySlot = Inventory.Count - 1;
+                    } while (Inventory[currentInventorySlot].Count <= 0);
+                }
+
+                UpdateInventoryUI();
+            }
         }
     }
 

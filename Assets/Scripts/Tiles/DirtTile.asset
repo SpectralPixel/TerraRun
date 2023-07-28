@@ -15,5 +15,5 @@ MonoBehaviour:
   Type: 0
   TileID: DirtTile
   Sprite: {fileID: 21300000, guid: 1bcd6ae012c81a345beba17665e2d698, type: 3}
-  Hardness: 2
+  Hardness: 4
   gameObject: {fileID: 0}

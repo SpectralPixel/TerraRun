@@ -39,10 +39,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 743.2
+    x: 742.4
     y: 0
-    width: 429.60004
-    height: 284.4
+    width: 429.59998
+    height: 285.19998
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 20}
@@ -68,13 +68,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 438.4
-    width: 1172.8
-    height: 284.4
+    y: 437.6
+    width: 1172
+    height: 285.19998
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 99
+  controlID: 88
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 123
+  controlID: 112
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -115,9 +115,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1172.8
+    x: 1172
     y: 0
-    width: 363.19995
+    width: 364
     height: 722.8
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
@@ -144,8 +144,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 290.4
-    height: 438.4
+    width: 194.4
+    height: 437.6
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
@@ -163,24 +163,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 743.2
-    height: 284.4
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 16}
+    width: 742.4
+    height: 285.19998
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 16}
   - {fileID: 21}
   - {fileID: 15}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -271,12 +271,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1172.8
+    width: 1172
     height: 722.8
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 98
+  controlID: 87
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -296,8 +296,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1172.8
-    height: 438.4
+    width: 1172
+    height: 437.6
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
@@ -317,10 +317,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 290.4
+    x: 194.4
     y: 0
-    width: 882.4
-    height: 438.4
+    width: 977.6
+    height: 437.6
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 19}
@@ -348,9 +348,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1172.8
+    x: 1172
     y: 73.6
-    width: 362.19995
+    width: 363
     height: 701.8
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -367,11 +367,11 @@ MonoBehaviour:
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 1
+  currentStatusEntriesHasUpdate: 0
   repositoryProgressHasUpdate: 1
   appManagerProgressHasUpdate: 1
-  changeTab: 3
-  activeTab: 3
+  changeTab: 5
+  activeTab: 5
   initProjectView:
     hasCompletedInitialCheck: 1
     isUserDataPresent: 1
@@ -496,20 +496,799 @@ MonoBehaviour:
     localBranches: []
     remoteBranches: []
   changesView:
-    currentBranchHasUpdate: 1
-    currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
+    currentBranchHasUpdate: 0
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
     currentBranch: master
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
-        keys: []
-        values: []
+        keys:
+        - 00000000000000001000000000000000
+        - 109e9bdd0fcc649c5bc59085c35bdc83
+        - 8c9cfa26abfee488c85f1582747f6a02
+        - b3e8f82a8ee4ce84ba5fb6a70fe1d45f
+        - 5d489fba3d22d0844876332da9694510
+        - 50f80170768c0d240b6cc59410d8b048
+        - 96af000ff8f0cc748b847ea3ef5b4f89
+        - 27377db242404334b973f10d2515ff3c
+        - b356b9b96a5047943aa0a8124e32562f
+        - 9908dfeffff8a0c41bc30c4c9f2c8f89
+        - 32f83e1f609285a478ae015efaf3196e
+        - bd546a94c1a6c3248b090934b54f55fa
+        - 9c7c6cccc37edaa4b9e245a5b24fd635
+        - 0b9036eeda5f1414ab48f3d3d622e251
+        - c3159b1ba5d9b324eb65750bb4314a02
+        - 36be0baa5470bcc49a826ddb82776dac
+        - b30f2a6f061c35e47a0acb6246aea5a0
+        - b1730ebacbb0e1942af681cdbf29ad32
+        - d4c422d6cbf1632429ade771a891b3cb
+        - b2dd0feb26a792547852165d4b33af70
+        - fd0931a44c5fac24ba93343df1411f52
+        - 19dd381981371bf40987f17247f67101
+        - 09b1f88ec875f6e4d8506a6109ce1b82
+        - 9dde21afbe1dca2448e47a89177b84c4
+        - 847e9c709d1ec93469a0676e5af38151
+        - 7b0bbc651746bc240b608c7d655009ac
+        - 00000000000000006100000000000000
+        - 00000000000000004000000000000000
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes
+          label: Scenes
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          label: SampleScene.unity
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scenes\SampleScene.unity
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scenes\SampleScene.unity
+            projectPath: Assets\Scenes\SampleScene.unity
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts
+          label: Scripts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Editor
+          label: Editor
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Editor\GridManagerUtils.cs
+          label: GridManagerUtils.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Editor\GridManagerUtils.cs
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Editor\GridManagerUtils.cs
+            projectPath: Assets\Scripts\Editor\GridManagerUtils.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\GameManager.cs
+          label: GameManager.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\GameManager.cs
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\GameManager.cs
+            projectPath: Assets\Scripts\GameManager.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\Items
+          label: Items
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Items\Pickaxe.asset
+          label: Pickaxe.asset
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Items\Pickaxe.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Items\Pickaxe.asset
+            projectPath: Assets\Scripts\Items\Pickaxe.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\Items\WoodTile.asset
+          label: WoodTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Items\WoodTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Items\WoodTile.asset
+            projectPath: Assets\Scripts\Items\WoodTile.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Scripts\PlayerHand.cs
+          label: PlayerHand.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\PlayerHand.cs
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\PlayerHand.cs
+            projectPath: Assets\Scripts\PlayerHand.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\Tiles
+          label: Tiles
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\DirtTile.asset
+          label: DirtTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Tiles\DirtTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\DirtTile.asset
+            projectPath: Assets\Scripts\Tiles\DirtTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\Tiles\GrassTile.asset
+          label: GrassTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Tiles\GrassTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\GrassTile.asset
+            projectPath: Assets\Scripts\Tiles\GrassTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\Tiles\LeafTile.asset
+          label: LeafTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Tiles\LeafTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\LeafTile.asset
+            projectPath: Assets\Scripts\Tiles\LeafTile.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Scripts\Tiles\StoneTile.asset
+          label: StoneTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Tiles\StoneTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\StoneTile.asset
+            projectPath: Assets\Scripts\Tiles\StoneTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\Tiles\Tile.cs
+          label: Tile.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Tiles\Tile.cs
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\Tile.cs
+            projectPath: Assets\Scripts\Tiles\Tile.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\Tiles\WoodTile.asset
+          label: WoodTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Tiles\WoodTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\WoodTile.asset
+            projectPath: Assets\Scripts\Tiles\WoodTile.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Scripts\WorldGen
+          label: WorldGen
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\WorldGen\GridManager.cs
+          label: GridManager.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\WorldGen\GridManager.cs
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\GridManager.cs
+            projectPath: Assets\Scripts\WorldGen\GridManager.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\WorldGen\Tree.cs
+          label: Tree.cs
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\WorldGen\Tree.cs
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Tree.cs
+            projectPath: Assets\Scripts\WorldGen\Tree.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Scripts\WorldGen\WorldGenerator.cs
+          label: WorldGenerator.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\WorldGen\WorldGenerator.cs
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\WorldGenerator.cs
+            projectPath: Assets\Scripts\WorldGen\WorldGenerator.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Sprites
+          label: Sprites
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Sprites\Tiles
+          label: Tiles
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Sprites\Tiles\Leaf.jpg
+          label: Leaf.jpg
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\Leaf.jpg
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Leaf.jpg
+            projectPath: Assets\Sprites\Tiles\Leaf.jpg
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Tiles\Wood.jpg
+          label: Wood.jpg
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\Wood.jpg
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Wood.jpg
+            projectPath: Assets\Sprites\Tiles\Wood.jpg
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: ProjectSettings\GraphicsSettings.asset
+          label: GraphicsSettings.asset
+          level: 1
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: ProjectSettings\GraphicsSettings.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\ProjectSettings\GraphicsSettings.asset
+            projectPath: ProjectSettings\GraphicsSettings.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: ProjectSettings\ProjectSettings.asset
+          label: ProjectSettings.asset
+          level: 1
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: ProjectSettings\ProjectSettings.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\ProjectSettings\ProjectSettings.asset
+            projectPath: ProjectSettings\ProjectSettings.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
       folders:
-        keys: []
-        values: []
+        keys:
+        - Assets
+        - Assets\Scenes
+        - Assets\Scripts
+        - Assets\Scripts\Editor
+        - Assets\Scripts\Items
+        - Assets\Scripts\Tiles
+        - Assets\Scripts\WorldGen
+        - Assets\Sprites
+        - Assets\Sprites\Tiles
+        - Packages
+        - ProjectSettings
+        - UserSettings
+        - UserSettings\Layouts
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes
+          label: Scenes
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts
+          label: Scripts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Editor
+          label: Editor
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Items
+          label: Items
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Tiles
+          label: Tiles
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\WorldGen
+          label: WorldGen
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Sprites
+          label: Sprites
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Sprites\Tiles
+          label: Tiles
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Packages
+          label: Packages
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: ProjectSettings
+          label: ProjectSettings
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings
+          label: UserSettings
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings\Layouts
+          label: Layouts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
       checkedFileNodes:
         keys: []
         values: []
@@ -538,16 +1317,15 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      selectedNode:
-        path: 
-        label: 
+      - path: Assets
+        label: Assets
         level: 0
-        isFolder: 0
+        isFolder: 1
         isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
-        treeIsCheckable: 0
+        treeIsCheckable: 1
         checkState: 0
         isLocked: 0
         gitStatusEntry:
@@ -557,21 +1335,1221 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-    gitStatusEntries: []
-    changedFilesText: No changed files
+      - path: Assets\quickcollidertest.cs
+        label: quickcollidertest.cs
+        level: 1
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\quickcollidertest.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\quickcollidertest.cs
+          projectPath: Assets\quickcollidertest.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\quickcollidertest.cs.meta
+        label: quickcollidertest.cs.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\quickcollidertest.cs.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\quickcollidertest.cs.meta
+          projectPath: Assets\quickcollidertest.cs.meta
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Scenes
+        label: Scenes
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        label: SampleScene.unity
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts
+        label: Scripts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scripts\Editor
+        label: Editor
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scripts\Editor\GridManagerUtils.cs
+        label: GridManagerUtils.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Editor\GridManagerUtils.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Editor\GridManagerUtils.cs
+          projectPath: Assets\Scripts\Editor\GridManagerUtils.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\GameManager.cs
+        label: GameManager.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\GameManager.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\GameManager.cs
+          projectPath: Assets\Scripts\GameManager.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\Items
+        label: Items
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scripts\Items\Pickaxe.asset
+        label: Pickaxe.asset
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Items\Pickaxe.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Items\Pickaxe.asset
+          projectPath: Assets\Scripts\Items\Pickaxe.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\Items\WoodTile.asset
+        label: WoodTile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Items\WoodTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Items\WoodTile.asset
+          projectPath: Assets\Scripts\Items\WoodTile.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\Items\WoodTile.asset.meta
+        label: WoodTile.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Items\WoodTile.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Items\WoodTile.asset.meta
+          projectPath: Assets\Scripts\Items\WoodTile.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\PlayerHand.cs
+        label: PlayerHand.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\PlayerHand.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\PlayerHand.cs
+          projectPath: Assets\Scripts\PlayerHand.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\Tiles
+        label: Tiles
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\DirtTile.asset
+        label: DirtTile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Tiles\DirtTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\DirtTile.asset
+          projectPath: Assets\Scripts\Tiles\DirtTile.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\Tiles\GrassTile.asset
+        label: GrassTile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Tiles\GrassTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\GrassTile.asset
+          projectPath: Assets\Scripts\Tiles\GrassTile.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\Tiles\LeafTile.asset
+        label: LeafTile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Tiles\LeafTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\LeafTile.asset
+          projectPath: Assets\Scripts\Tiles\LeafTile.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\Tiles\LeafTile.asset.meta
+        label: LeafTile.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Tiles\LeafTile.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\LeafTile.asset.meta
+          projectPath: Assets\Scripts\Tiles\LeafTile.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\Tiles\StoneTile.asset
+        label: StoneTile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Tiles\StoneTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\StoneTile.asset
+          projectPath: Assets\Scripts\Tiles\StoneTile.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\Tiles\Tile.cs
+        label: Tile.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Tiles\Tile.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\Tile.cs
+          projectPath: Assets\Scripts\Tiles\Tile.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\Tiles\WoodTile.asset
+        label: WoodTile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Tiles\WoodTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\WoodTile.asset
+          projectPath: Assets\Scripts\Tiles\WoodTile.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\Tiles\WoodTile.asset.meta
+        label: WoodTile.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Tiles\WoodTile.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\WoodTile.asset.meta
+          projectPath: Assets\Scripts\Tiles\WoodTile.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\WorldGen
+        label: WorldGen
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scripts\WorldGen\GridManager.cs
+        label: GridManager.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\WorldGen\GridManager.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\GridManager.cs
+          projectPath: Assets\Scripts\WorldGen\GridManager.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\WorldGen\Tree.cs
+        label: Tree.cs
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\WorldGen\Tree.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Tree.cs
+          projectPath: Assets\Scripts\WorldGen\Tree.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\WorldGen\Tree.cs.meta
+        label: Tree.cs.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\WorldGen\Tree.cs.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Tree.cs.meta
+          projectPath: Assets\Scripts\WorldGen\Tree.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\WorldGen\WorldGenerator.cs
+        label: WorldGenerator.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\WorldGen\WorldGenerator.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\WorldGenerator.cs
+          projectPath: Assets\Scripts\WorldGen\WorldGenerator.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Sprites
+        label: Sprites
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Sprites\Tiles
+        label: Tiles
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Sprites\Tiles\Leaf.jpg
+        label: Leaf.jpg
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Tiles\Leaf.jpg
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Leaf.jpg
+          projectPath: Assets\Sprites\Tiles\Leaf.jpg
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Sprites\Tiles\Leaf.jpg.meta
+        label: Leaf.jpg.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Tiles\Leaf.jpg.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Leaf.jpg.meta
+          projectPath: Assets\Sprites\Tiles\Leaf.jpg.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Sprites\Tiles\Wood.jpg
+        label: Wood.jpg
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Tiles\Wood.jpg
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Wood.jpg
+          projectPath: Assets\Sprites\Tiles\Wood.jpg
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Sprites\Tiles\Wood.jpg.meta
+        label: Wood.jpg.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Tiles\Wood.jpg.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Wood.jpg.meta
+          projectPath: Assets\Sprites\Tiles\Wood.jpg.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Packages
+        label: Packages
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Packages\manifest.json
+        label: manifest.json
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Packages\manifest.json
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Packages\manifest.json
+          projectPath: Packages\manifest.json
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Packages\packages-lock.json
+        label: packages-lock.json
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Packages\packages-lock.json
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Packages\packages-lock.json
+          projectPath: Packages\packages-lock.json
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: ProjectSettings
+        label: ProjectSettings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: ProjectSettings\GraphicsSettings.asset
+        label: GraphicsSettings.asset
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: ProjectSettings\GraphicsSettings.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\ProjectSettings\GraphicsSettings.asset
+          projectPath: ProjectSettings\GraphicsSettings.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: ProjectSettings\ProjectSettings.asset
+        label: ProjectSettings.asset
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: ProjectSettings\ProjectSettings.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\ProjectSettings\ProjectSettings.asset
+          projectPath: ProjectSettings\ProjectSettings.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: UserSettings
+        label: UserSettings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts
+        label: Layouts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        label: default-2022.dwlt
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      selectedNode:
+        path: Assets\Scripts\Items
+        label: Items
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+    gitStatusEntries:
+    - path: Assets\quickcollidertest.cs
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\quickcollidertest.cs
+      projectPath: Assets\quickcollidertest.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\quickcollidertest.cs.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\quickcollidertest.cs.meta
+      projectPath: Assets\quickcollidertest.cs.meta
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Editor\GridManagerUtils.cs
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Editor\GridManagerUtils.cs
+      projectPath: Assets\Scripts\Editor\GridManagerUtils.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\GameManager.cs
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\GameManager.cs
+      projectPath: Assets\Scripts\GameManager.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Items\Pickaxe.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Items\Pickaxe.asset
+      projectPath: Assets\Scripts\Items\Pickaxe.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Items\WoodTile.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Items\WoodTile.asset
+      projectPath: Assets\Scripts\Items\WoodTile.asset
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\Items\WoodTile.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Items\WoodTile.asset.meta
+      projectPath: Assets\Scripts\Items\WoodTile.asset.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\PlayerHand.cs
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\PlayerHand.cs
+      projectPath: Assets\Scripts\PlayerHand.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Tiles\DirtTile.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\DirtTile.asset
+      projectPath: Assets\Scripts\Tiles\DirtTile.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Tiles\GrassTile.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\GrassTile.asset
+      projectPath: Assets\Scripts\Tiles\GrassTile.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Tiles\LeafTile.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\LeafTile.asset
+      projectPath: Assets\Scripts\Tiles\LeafTile.asset
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\Tiles\LeafTile.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\LeafTile.asset.meta
+      projectPath: Assets\Scripts\Tiles\LeafTile.asset.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\Tiles\StoneTile.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\StoneTile.asset
+      projectPath: Assets\Scripts\Tiles\StoneTile.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Tiles\Tile.cs
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\Tile.cs
+      projectPath: Assets\Scripts\Tiles\Tile.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Tiles\WoodTile.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\WoodTile.asset
+      projectPath: Assets\Scripts\Tiles\WoodTile.asset
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\Tiles\WoodTile.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\WoodTile.asset.meta
+      projectPath: Assets\Scripts\Tiles\WoodTile.asset.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\WorldGen\GridManager.cs
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\GridManager.cs
+      projectPath: Assets\Scripts\WorldGen\GridManager.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\WorldGen\Tree.cs
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Tree.cs
+      projectPath: Assets\Scripts\WorldGen\Tree.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\WorldGen\Tree.cs.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Tree.cs.meta
+      projectPath: Assets\Scripts\WorldGen\Tree.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\WorldGen\WorldGenerator.cs
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\WorldGenerator.cs
+      projectPath: Assets\Scripts\WorldGen\WorldGenerator.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Sprites\Tiles\Leaf.jpg
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Leaf.jpg
+      projectPath: Assets\Sprites\Tiles\Leaf.jpg
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Sprites\Tiles\Leaf.jpg.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Leaf.jpg.meta
+      projectPath: Assets\Sprites\Tiles\Leaf.jpg.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Sprites\Tiles\Wood.jpg
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Wood.jpg
+      projectPath: Assets\Sprites\Tiles\Wood.jpg
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Sprites\Tiles\Wood.jpg.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Wood.jpg.meta
+      projectPath: Assets\Sprites\Tiles\Wood.jpg.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Packages\manifest.json
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Packages\manifest.json
+      projectPath: Packages\manifest.json
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Packages\packages-lock.json
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Packages\packages-lock.json
+      projectPath: Packages\packages-lock.json
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: ProjectSettings\GraphicsSettings.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\ProjectSettings\GraphicsSettings.asset
+      projectPath: ProjectSettings\GraphicsSettings.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: ProjectSettings\ProjectSettings.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\ProjectSettings\ProjectSettings.asset
+      projectPath: ProjectSettings\ProjectSettings.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: UserSettings\Layouts\default-2022.dwlt
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\UserSettings\Layouts\default-2022.dwlt
+      projectPath: UserSettings\Layouts\default-2022.dwlt
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    changedFilesText: 30 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-07-23T20:01:04.429+02:00
+      updatedTimeString: 2023-07-25T20:19:51.955+02:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-07-23T20:20:14.484+02:00
+      updatedTimeString: 2023-07-25T20:21:25.399+02:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2023-07-23T20:19:50.260+02:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: 50432cda7a925e5a8a0c3f83eccc5906cfebb47b
+      mergeA: 
+      mergeB: 
+      authorName: spectralpixel
+      authorEmail: encrypteddvjjrxv@gmail.com
+      commitEmail: encrypteddvjjrxv@gmail.com
+      commitName: spectralpixel
+      summary: Big Optimization + Bug Fixes
+      description: '- Fixed trying to step up a block when you can''t because you
+        would hit your head
+
+        - Greatly optimized tiles by only adding colliders
+        to tiles bordering empty ones'
+      timeString: 2023-07-23T23:30:29.000+02:00
+      commitTimeString: 2023-07-23T23:30:29.000+02:00
+      changes:
+      - path: Assets\Prefabs\Tiles\Tile.prefab
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Prefabs\Tiles\Tile.prefab
+        projectPath: Assets\Prefabs\Tiles\Tile.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Editor\GridManagerUtils.cs
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Editor\GridManagerUtils.cs
+        projectPath: Assets\Scripts\Editor\GridManagerUtils.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\GameManager.cs
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\GameManager.cs
+        projectPath: Assets\Scripts\GameManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\GameUtilities.cs
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\GameUtilities.cs
+        projectPath: Assets\Scripts\GameUtilities.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\GameUtilities.cs.meta
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\GameUtilities.cs.meta
+        projectPath: Assets\Scripts\GameUtilities.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Items\Item.cs
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Items\Item.cs
+        projectPath: Assets\Scripts\Items\Item.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Items\Pickaxe.asset
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Items\Pickaxe.asset
+        projectPath: Assets\Scripts\Items\Pickaxe.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\PlayerHand.cs
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\PlayerHand.cs
+        projectPath: Assets\Scripts\PlayerHand.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\PlayerInventory.cs
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\PlayerInventory.cs
+        projectPath: Assets\Scripts\PlayerInventory.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\PlayerMovement.cs
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\PlayerMovement.cs
+        projectPath: Assets\Scripts\PlayerMovement.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\DirtTile.asset
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\DirtTile.asset
+        projectPath: Assets\Scripts\Tiles\DirtTile.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\GrassTile.asset
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\GrassTile.asset
+        projectPath: Assets\Scripts\Tiles\GrassTile.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\StoneTile.asset
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\StoneTile.asset
+        projectPath: Assets\Scripts\Tiles\StoneTile.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tiles\Tile.cs
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\Tile.cs
+        projectPath: Assets\Scripts\Tiles\Tile.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\WorldGen\GridManager.cs
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\GridManager.cs
+        projectPath: Assets\Scripts\WorldGen\GridManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\WorldGen\WorldGenerator.cs
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\WorldGenerator.cs
+        projectPath: Assets\Scripts\WorldGen\WorldGenerator.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\TerraRun.inputactions
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\TerraRun.inputactions
+        projectPath: Assets\TerraRun.inputactions
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\quickcollidertest.cs
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\quickcollidertest.cs
+        projectPath: Assets\quickcollidertest.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\quickcollidertest.cs.meta
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\quickcollidertest.cs.meta
+        projectPath: Assets\quickcollidertest.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2021.dwlt
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\UserSettings\Layouts\default-2021.dwlt
+        projectPath: UserSettings\Layouts\default-2021.dwlt
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Search.index
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\UserSettings\Search.index
+        projectPath: UserSettings\Search.index
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Search.settings
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\UserSettings\Search.settings
+        projectPath: UserSettings\Search.settings
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: b70789bdc56336c226e2c12ecb98db554dde8315
+      mergeA: 
+      mergeB: 
+      authorName: spectralpixel
+      authorEmail: encrypteddvjjrxv@gmail.com
+      commitEmail: encrypteddvjjrxv@gmail.com
+      commitName: spectralpixel
+      summary: Fixed generation bug
+      description: Fixed a bug that caused error when testing generation in editor,
+        and added another couple small features making tweaking the world gen easier
+      timeString: 2023-07-19T20:33:18.000+02:00
+      commitTimeString: 2023-07-19T20:33:18.000+02:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\WorldGen\GridManager.cs
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\GridManager.cs
+        projectPath: Assets\Scripts\WorldGen\GridManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\WorldGen\Hills.asset
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Hills.asset
+        projectPath: Assets\Scripts\WorldGen\Hills.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\WorldGen\Landscape.asset
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Landscape.asset
+        projectPath: Assets\Scripts\WorldGen\Landscape.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\WorldGen\Mountains.asset
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Mountains.asset
+        projectPath: Assets\Scripts\WorldGen\Mountains.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\WorldGen\NoiseGenerator.cs
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\NoiseGenerator.cs
+        projectPath: Assets\Scripts\WorldGen\NoiseGenerator.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\WorldGen\Octave1.asset
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Octave1.asset
+        projectPath: Assets\Scripts\WorldGen\Octave1.asset
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scripts\WorldGen\Octave1.asset.meta
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Octave1.asset.meta
+        projectPath: Assets\Scripts\WorldGen\Octave1.asset.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scripts\WorldGen\Octave2.asset
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Octave2.asset
+        projectPath: Assets\Scripts\WorldGen\Octave2.asset
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scripts\WorldGen\Octave2.asset.meta
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Octave2.asset.meta
+        projectPath: Assets\Scripts\WorldGen\Octave2.asset.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scripts\WorldGen\OctaveSetting.cs
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\OctaveSetting.cs
+        projectPath: Assets\Scripts\WorldGen\OctaveSetting.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\coolk\Documents\Projects\TerraRun\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
     - commitID: 68500b81f07bb34afafbd6a53de728a7a948499b
       mergeA: 
       mergeB: 
@@ -1972,14 +3950,259 @@ MonoBehaviour:
         workTreeStatus: 0
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2023-07-25T20:26:27.006+02:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2023-07-25T20:26:26.356+02:00
       cacheType: 5
     historyControl:
-      scroll: {x: 0, y: 0}
+      scroll: {x: 0, y: 40}
       entries:
+      - commitID: 50432cda7a925e5a8a0c3f83eccc5906cfebb47b
+        mergeA: 
+        mergeB: 
+        authorName: spectralpixel
+        authorEmail: encrypteddvjjrxv@gmail.com
+        commitEmail: encrypteddvjjrxv@gmail.com
+        commitName: spectralpixel
+        summary: Big Optimization + Bug Fixes
+        description: '- Fixed trying to step up a block when you can''t because you
+          would hit your head
+
+          - Greatly optimized tiles by only adding
+          colliders to tiles bordering empty ones'
+        timeString: 2023-07-23T23:30:29.000+02:00
+        commitTimeString: 2023-07-23T23:30:29.000+02:00
+        changes:
+        - path: Assets\Prefabs\Tiles\Tile.prefab
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Prefabs\Tiles\Tile.prefab
+          projectPath: Assets\Prefabs\Tiles\Tile.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Editor\GridManagerUtils.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Editor\GridManagerUtils.cs
+          projectPath: Assets\Scripts\Editor\GridManagerUtils.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\GameManager.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\GameManager.cs
+          projectPath: Assets\Scripts\GameManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\GameUtilities.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\GameUtilities.cs
+          projectPath: Assets\Scripts\GameUtilities.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\GameUtilities.cs.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\GameUtilities.cs.meta
+          projectPath: Assets\Scripts\GameUtilities.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Items\Item.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Items\Item.cs
+          projectPath: Assets\Scripts\Items\Item.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Items\Pickaxe.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Items\Pickaxe.asset
+          projectPath: Assets\Scripts\Items\Pickaxe.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\PlayerHand.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\PlayerHand.cs
+          projectPath: Assets\Scripts\PlayerHand.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\PlayerInventory.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\PlayerInventory.cs
+          projectPath: Assets\Scripts\PlayerInventory.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\PlayerMovement.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\PlayerMovement.cs
+          projectPath: Assets\Scripts\PlayerMovement.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\DirtTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\DirtTile.asset
+          projectPath: Assets\Scripts\Tiles\DirtTile.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\GrassTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\GrassTile.asset
+          projectPath: Assets\Scripts\Tiles\GrassTile.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\StoneTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\StoneTile.asset
+          projectPath: Assets\Scripts\Tiles\StoneTile.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tiles\Tile.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Tiles\Tile.cs
+          projectPath: Assets\Scripts\Tiles\Tile.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\WorldGen\GridManager.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\GridManager.cs
+          projectPath: Assets\Scripts\WorldGen\GridManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\WorldGen\WorldGenerator.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\WorldGenerator.cs
+          projectPath: Assets\Scripts\WorldGen\WorldGenerator.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\TerraRun.inputactions
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\TerraRun.inputactions
+          projectPath: Assets\TerraRun.inputactions
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\quickcollidertest.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\quickcollidertest.cs
+          projectPath: Assets\quickcollidertest.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\quickcollidertest.cs.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\quickcollidertest.cs.meta
+          projectPath: Assets\quickcollidertest.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2021.dwlt
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\UserSettings\Layouts\default-2021.dwlt
+          projectPath: UserSettings\Layouts\default-2021.dwlt
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Search.index
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\UserSettings\Search.index
+          projectPath: UserSettings\Search.index
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Search.settings
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\UserSettings\Search.settings
+          projectPath: UserSettings\Search.settings
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: b70789bdc56336c226e2c12ecb98db554dde8315
+        mergeA: 
+        mergeB: 
+        authorName: spectralpixel
+        authorEmail: encrypteddvjjrxv@gmail.com
+        commitEmail: encrypteddvjjrxv@gmail.com
+        commitName: spectralpixel
+        summary: Fixed generation bug
+        description: Fixed a bug that caused error when testing generation in editor,
+          and added another couple small features making tweaking the world gen easier
+        timeString: 2023-07-19T20:33:18.000+02:00
+        commitTimeString: 2023-07-19T20:33:18.000+02:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\WorldGen\GridManager.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\GridManager.cs
+          projectPath: Assets\Scripts\WorldGen\GridManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\WorldGen\Hills.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Hills.asset
+          projectPath: Assets\Scripts\WorldGen\Hills.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\WorldGen\Landscape.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Landscape.asset
+          projectPath: Assets\Scripts\WorldGen\Landscape.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\WorldGen\Mountains.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Mountains.asset
+          projectPath: Assets\Scripts\WorldGen\Mountains.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\WorldGen\NoiseGenerator.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\NoiseGenerator.cs
+          projectPath: Assets\Scripts\WorldGen\NoiseGenerator.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\WorldGen\Octave1.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Octave1.asset
+          projectPath: Assets\Scripts\WorldGen\Octave1.asset
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scripts\WorldGen\Octave1.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Octave1.asset.meta
+          projectPath: Assets\Scripts\WorldGen\Octave1.asset.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scripts\WorldGen\Octave2.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Octave2.asset
+          projectPath: Assets\Scripts\WorldGen\Octave2.asset
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scripts\WorldGen\Octave2.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\Octave2.asset.meta
+          projectPath: Assets\Scripts\WorldGen\Octave2.asset.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scripts\WorldGen\OctaveSetting.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\OctaveSetting.cs
+          projectPath: Assets\Scripts\WorldGen\OctaveSetting.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
       - commitID: 68500b81f07bb34afafbd6a53de728a7a948499b
         mergeA: 
         mergeB: 
@@ -3380,7 +5603,7 @@ MonoBehaviour:
           indexStatus: 4
           workTreeStatus: 0
       statusAhead: 0
-      selectedIndex: 1
+      selectedIndex: 3
     selectedEntry:
       commitID: 583bc8a2fab992d5be7e0cc764ab274edb9040d9
       mergeA: 
@@ -3807,23 +6030,23 @@ MonoBehaviour:
       errorMessage: 
       resetToBundled: 0
       resetToSystem: 0
-      changingManually: 1
-    hasRemote: 1
+      changingManually: 0
+    hasRemote: 0
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2023-07-19T20:14:18.433+02:00
+      updatedTimeString: 2023-07-27T22:41:26.946+02:00
       cacheType: 1
-    newRepositoryRemoteUrl: https://github.com/SpectralPixel/TerraRun.git
+    newRepositoryRemoteUrl: 
     repositoryRemoteName: origin
-    repositoryRemoteUrl: https://github.com/SpectralPixel/TerraRun.git
+    repositoryRemoteUrl: 
     scroll: {x: 0, y: 0}
     userSettingsView:
-      gitName: spectralpixel
-      gitEmail: encrypteddvjjrxv@gmail.com
-      newGitName: spectralpixel
-      newGitEmail: encrypteddvjjrxv@gmail.com
+      gitName: SpectralPixel
+      gitEmail: 113791599+SpectralPixel@users.noreply.github.com
+      newGitName: SpectralPixel
+      newGitEmail: 113791599+SpectralPixel@users.noreply.github.com
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 2023-07-19T20:26:37.671+02:00
+        updatedTimeString: 2023-07-27T23:00:50.287+02:00
         cacheType: 8
     webTimeout: 100000
     gitTimeout: 5000
@@ -3913,7 +6136,7 @@ MonoBehaviour:
   currentRemoteUrl: https://github.com/SpectralPixel/TerraRun.git
   statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 0
+  hasItemsToCommit: 1
   isTrackingRemoteBranch: 0
   currentBranchContent:
     m_Text: master
@@ -3924,13 +6147,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-07-19T20:14:18.433+02:00
+    updatedTimeString: 2023-07-26T23:23:01.527+02:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-07-19T20:33:19.739+02:00
+    updatedTimeString: 2023-07-26T23:23:03.443+02:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-07-19T20:43:02.290+02:00
+    updatedTimeString: 2023-07-26T23:23:02.700+02:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -3948,7 +6171,7 @@ MonoBehaviour:
     m_Text: Fetch
     m_Image: {fileID: 0}
     m_Tooltip: 
-  repositoryProgressValue: 0
+  repositoryProgressValue: 1
   repositoryProgressMessage: 
   appManagerProgressValue: 1
   appManagerProgressMessage: 
@@ -3974,9 +6197,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 512
-    width: 743.8
-    height: 263.4
+    y: 511.2
+    width: 741.4
+    height: 264.19998
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -4008,9 +6231,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 512
-    width: 742.2
-    height: 263.4
+    y: 511.2
+    width: 741.4
+    height: 264.19998
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -4032,7 +6255,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Tiles
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -4040,16 +6263,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Tiles
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\coolk\Documents\Projects\TerraRun
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 64.600006}
-    m_SelectedIDs: c8140100
-    m_LastClickedID: 70856
-    m_ExpandedIDs: 000000006012010062120100641201002214010000ca9a3b
+    scrollPos: {x: 0, y: 63.80002}
+    m_SelectedIDs: d65e0100
+    m_LastClickedID: 89814
+    m_ExpandedIDs: 00000000d25e0100d45e0100d65e010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -4077,7 +6300,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000601201006212010064120100
+    m_ExpandedIDs: 00000000d25e0100d45e0100d65e0100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -4102,8 +6325,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: a23b0100
+    m_LastClickedInstanceID: 80802
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300006ca0000000000000
     m_RenameOverlay:
@@ -4132,7 +6355,7 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 207
+  m_DirectoriesAreaWidth: 172
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -4153,9 +6376,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1172.8
+    x: 1172
     y: 73.6
-    width: 362.19995
+    width: 363
     height: 701.8
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -4202,8 +6425,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73.6
-    width: 289.4
-    height: 417.4
+    width: 193.4
+    height: 416.6
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -4217,9 +6440,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 02c10000
-      m_LastClickedID: 49410
-      m_ExpandedIDs: 24643fff6a7b41ff96fa42ff4052d0ff9cddd1ff5a47d5ff208bd6ff6475daffe666dbffaa7efcff60bbfdff4834feff0efbffff02c10000
+      m_SelectedIDs: 9cc40000
+      m_LastClickedID: 50332
+      m_ExpandedIDs: 8406f6fff2faffff9ae60000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -4263,10 +6486,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 290.4
+    x: 194.40001
     y: 73.6
-    width: 880.4
-    height: 417.4
+    width: 975.6
+    height: 416.6
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -4333,7 +6556,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 24.8}
+      snapOffset: {x: 0, y: 15.199997}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -4359,9 +6582,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 67.5, y: 86}
+      snapOffset: {x: 67.5, y: -78.79999}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 2
       id: Orientation
       index: 0
       layout: 4
@@ -4623,6 +6846,19 @@ MonoBehaviour:
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: UnityEditor.SceneViewCameraOverlay
+      index: 12
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Cinemachine Tool Settings
       index: 11
       layout: 4
       size: {x: 0, y: 0}
@@ -4638,9 +6874,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 59.276016, y: 113.77727, z: -8.3394575}
+    m_Target: {x: 44.22655, y: 84.25961, z: -0.59056526}
     speed: 2
-    m_Value: {x: 59.276016, y: 113.77727, z: -8.3394575}
+    m_Value: {x: 44.22655, y: 84.25961, z: -0.59056526}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -4690,9 +6926,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.0266337
+    m_Target: 34.726265
     speed: 2
-    m_Value: 2.0266337
+    m_Value: 34.726265
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -4737,10 +6973,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 743.2
-    y: 512
-    width: 427.60004
-    height: 263.4
+    x: 742.4
+    y: 511.2
+    width: 427.59998
+    height: 264.19998
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -4793,10 +7029,10 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 427.60004
-      height: 242.4
-    m_Scale: {x: 0.27838543, y: 0.27838543}
-    m_Translation: {x: 213.80002, y: 121.200005}
+      width: 427.59998
+      height: 243.19998
+    m_Scale: {x: 0.2783854, y: 0.2783854}
+    m_Translation: {x: 213.79999, y: 121.59999}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -4804,12 +7040,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -768
-      y: -435.3676
+      y: -436.80447
       width: 1536
-      height: 870.7352
+      height: 873.60895
     m_MinimalGUI: 1
-  m_defaultScale: 0.27838543
-  m_LastWindowPixelSize: {x: 534.50006, y: 329.25}
+  m_defaultScale: 0.2783854
+  m_LastWindowPixelSize: {x: 534.5, y: 330.24997}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -4836,9 +7072,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 512
-    width: 742.2
-    height: 263.4
+    y: 511.2
+    width: 741.4
+    height: 264.19998
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0

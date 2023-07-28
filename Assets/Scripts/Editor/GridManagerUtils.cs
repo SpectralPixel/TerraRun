@@ -6,7 +6,7 @@ public class GridManagerUtils : Editor
 {
 
     public bool AutoUpdate = true;
-    private int oldSeed, oldGridWidth, oldGridHeight, oldFloorHeight;
+    private int oldSeed, oldGridWidth, oldGridHeight, oldFloorHeight, oldFloorSmoothing;
 
     public override void OnInspectorGUI()
     {
@@ -16,14 +16,19 @@ public class GridManagerUtils : Editor
 
         AutoUpdate = GUILayout.Toggle(AutoUpdate, "Auto Update World");
 
-        if (GUILayout.Button("Generate World")) generator.GenerateWorld();
+        if (GUILayout.Button("Generate World"))
+        {
+            GameUtilities.SetupVariables();
+            generator.GenerateWorld();
+        }
 
         if (AutoUpdate)
         {
             if (oldSeed != generator.WorldSeed ||
                 oldGridWidth != generator.MapWidth ||
                 oldGridHeight != generator.MapHeight ||
-                oldFloorHeight != generator.FloorHeight)
+                oldFloorHeight != generator.FloorHeight ||
+                oldFloorSmoothing != generator.FloorSmoothing)
             {
                 GameUtilities.SetupVariables();
                 generator.GenerateWorld();
@@ -34,5 +39,6 @@ public class GridManagerUtils : Editor
         oldGridWidth = generator.MapWidth;
         oldGridHeight = generator.MapHeight;
         oldFloorHeight = generator.FloorHeight;
+        oldFloorSmoothing = generator.FloorSmoothing;
     }
 }

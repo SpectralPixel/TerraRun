@@ -106,18 +106,36 @@ public class PlayerHand : MonoBehaviour
             case ItemType.Weapon:
                 break;
             case ItemType.Tool:
-                GridManager.WorldTiles.TryGetValue(selectedTile, out Tile tileToAdd);
-                if (tileToAdd != null && timeClicked * curItem.Power > tileToAdd.Hardness && tileToAdd.Type != TileType.Gas)
+                GridManager.WorldTiles.TryGetValue(selectedTile, out Tile _tileToAdd);
+                if (_tileToAdd != null && timeClicked * curItem.Power > _tileToAdd.Hardness)
                 {
-                    inventory.AddItems(GameUtilities.TileToItem(tileToAdd), 1);
-                    GridManager.UpdateGrid(selectedTile, GameUtilities.AllTiles["AirTile"]);
+                    if (_tileToAdd.Type == TileType.Solid)
+                    {
+                        inventory.AddItems(GameUtilities.TileToItem(_tileToAdd), 1);
+                        GridManager.UpdateGrid(selectedTile, GameUtilities.AllTiles["AirTile"]);
+                    }
+                    else if (_tileToAdd.Type == TileType.Tree)
+                    {
+                        GridManager.Trees.TryGetValue(selectedTile, out Tree _tree);
+                        for (int i = 0; i < 8; i++)
+                        {
+                            GridManager.Trees.TryGetValue(new Vector2Int(selectedTile.x, selectedTile.y - i), out _tree);
+                            if (_tree != null) break;
+                        }
+                        if (_tree != null && timeClicked * curItem.Power > _tileToAdd.Hardness * _tree.TreeHeight)
+                        {
+                            Debug.Log((_tileToAdd.Hardness * _tree.TreeHeight).ToString());
+                            inventory.AddItems(GameUtilities.TileToItem(_tileToAdd), _tree.TreeHeight);
+                            _tree.DestroyTree();
+                        }
+                    }
                 }
                 break;
             case ItemType.Consumable:
                 break;
             case ItemType.Tile:
-                GridManager.WorldTiles.TryGetValue(selectedTile, out Tile tile);
-                if ((tile == null || tile.Type == TileType.Gas) && inventory.GetCurrentStack().Count > 0)
+                GridManager.WorldTiles.TryGetValue(selectedTile, out Tile _tile);
+                if ((_tile == null || _tile.Type == TileType.Gas) && inventory.GetCurrentStack().Count > 0)
                 {
                     inventory.RemoveItems(inventory.GetCurrentStack().Item, 1);
                     GridManager.UpdateGrid(selectedTile, GameUtilities.ItemToTile(inventory.GetCurrentStack().Item));

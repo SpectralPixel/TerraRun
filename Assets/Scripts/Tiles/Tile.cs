@@ -9,7 +9,7 @@ public class Tile : ScriptableObject
     public string TileID = "Tile";
     [HideIfEnumValue("Type", HideIf.Equal, (int)TileType.Gas)] public Sprite Sprite;
 
-    [HideIfEnumValue("Type", HideIf.NotEqual, (int)TileType.Solid)] public float Hardness;
+    [HideIfEnumValue("Type", HideIf.NotEqual, (int)TileType.Solid, (int)TileType.Tree)] public float Hardness;
 
     [HideInInspector] public GameObject gameObject;
 
@@ -19,5 +19,7 @@ public enum TileType
 {
     Solid,
     Liquid,
-    Gas
+    Gas,
+    Tree,
+    Background
 }
