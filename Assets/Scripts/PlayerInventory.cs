@@ -25,7 +25,10 @@ public class PlayerInventory : MonoBehaviour
 
     private void Start()
     {
-        // add starting inventory???
+        Inventory = new List<ItemStack>()
+        {
+            new ItemStack(GameUtilities.AllItems["Pickaxe"], 1)
+        };
 
         UpdateInventoryUI();
     }
@@ -37,30 +40,58 @@ public class PlayerInventory : MonoBehaviour
 
     public void AddItems(Item newItem, int amount)
     {
-        foreach (ItemStack stack in Inventory)
+        ItemStack _stack = null;
+
+        foreach (ItemStack _curStack in Inventory)
         {
-            if (stack.Item.ItemID == newItem.ItemID)
+            if (_curStack.Item.ItemID == newItem.ItemID)
             {
-                stack.Count += amount;
-                UpdateInventoryUI();
-                return;
+                _stack = _curStack;
+                break;
             }
         }
 
-        Inventory.Add(new ItemStack(newItem, amount));
+        if (_stack == null)
+        {
+            Inventory.Add(new ItemStack(newItem, amount));
+            return;
+        }
+
+        _stack.Count += amount;
+        UpdateInventoryUI();
     }
 
     public void RemoveItems(Item newItem, int amount)
     {
-        foreach (ItemStack stack in Inventory)
+        ItemStack _stack = null;
+
+        int itemIndex = 0;
+        foreach (ItemStack _curStack in Inventory)
         {
-            if (stack.Item.ItemID == newItem.ItemID)
+            if (_curStack.Item.ItemID == newItem.ItemID)
             {
-                stack.Count -= amount;
-                if (stack.Count < 0) stack.Count = 0;
-                UpdateInventoryUI();
-                return;
+                _stack = _curStack;
+                break;
             }
+
+            itemIndex++;
+        }
+
+        if (_stack != null)
+        {
+            _stack.Count -= amount;
+
+            if (_stack.Count <= 0)
+            {
+                ItemType _previousStackType = Inventory[currentInventorySlot].Item.Type;
+
+                Inventory.RemoveAt(itemIndex);
+                if (currentInventorySlot >= itemIndex) CycleSlots(-1);
+
+                CycleToNextItemOfType(_previousStackType);
+            }
+
+            UpdateInventoryUI();
         }
     }
 
@@ -73,24 +104,29 @@ public class PlayerInventory : MonoBehaviour
             {
                 float cycle = context.ReadValue<float>();
 
-                if (cycle > 0f) // if switching to the next item
-                {
-                    do
-                    {
-                        currentInventorySlot = (currentInventorySlot + 1) % Inventory.Count;
-                    } while (Inventory[currentInventorySlot].Count <= 0);
-                }
-                else
-                {
-                    do
-                    {
-                        currentInventorySlot--;
-                        if (currentInventorySlot < 0) currentInventorySlot = Inventory.Count - 1;
-                    } while (Inventory[currentInventorySlot].Count <= 0);
-                }
+                CycleSlots((int)Mathf.Sign(cycle));
 
                 UpdateInventoryUI();
             }
+        }
+    }
+
+    private void CycleSlots(int _distance)
+    {
+        do
+        {
+            currentInventorySlot = (currentInventorySlot + _distance) % Inventory.Count;
+            if (currentInventorySlot < 0) currentInventorySlot = Inventory.Count - 1;
+        } while (Inventory[currentInventorySlot].Count <= 0);
+    }
+
+    private void CycleToNextItemOfType(ItemType _type)
+    {
+        for (int i = 0; i < Inventory.Count; i++)
+        {
+            CycleSlots(1);
+
+            if (Inventory[currentInventorySlot].Item.Type == _type) break;
         }
     }
 
@@ -103,7 +139,6 @@ public class PlayerInventory : MonoBehaviour
 }
 
 
-[System.Serializable]
 public class ItemStack
 {
 

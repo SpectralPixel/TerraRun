@@ -143,8 +143,7 @@ public class GridManager : MonoBehaviour
         {
             ActiveTiles.TryGetValue(_pos, out GameObject _oldTile);
             if (_oldTile == null) _oldTile = GameObject.Find($"/Grid/Tile {_pos.x} {_pos.y}");
-            if (_oldTile != null) Destroy(_oldTile); // destroy the old copy
-            else Debug.Log($"Tile at {_pos} not found...");
+            if (_oldTile != null) Destroy(_oldTile); // destroy the old copys
         }
 
         WorldTiles[_pos] = _newTile;

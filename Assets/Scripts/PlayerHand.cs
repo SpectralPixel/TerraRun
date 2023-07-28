@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -51,7 +52,7 @@ public class PlayerHand : MonoBehaviour
             selectedTile = new Vector2Int(Mathf.FloorToInt(mouseCoords.x), Mathf.FloorToInt(mouseCoords.y));
 
             GridManager.WorldTiles.TryGetValue(selectedTile, out Tile tile);
-            if ((tile == null || tile.Type == TileType.Gas) && inventory.GetCurrentStack().Item.Type == ItemType.Tool)
+            if ((tile == null || tile.Type == TileType.Gas || tile.Type == TileType.Background) && inventory.GetCurrentStack().Item.Type == ItemType.Tool)
             {
                 /*
                  * Basic implementation of smart cursor.
@@ -63,28 +64,58 @@ public class PlayerHand : MonoBehaviour
                  * The tile furthest to the player on the x-axis has the lowest priority to aid when tunnelling sideways.
                  */
 
+                int directionFromPlayer = (int)Mathf.Sign(transform.position.x - mouseCoords.x);
+
                 List<Vector2Int> directionsToCheck = new List<Vector2Int>()
                 {
+                    new Vector2Int(directionFromPlayer, 0),
                     Vector2Int.down,
                     Vector2Int.up,
-                    new Vector2Int(1, 1),
-                    new Vector2Int(-1, 1),
-                    new Vector2Int(-1, -1),
-                    new Vector2Int(1, -1),
+                    new Vector2Int(-directionFromPlayer, 0),
                 };
 
-                int directionFromPlayer = (int)Mathf.Sign(transform.position.x - mouseCoords.x);
-                directionsToCheck.Insert(0, new Vector2Int(directionFromPlayer, 0));
-                directionsToCheck.Insert(3, new Vector2Int(-directionFromPlayer, 0));
-
+                bool _tileFound = false;
                 foreach (Vector2Int direction in directionsToCheck)
                 {
                     GridManager.WorldTiles.TryGetValue(selectedTile + direction, out tile);
-                    if (tile != null && tile.Type != TileType.Gas)
+                    if (tile != null && tile.Type != TileType.Gas && tile.Type != TileType.Background)
                     {
                         selectedTile += direction;
+                        _tileFound = true;
                         break;
                     }
+                }
+
+                if (!_tileFound)
+                {
+                    float _shortestDistance = Mathf.Infinity;
+                    Vector2Int _closestTile = selectedTile;
+                    for (int i = 0; i < 5 && _shortestDistance == Mathf.Infinity; i++) // search within a 25 tile radius (if no tile has been found)
+                    {
+                        for (int x = -5 * i; x < 5 * i; x++)
+                        {
+                            for (int y = -5 * i; y < 5 * i; y++)
+                            {
+                                if (i > 0 && x >= -5 * i - 1 && x <= 5 * i - 1 && y >= -5 * i - 1 && y <= 5 * i - 1) // if we should've already have checked this tile
+                                {
+                                    Vector2Int _pos = selectedTile + new Vector2Int(x, y);
+
+                                    GridManager.WorldTiles.TryGetValue(_pos, out Tile _tile);
+                                    if (_tile != null && _tile.Type != TileType.Gas && _tile.Type != TileType.Background)
+                                    {
+                                        float distance = Mathf.Sqrt(x * x + y * y);
+                                        if (distance < _shortestDistance)
+                                        {
+                                            _shortestDistance = distance;
+                                            _closestTile = _pos;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    selectedTile = _closestTile;
                 }
             }
 
@@ -124,7 +155,6 @@ public class PlayerHand : MonoBehaviour
                         }
                         if (_tree != null && timeClicked * curItem.Power > _tileToAdd.Hardness * _tree.TreeHeight)
                         {
-                            Debug.Log((_tileToAdd.Hardness * _tree.TreeHeight).ToString());
                             inventory.AddItems(GameUtilities.TileToItem(_tileToAdd), _tree.TreeHeight);
                             _tree.DestroyTree();
                         }
@@ -137,8 +167,8 @@ public class PlayerHand : MonoBehaviour
                 GridManager.WorldTiles.TryGetValue(selectedTile, out Tile _tile);
                 if ((_tile == null || _tile.Type == TileType.Gas) && inventory.GetCurrentStack().Count > 0)
                 {
-                    inventory.RemoveItems(inventory.GetCurrentStack().Item, 1);
                     GridManager.UpdateGrid(selectedTile, GameUtilities.ItemToTile(inventory.GetCurrentStack().Item));
+                    inventory.RemoveItems(inventory.GetCurrentStack().Item, 1);
                 }
                 break;
         }
