@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -24,7 +23,10 @@ public class PlayerHand : MonoBehaviour
 
         selectionObj = Instantiate(selectionObj);
         selectionObj.name = "Selection";
-        Destroy(selectionObj.GetComponent<BoxCollider2D>());
+        selectionObj.tag = "Tile Selection";
+        selectionObj.layer = 0;
+        BoxCollider2D boxCollider2D = selectionObj.AddComponent<BoxCollider2D>();
+        boxCollider2D.isTrigger = true;
         SpriteRenderer selectionRenderer = selectionObj.GetComponent<SpriteRenderer>();
         selectionRenderer.color = new Color(1f, 1f, 1f, 0.4f);
         selectionRenderer.sortingOrder = 1;
@@ -186,5 +188,10 @@ public class PlayerHand : MonoBehaviour
         {
             smartCursor = !smartCursor;
         }
+    }
+
+    public bool GetMouseDown()
+    {
+        return mouseDown;
     }
 }

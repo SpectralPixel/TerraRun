@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private float timeSinceJump;
     private bool jumpPressed = false;
     private bool jumpReleased = false;
+    private bool placingBlocksInPlayer = false;
 
     private void Start()
     {
@@ -86,7 +87,24 @@ public class PlayerMovement : MonoBehaviour
             // there is a tile next to you that you should be stepping up (size only set to 0.9f to avoid trying to step up when walking normally)
             Physics2D.OverlapBox(new Vector3(transform.position.x, (transform.position.y - transform.localScale.y / 2f) + 0.5f, transform.position.z), new Vector2(transform.localScale.x + stepDistance, 0.9f), 0f, groundLayer) &&
             // and there aren't any tiles solid tiles up to head height (so the player doesn't try to step up a two block wall or into a gap they won't fit into)
-            !Physics2D.OverlapBox(new Vector3(transform.position.x, ((transform.position.y + transform.localScale.y / 2f + 0.7f) + ((transform.position.y - transform.localScale.y / 2f) + 1.1f)) / 2f, transform.position.z), new Vector2(transform.localScale.x + stepDistance, (transform.position.y + transform.localScale.y / 2 + 0.7f) - ((transform.position.y - transform.localScale.y / 2) + 1.1f)), 0f, groundLayer);
+            !Physics2D.OverlapBox(new Vector3(transform.position.x, ((transform.position.y + transform.localScale.y / 2f + 0.7f) + ((transform.position.y - transform.localScale.y / 2f) + 1.1f)) / 2f, transform.position.z), new Vector2(transform.localScale.x + stepDistance, (transform.position.y + transform.localScale.y / 2 + 0.7f) - ((transform.position.y - transform.localScale.y / 2) + 1.1f)), 0f, groundLayer) &&
+            !placingBlocksInPlayer;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Tile Selection" && GetComponent<PlayerHand>().GetMouseDown())
+        {
+            placingBlocksInPlayer = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Tile Selection")
+        {
+            placingBlocksInPlayer = false;
+        }
     }
 
     private void OnDrawGizmos()
