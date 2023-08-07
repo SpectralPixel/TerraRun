@@ -6,8 +6,6 @@ using UnityEngine.InputSystem;
 public class GridManager : MonoBehaviour
 {
 
-    private const string gridName = "Grid";
-
     public static Dictionary<Vector2Int, Tile> WorldTiles;
     public static Dictionary<Vector2Int, GameObject> ActiveTiles;
     public static Dictionary<int, int> RawFloorHeights;
@@ -18,7 +16,9 @@ public class GridManager : MonoBehaviour
     public static PhysicsMaterial2D TilePhysicsMaterial;
     public static GameObject AirTile;
 
-    public static (int, float[]) InitializeWorld(int seed, List<Tile> allTiles, List<OctaveSetting> octaves, int _floorSmoothing, GameObject tilePrefab, PhysicsMaterial2D _tilePhysicsMaterial, bool generateWorld = false, int mapWidth = 0, int mapHeight = 0, int worldFloorHeight = 0)
+    private const string GridName = "Grid"; // Constant variables are automatically static
+
+    public static (int, float[]) InitializeWorld(int seed, List<OctaveSetting> octaves, int _floorSmoothing, GameObject tilePrefab, PhysicsMaterial2D _tilePhysicsMaterial, bool generateWorld = false, int mapWidth = 0, int mapHeight = 0, int worldFloorHeight = 0)
     {
         Random.InitState(seed);
         float _seedVariation = 0.03999f;
@@ -28,15 +28,9 @@ public class GridManager : MonoBehaviour
         for (int m = 0; m < 7; m++) _seedVariationMultipliers[m] = Random.Range(1 - _seedVariation, 1 + _seedVariation);
         for (int m = 7; m < 10; m++) _seedVariationMultipliers[m] = Random.Range(-1000, 1000);
 
-        GameUtilities.AllTiles = new Dictionary<string, Tile>();
-        foreach (Tile tile in allTiles)
-        {
-            GameUtilities.AllTiles.Add(tile.TileID, tile);
-        }
-
-        GameObject oldGrid = GameObject.Find(gridName);
+        GameObject oldGrid = GameObject.Find(GridName);
         if (oldGrid != null) DestroyImmediate(oldGrid);
-        new GameObject(gridName);
+        new GameObject(GridName);
 
         WorldTiles = new Dictionary<Vector2Int, Tile>();
         ActiveTiles = new Dictionary<Vector2Int, GameObject>();

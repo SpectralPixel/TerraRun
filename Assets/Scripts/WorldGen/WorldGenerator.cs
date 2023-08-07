@@ -15,7 +15,6 @@ public class WorldGenerator : MonoBehaviour
     [Min(1)] public int MapWidth, MapHeight, FloorHeight;
     [Range(0, 10)] public int FloorSmoothing;
 
-    public List<Tile> Tiles;
     public List<OctaveSetting> Octaves;
 
     public GameObject TilePrefab;
@@ -60,8 +59,8 @@ public class WorldGenerator : MonoBehaviour
         // signed 32-bit integer limits are -2,147,483,647 and 2,147,483,647 (you can't get any higher numbers with Int32, which should always be used for whole numbers)
         if (UseRandomSeed) WorldSeed = UnityEngine.Random.Range(-9999, 10000); // floating point errors happen with high seed values
 
-        if (!Application.isPlaying) GridManager.InitializeWorld(WorldSeed, Tiles, Octaves, FloorSmoothing, TilePrefab, TilePhysicsMaterial, true, MapWidth, MapHeight, FloorHeight);
-        else (SeedXOffset, SeedVariationMultipliers) = GridManager.InitializeWorld(WorldSeed, Tiles, Octaves, FloorSmoothing, TilePrefab, TilePhysicsMaterial);
+        if (!Application.isPlaying) GridManager.InitializeWorld(WorldSeed, Octaves, FloorSmoothing, TilePrefab, TilePhysicsMaterial, true, MapWidth, MapHeight, FloorHeight);
+        else (SeedXOffset, SeedVariationMultipliers) = GridManager.InitializeWorld(WorldSeed, Octaves, FloorSmoothing, TilePrefab, TilePhysicsMaterial);
 
         if (Application.isPlaying)
         {

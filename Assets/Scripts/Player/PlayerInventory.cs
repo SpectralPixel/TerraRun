@@ -6,22 +6,12 @@ using UnityEngine.UI;
 public class PlayerInventory : MonoBehaviour
 {
 
-    [SerializeField] private List<Item> allItems;
     [SerializeField] private Image tileInHandObj;
     [SerializeField] private Color colorIfStackEmpty;
 
     private int currentInventorySlot;
 
     public List<ItemStack> Inventory;
-
-    private void Awake()
-    {
-        GameUtilities.AllItems = new Dictionary<string, Item>();
-        foreach (Item item in allItems)
-        {
-            GameUtilities.AllItems.Add(item.ItemID, item);
-        }
-    }
 
     private void Start()
     {

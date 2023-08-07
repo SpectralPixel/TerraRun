@@ -12,6 +12,20 @@ public static class GameUtilities
 
     public static void SetupVariables()
     {
+        Object[] _allTiles = Resources.LoadAll("Tiles");
+        AllTiles = new Dictionary<string, Tile>();
+        foreach (Tile tile in _allTiles)
+        {
+            AllTiles.Add(tile.TileID, tile);
+        }
+
+        Object[] _allItems = Resources.LoadAll("Items");
+        AllItems = new Dictionary<string, Item>();
+        foreach (Item item in _allItems)
+        {
+            AllItems.Add(item.ItemID, item);
+        }
+
         CheckDirections = new List<Vector2Int>()
         {
             Vector2Int.up,
