@@ -22,7 +22,7 @@ public class GridManagerUtils : Editor
             generator.GenerateWorld();
         }
 
-        if (AutoUpdate)
+        if (AutoUpdate && !Application.isPlaying)
         {
             if (oldSeed != generator.WorldSeed ||
                 oldGridWidth != generator.MapWidth ||

@@ -20,6 +20,7 @@ public enum ItemType
 {
     Weapon,
     Tool,
-    Consumable,
+    Accessory,
+    Material,
     Tile
 }

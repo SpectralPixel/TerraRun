@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d888c75743fe5041b7b19f8ac34de07, type: 3}
   m_Name: GrassTile
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: 3ee135d7ecb4f0b458a30712353f0bf1, type: 3}
+  Type: 4
   ItemID: GrassTile
-  Type: 3
-  damage: 0
+  Icon: {fileID: 21300000, guid: 3ee135d7ecb4f0b458a30712353f0bf1, type: 3}
+  Damage: 0
+  Power: 0
+  tile: {fileID: 0}

@@ -163,7 +163,9 @@ public class PlayerHand : MonoBehaviour
                     }
                 }
                 break;
-            case ItemType.Consumable:
+            case ItemType.Accessory:
+                break;
+            case ItemType.Material:
                 break;
             case ItemType.Tile:
                 GridManager.WorldTiles.TryGetValue(selectedTile, out Tile _tile);

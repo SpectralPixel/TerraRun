@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d888c75743fe5041b7b19f8ac34de07, type: 3}
   m_Name: AltWoodTile
   m_EditorClassIdentifier: 
-  Type: 3
+  Type: 4
   ItemID: AltWoodTile
-  Icon: {fileID: 21300000, guid: 5f70d2adcfb8a22438bef81bdaa5b30c, type: 3}
+  Icon: {fileID: 21300000, guid: b315a3031769bd44e9e7b709a42afe75, type: 3}
   Damage: 0
   Power: 0
   tile: {fileID: 0}
