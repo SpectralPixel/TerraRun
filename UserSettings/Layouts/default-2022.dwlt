@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -146,8 +146,8 @@ MonoBehaviour:
     y: 0
     width: 189.6
     height: 439.2
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -499,26 +499,61 @@ MonoBehaviour:
     currentBranchHasUpdate: 1
     currentStatusEntriesHasUpdate: 1
     currentLocksHasUpdate: 0
-    commitBody: https://lospec.com/palette-list/resurrect-64
-    commitMessage: TerraRun Alpha v0.0.6
+    commitBody: 
+    commitMessage: Redrew sprites and added new ones
     currentBranch: master
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
         keys:
         - 00000000000000001000000000000000
+        - 9a74eb5295f8c424b96e5255f9ac4fa5
+        - 27377db242404334b973f10d2515ff3c
+        - b48249ae2186ad8409793547463bf97c
+        - 45656d77b9d20b9489e0ce4dd6974fb4
+        - 3efae3244d70e8b408153aea670f026b
+        - f7e63126f6f5bd64aad1730ec7f34199
+        - ec51e20d778ff4a47b1e3d02923300cf
+        - f450cb5fb55469149bd84a1c6e24daa4
+        - 213135507a545954a85ec525006e818c
+        - bd546a94c1a6c3248b090934b54f55fa
+        - 66dde2195e4425e45b5b953ede311b27
+        - acda071540c826b4686e31146ea01cfe
+        - 9c7c6cccc37edaa4b9e245a5b24fd635
+        - 0b9036eeda5f1414ab48f3d3d622e251
+        - 399363e57a3b7f0489815f593bba3053
+        - c3159b1ba5d9b324eb65750bb4314a02
+        - 7340e975423d4c142aa6018b80a2fbe7
+        - 36be0baa5470bcc49a826ddb82776dac
+        - b1730ebacbb0e1942af681cdbf29ad32
         - 109e9bdd0fcc649c5bc59085c35bdc83
         - 8c9cfa26abfee488c85f1582747f6a02
         - 7fe1aed80f4297c4985dd764207d6aa6
         - 9dfc65d9cad85c7468a066b0e713c9d9
+        - b3e8f82a8ee4ce84ba5fb6a70fe1d45f
+        - 5d489fba3d22d0844876332da9694510
+        - 50f80170768c0d240b6cc59410d8b048
+        - 3d888c75743fe5041b7b19f8ac34de07
+        - 60a35a63f0e29b946965e2ad0682c1ce
+        - 32f83e1f609285a478ae015efaf3196e
+        - d4c422d6cbf1632429ade771a891b3cb
+        - 19dd381981371bf40987f17247f67101
         - 0220aab0833d04faeb927d84ca6cc40c
         - 681886c5eb7344803b6206f758bf0b1c
         - 09b1f88ec875f6e4d8506a6109ce1b82
+        - 78e9fa4247832fd43911fc88081d9e78
+        - cbce148cc2b887d4b9845db02fa7fed5
+        - 32969ff6b42e7ac43a2e783e2cd26896
+        - 1cf67c03c88037b41b06fc9ddee5bee3
+        - 6b27146b5f4f5a74cb5dde1101592b07
         - 9dde21afbe1dca2448e47a89177b84c4
         - b315a3031769bd44e9e7b709a42afe75
+        - 62fc2b1dc078ea74389c10910a83c26e
         - 1bcd6ae012c81a345beba17665e2d698
         - 3ee135d7ecb4f0b458a30712353f0bf1
+        - 97aea607f7988a8408ba98094538c528
         - 847e9c709d1ec93469a0676e5af38151
+        - afec31b6fa8580741a56439ca6123eca
         - f8987e3596cb44149a998ad5a8164d48
         - 7b0bbc651746bc240b608c7d655009ac
         values:
@@ -531,7 +566,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -540,6 +575,348 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
+        - path: Assets\Resources
+          label: Resources
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Items
+          label: Items
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Items\AltWoodTile.asset
+          label: AltWoodTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Items\AltWoodTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\AltWoodTile.asset
+            projectPath: Assets\Resources\Items\AltWoodTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Resources\Items\DirtTile.asset
+          label: DirtTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Items\DirtTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\DirtTile.asset
+            projectPath: Assets\Resources\Items\DirtTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Resources\Items\GrassTile.asset
+          label: GrassTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Items\GrassTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\GrassTile.asset
+            projectPath: Assets\Resources\Items\GrassTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Resources\Items\IronBar.asset
+          label: IronBar.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Items\IronBar.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\IronBar.asset
+            projectPath: Assets\Resources\Items\IronBar.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Items\IronChunk.asset
+          label: IronChunk.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Items\IronChunk.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\IronChunk.asset
+            projectPath: Assets\Resources\Items\IronChunk.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Items\MagicShard.asset
+          label: MagicShard.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Items\MagicShard.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\MagicShard.asset
+            projectPath: Assets\Resources\Items\MagicShard.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Items\StoneTile.asset
+          label: StoneTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Items\StoneTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\StoneTile.asset
+            projectPath: Assets\Resources\Items\StoneTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Resources\Tiles
+          label: Tiles
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Tiles\Air.asset
+          label: Air.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Air.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Air.asset
+            projectPath: Assets\Resources\Tiles\Air.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\AltWood.asset
+          label: AltWood.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\AltWood.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AltWood.asset
+            projectPath: Assets\Resources\Tiles\AltWood.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\Dirt.asset
+          label: Dirt.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Dirt.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Dirt.asset
+            projectPath: Assets\Resources\Tiles\Dirt.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\Grass.asset
+          label: Grass.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Grass.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Grass.asset
+            projectPath: Assets\Resources\Tiles\Grass.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\IronOre.asset
+          label: IronOre.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\IronOre.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\IronOre.asset
+            projectPath: Assets\Resources\Tiles\IronOre.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\Leaf.asset
+          label: Leaf.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Leaf.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Leaf.asset
+            projectPath: Assets\Resources\Tiles\Leaf.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\MagicOre.asset
+          label: MagicOre.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\MagicOre.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\MagicOre.asset
+            projectPath: Assets\Resources\Tiles\MagicOre.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\Stone.asset
+          label: Stone.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Stone.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Stone.asset
+            projectPath: Assets\Resources\Tiles\Stone.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\Wood.asset
+          label: Wood.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Wood.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Wood.asset
+            projectPath: Assets\Resources\Tiles\Wood.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
         - path: Assets\Scenes
           label: Scenes
           level: 1
@@ -549,7 +926,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -567,7 +944,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: Assets\Scenes\SampleScene.unity
@@ -585,7 +962,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -603,7 +980,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: Assets\Scenes\SampleScene\LightingData.asset
@@ -612,6 +989,150 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 1
             workTreeStatus: 1
+        - path: Assets\Scripts
+          label: Scripts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Editor
+          label: Editor
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Editor\GridManagerUtils.cs
+          label: GridManagerUtils.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Editor\GridManagerUtils.cs
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Editor\GridManagerUtils.cs
+            projectPath: Assets\Scripts\Editor\GridManagerUtils.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\Item.cs
+          label: Item.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Item.cs
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Item.cs
+            projectPath: Assets\Scripts\Item.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\Player
+          label: Player
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Player\PlayerHand.cs
+          label: PlayerHand.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Player\PlayerHand.cs
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Player\PlayerHand.cs
+            projectPath: Assets\Scripts\Player\PlayerHand.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\WorldGen
+          label: WorldGen
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\WorldGen\WorldGenerator.cs
+          label: WorldGenerator.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\WorldGen\WorldGenerator.cs
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\WorldGenerator.cs
+            projectPath: Assets\Scripts\WorldGen\WorldGenerator.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
         - path: Assets\Settings
           label: Settings
           level: 1
@@ -621,7 +1142,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -639,7 +1160,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: Assets\Settings\UniversalRP.asset
@@ -657,7 +1178,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -666,6 +1187,96 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
+        - path: Assets\Sprites\Items
+          label: Items
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Sprites\Items\IronBar.png
+          label: IronBar.png
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Items\IronBar.png
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\IronBar.png
+            projectPath: Assets\Sprites\Items\IronBar.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Items\IronChunk.png
+          label: IronChunk.png
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Items\IronChunk.png
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\IronChunk.png
+            projectPath: Assets\Sprites\Items\IronChunk.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Items\MagicShard.png
+          label: MagicShard.png
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Items\MagicShard.png
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\MagicShard.png
+            projectPath: Assets\Sprites\Items\MagicShard.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Items\Pickaxe.png
+          label: Pickaxe.png
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Items\Pickaxe.png
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\Pickaxe.png
+            projectPath: Assets\Sprites\Items\Pickaxe.png
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
         - path: Assets\Sprites\Tiles
           label: Tiles
           level: 2
@@ -675,7 +1286,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -693,12 +1304,30 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: Assets\Sprites\Tiles\AltWoodTile.jpg
             fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\AltWoodTile.jpg
             projectPath: Assets\Sprites\Tiles\AltWoodTile.jpg
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Tiles\Crate.jpg
+          label: Crate.jpg
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\Crate.jpg
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Crate.jpg
+            projectPath: Assets\Sprites\Tiles\Crate.jpg
             originalPath: 
             indexStatus: 1
             workTreeStatus: 1
@@ -711,7 +1340,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: Assets\Sprites\Tiles\Dirt.jpg
@@ -729,7 +1358,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: Assets\Sprites\Tiles\Grass.jpg
@@ -738,6 +1367,24 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
+        - path: Assets\Sprites\Tiles\IronOre.jpg
+          label: IronOre.jpg
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\IronOre.jpg
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\IronOre.jpg
+            projectPath: Assets\Sprites\Tiles\IronOre.jpg
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
         - path: Assets\Sprites\Tiles\Leaf.jpg
           label: Leaf.jpg
           level: 3
@@ -747,7 +1394,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: Assets\Sprites\Tiles\Leaf.jpg
@@ -756,6 +1403,24 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
+        - path: Assets\Sprites\Tiles\MagicOre.jpg
+          label: MagicOre.jpg
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\MagicOre.jpg
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\MagicOre.jpg
+            projectPath: Assets\Sprites\Tiles\MagicOre.jpg
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
         - path: Assets\Sprites\Tiles\Stone.jpg
           label: Stone.jpg
           level: 3
@@ -765,7 +1430,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: Assets\Sprites\Tiles\Stone.jpg
@@ -783,7 +1448,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: Assets\Sprites\Tiles\Wood.jpg
@@ -795,10 +1460,18 @@ MonoBehaviour:
       folders:
         keys:
         - Assets
+        - Assets\Resources
+        - Assets\Resources\Items
+        - Assets\Resources\Tiles
         - Assets\Scenes
         - Assets\Scenes\SampleScene
+        - Assets\Scripts
+        - Assets\Scripts\Editor
+        - Assets\Scripts\Player
+        - Assets\Scripts\WorldGen
         - Assets\Settings
         - Assets\Sprites
+        - Assets\Sprites\Items
         - Assets\Sprites\Tiles
         - Packages
         - ProjectSettings
@@ -814,7 +1487,61 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources
+          label: Resources
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Items
+          label: Items
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Tiles
+          label: Tiles
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -832,7 +1559,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -850,7 +1577,79 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts
+          label: Scripts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Editor
+          label: Editor
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Player
+          label: Player
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\WorldGen
+          label: WorldGen
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -868,7 +1667,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -886,7 +1685,25 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Sprites\Items
+          label: Items
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -904,7 +1721,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -922,7 +1739,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -940,7 +1757,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -958,7 +1775,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -976,7 +1793,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -986,8 +1803,1509 @@ MonoBehaviour:
             indexStatus: 0
             workTreeStatus: 0
       checkedFileNodes:
-        keys: []
-        values: []
+        keys:
+        - UserSettings\Layouts\default-2022.dwlt
+        - ProjectSettings\PackageManagerSettings.asset
+        - Packages\manifest.json
+        - Assets\Sprites\Tiles\Wood.jpg
+        - Assets\Sprites\Tiles\Stone.jpg
+        - Assets\Sprites\Tiles\MagicOre.jpg.meta
+        - Assets\Sprites\Tiles\MagicOre.jpg
+        - Assets\Sprites\Tiles\Leaf.jpg
+        - Assets\Sprites\Tiles\IronOre.jpg.meta
+        - Assets\Sprites\Tiles\IronOre.jpg
+        - Assets\Sprites\Tiles\Grass.jpg
+        - Assets\Sprites\Tiles\Dirt.jpg
+        - Assets\Sprites\Tiles\Crate.jpg.meta
+        - Assets\Sprites\Tiles\Crate.jpg
+        - Assets\Sprites\Tiles\AltWoodTile.png.meta
+        - Assets\Sprites\Tiles\AltWoodTile.png
+        - Assets\Sprites\Tiles\AltWoodTile.jpg.meta
+        - Assets\Sprites\Tiles\AltWoodTile.jpg
+        - Assets\Sprites\Items\Pickaxe.png.meta
+        - Assets\Sprites\Items\Pickaxe.png
+        - Assets\Sprites\Items\MagicShard.png.meta
+        - Assets\Sprites\Items\MagicShard.png
+        - Assets\Sprites\Items\IronChunk.png.meta
+        - Assets\Sprites\Items\IronChunk.png
+        - Assets\Sprites\Items\IronBar.png.meta
+        - Assets\Sprites\Items\IronBar.png
+        - Assets\Sprites\Background.jpg.meta
+        - Assets\Sprites\Background.jpg
+        - Assets\Settings\UniversalRP.asset
+        - Assets\Scripts\WorldGen\WorldGenerator.cs
+        - Assets\Scripts\Player\PlayerHand.cs
+        - Assets\Scripts\Item.cs
+        - Assets\Scripts\Editor\GridManagerUtils.cs
+        - Assets\Scenes\SampleScene\LightingData.asset.meta
+        - Assets\Scenes\SampleScene\LightingData.asset
+        - Assets\Scenes\SampleScene.unity
+        - Assets\Scenes\SampleScene.meta
+        - Assets\Resources\Tiles\WoodTile.asset.meta
+        - Assets\Resources\Tiles\WoodTile.asset
+        - Assets\Resources\Tiles\Wood.asset.meta
+        - Assets\Resources\Tiles\Wood.asset
+        - Assets\Resources\Tiles\StoneTile.asset.meta
+        - Assets\Resources\Tiles\StoneTile.asset
+        - Assets\Resources\Tiles\Stone.asset.meta
+        - Assets\Resources\Tiles\Stone.asset
+        - Assets\Resources\Tiles\MagicOre.asset.meta
+        - Assets\Resources\Tiles\MagicOre.asset
+        - Assets\Resources\Tiles\LeafTile.asset.meta
+        - Assets\Resources\Tiles\LeafTile.asset
+        - Assets\Resources\Tiles\Leaf.asset.meta
+        - Assets\Resources\Tiles\Leaf.asset
+        - Assets\Resources\Tiles\IronOre.asset.meta
+        - Assets\Resources\Tiles\IronOre.asset
+        - Assets\Resources\Tiles\GrassTile.asset.meta
+        - Assets\Resources\Tiles\GrassTile.asset
+        - Assets\Resources\Tiles\Grass.asset.meta
+        - Assets\Resources\Tiles\Grass.asset
+        - Assets\Resources\Tiles\DirtTile.asset.meta
+        - Assets\Resources\Tiles\DirtTile.asset
+        - Assets\Resources\Tiles\Dirt.asset.meta
+        - Assets\Resources\Tiles\Dirt.asset
+        - Assets\Resources\Tiles\AltWoodTile.asset.meta
+        - Assets\Resources\Tiles\AltWoodTile.asset
+        - Assets\Resources\Tiles\AltWood.asset.meta
+        - Assets\Resources\Tiles\AltWood.asset
+        - Assets\Resources\Tiles\AirTile.asset.meta
+        - Assets\Resources\Tiles\AirTile.asset
+        - Assets\Resources\Tiles\Air.asset.meta
+        - Assets\Resources\Tiles\Air.asset
+        - Assets\Resources\Items\StoneTile.asset
+        - Assets\Resources\Items\MagicShard.asset.meta
+        - Assets\Resources\Items\MagicShard.asset
+        - Assets\Resources\Items\IronChunk.asset.meta
+        - Assets\Resources\Items\IronChunk.asset
+        - Assets\Resources\Items\IronBar.asset.meta
+        - Assets\Resources\Items\IronBar.asset
+        - Assets\Resources\Items\GrassTile.asset
+        - Assets\Resources\Items\DirtTile.asset
+        - Assets\Resources\Items\AltWoodTile.asset
+        values:
+        - path: UserSettings\Layouts\default-2022.dwlt
+          label: default-2022.dwlt
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: UserSettings\Layouts\default-2022.dwlt
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\UserSettings\Layouts\default-2022.dwlt
+            projectPath: UserSettings\Layouts\default-2022.dwlt
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: ProjectSettings\PackageManagerSettings.asset
+          label: PackageManagerSettings.asset
+          level: 1
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: ProjectSettings\PackageManagerSettings.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\ProjectSettings\PackageManagerSettings.asset
+            projectPath: ProjectSettings\PackageManagerSettings.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Packages\manifest.json
+          label: manifest.json
+          level: 1
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Packages\manifest.json
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Packages\manifest.json
+            projectPath: Packages\manifest.json
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Sprites\Tiles\Wood.jpg
+          label: Wood.jpg
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\Wood.jpg
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Wood.jpg
+            projectPath: Assets\Sprites\Tiles\Wood.jpg
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Sprites\Tiles\Stone.jpg
+          label: Stone.jpg
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\Stone.jpg
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Stone.jpg
+            projectPath: Assets\Sprites\Tiles\Stone.jpg
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Sprites\Tiles\MagicOre.jpg.meta
+          label: MagicOre.jpg.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\MagicOre.jpg.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\MagicOre.jpg.meta
+            projectPath: Assets\Sprites\Tiles\MagicOre.jpg.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Tiles\MagicOre.jpg
+          label: MagicOre.jpg
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\MagicOre.jpg
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\MagicOre.jpg
+            projectPath: Assets\Sprites\Tiles\MagicOre.jpg
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Tiles\Leaf.jpg
+          label: Leaf.jpg
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\Leaf.jpg
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Leaf.jpg
+            projectPath: Assets\Sprites\Tiles\Leaf.jpg
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Sprites\Tiles\IronOre.jpg.meta
+          label: IronOre.jpg.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\IronOre.jpg.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\IronOre.jpg.meta
+            projectPath: Assets\Sprites\Tiles\IronOre.jpg.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Tiles\IronOre.jpg
+          label: IronOre.jpg
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\IronOre.jpg
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\IronOre.jpg
+            projectPath: Assets\Sprites\Tiles\IronOre.jpg
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Tiles\Grass.jpg
+          label: Grass.jpg
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\Grass.jpg
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Grass.jpg
+            projectPath: Assets\Sprites\Tiles\Grass.jpg
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Sprites\Tiles\Dirt.jpg
+          label: Dirt.jpg
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\Dirt.jpg
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Dirt.jpg
+            projectPath: Assets\Sprites\Tiles\Dirt.jpg
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Sprites\Tiles\Crate.jpg.meta
+          label: Crate.jpg.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\Crate.jpg.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Crate.jpg.meta
+            projectPath: Assets\Sprites\Tiles\Crate.jpg.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Tiles\Crate.jpg
+          label: Crate.jpg
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\Crate.jpg
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Crate.jpg
+            projectPath: Assets\Sprites\Tiles\Crate.jpg
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Tiles\AltWoodTile.png.meta
+          label: AltWoodTile.png.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\AltWoodTile.png.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\AltWoodTile.png.meta
+            projectPath: Assets\Sprites\Tiles\AltWoodTile.png.meta
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Sprites\Tiles\AltWoodTile.png
+          label: AltWoodTile.png
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\AltWoodTile.png
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\AltWoodTile.png
+            projectPath: Assets\Sprites\Tiles\AltWoodTile.png
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Sprites\Tiles\AltWoodTile.jpg.meta
+          label: AltWoodTile.jpg.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\AltWoodTile.jpg.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\AltWoodTile.jpg.meta
+            projectPath: Assets\Sprites\Tiles\AltWoodTile.jpg.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Tiles\AltWoodTile.jpg
+          label: AltWoodTile.jpg
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Tiles\AltWoodTile.jpg
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\AltWoodTile.jpg
+            projectPath: Assets\Sprites\Tiles\AltWoodTile.jpg
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Items\Pickaxe.png.meta
+          label: Pickaxe.png.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Items\Pickaxe.png.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\Pickaxe.png.meta
+            projectPath: Assets\Sprites\Items\Pickaxe.png.meta
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Sprites\Items\Pickaxe.png
+          label: Pickaxe.png
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Items\Pickaxe.png
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\Pickaxe.png
+            projectPath: Assets\Sprites\Items\Pickaxe.png
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Sprites\Items\MagicShard.png.meta
+          label: MagicShard.png.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Items\MagicShard.png.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\MagicShard.png.meta
+            projectPath: Assets\Sprites\Items\MagicShard.png.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Items\MagicShard.png
+          label: MagicShard.png
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Items\MagicShard.png
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\MagicShard.png
+            projectPath: Assets\Sprites\Items\MagicShard.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Items\IronChunk.png.meta
+          label: IronChunk.png.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Items\IronChunk.png.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\IronChunk.png.meta
+            projectPath: Assets\Sprites\Items\IronChunk.png.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Items\IronChunk.png
+          label: IronChunk.png
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Items\IronChunk.png
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\IronChunk.png
+            projectPath: Assets\Sprites\Items\IronChunk.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Items\IronBar.png.meta
+          label: IronBar.png.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Items\IronBar.png.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\IronBar.png.meta
+            projectPath: Assets\Sprites\Items\IronBar.png.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Items\IronBar.png
+          label: IronBar.png
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Items\IronBar.png
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\IronBar.png
+            projectPath: Assets\Sprites\Items\IronBar.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Sprites\Background.jpg.meta
+          label: Background.jpg.meta
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Background.jpg.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Background.jpg.meta
+            projectPath: Assets\Sprites\Background.jpg.meta
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Sprites\Background.jpg
+          label: Background.jpg
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Sprites\Background.jpg
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Background.jpg
+            projectPath: Assets\Sprites\Background.jpg
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Settings\UniversalRP.asset
+          label: UniversalRP.asset
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Settings\UniversalRP.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Settings\UniversalRP.asset
+            projectPath: Assets\Settings\UniversalRP.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\WorldGen\WorldGenerator.cs
+          label: WorldGenerator.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\WorldGen\WorldGenerator.cs
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\WorldGenerator.cs
+            projectPath: Assets\Scripts\WorldGen\WorldGenerator.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\Player\PlayerHand.cs
+          label: PlayerHand.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Player\PlayerHand.cs
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Player\PlayerHand.cs
+            projectPath: Assets\Scripts\Player\PlayerHand.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\Item.cs
+          label: Item.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Item.cs
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Item.cs
+            projectPath: Assets\Scripts\Item.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\Editor\GridManagerUtils.cs
+          label: GridManagerUtils.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Editor\GridManagerUtils.cs
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Editor\GridManagerUtils.cs
+            projectPath: Assets\Scripts\Editor\GridManagerUtils.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scenes\SampleScene\LightingData.asset.meta
+          label: LightingData.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scenes\SampleScene\LightingData.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scenes\SampleScene\LightingData.asset.meta
+            projectPath: Assets\Scenes\SampleScene\LightingData.asset.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Scenes\SampleScene\LightingData.asset
+          label: LightingData.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scenes\SampleScene\LightingData.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scenes\SampleScene\LightingData.asset
+            projectPath: Assets\Scenes\SampleScene\LightingData.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Scenes\SampleScene.unity
+          label: SampleScene.unity
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scenes\SampleScene.unity
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scenes\SampleScene.unity
+            projectPath: Assets\Scenes\SampleScene.unity
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scenes\SampleScene.meta
+          label: SampleScene.meta
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scenes\SampleScene.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scenes\SampleScene.meta
+            projectPath: Assets\Scenes\SampleScene.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\WoodTile.asset.meta
+          label: WoodTile.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\WoodTile.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\WoodTile.asset.meta
+            projectPath: Assets\Resources\Tiles\WoodTile.asset.meta
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Resources\Tiles\WoodTile.asset
+          label: WoodTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\WoodTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\WoodTile.asset
+            projectPath: Assets\Resources\Tiles\WoodTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Resources\Tiles\Wood.asset.meta
+          label: Wood.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Wood.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Wood.asset.meta
+            projectPath: Assets\Resources\Tiles\Wood.asset.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\Wood.asset
+          label: Wood.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Wood.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Wood.asset
+            projectPath: Assets\Resources\Tiles\Wood.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\StoneTile.asset.meta
+          label: StoneTile.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\StoneTile.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\StoneTile.asset.meta
+            projectPath: Assets\Resources\Tiles\StoneTile.asset.meta
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Resources\Tiles\StoneTile.asset
+          label: StoneTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\StoneTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\StoneTile.asset
+            projectPath: Assets\Resources\Tiles\StoneTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Resources\Tiles\Stone.asset.meta
+          label: Stone.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Stone.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Stone.asset.meta
+            projectPath: Assets\Resources\Tiles\Stone.asset.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\Stone.asset
+          label: Stone.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Stone.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Stone.asset
+            projectPath: Assets\Resources\Tiles\Stone.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\MagicOre.asset.meta
+          label: MagicOre.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\MagicOre.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\MagicOre.asset.meta
+            projectPath: Assets\Resources\Tiles\MagicOre.asset.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\MagicOre.asset
+          label: MagicOre.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\MagicOre.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\MagicOre.asset
+            projectPath: Assets\Resources\Tiles\MagicOre.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\LeafTile.asset.meta
+          label: LeafTile.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\LeafTile.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\LeafTile.asset.meta
+            projectPath: Assets\Resources\Tiles\LeafTile.asset.meta
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Resources\Tiles\LeafTile.asset
+          label: LeafTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\LeafTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\LeafTile.asset
+            projectPath: Assets\Resources\Tiles\LeafTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Resources\Tiles\Leaf.asset.meta
+          label: Leaf.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Leaf.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Leaf.asset.meta
+            projectPath: Assets\Resources\Tiles\Leaf.asset.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\Leaf.asset
+          label: Leaf.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Leaf.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Leaf.asset
+            projectPath: Assets\Resources\Tiles\Leaf.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\IronOre.asset.meta
+          label: IronOre.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\IronOre.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\IronOre.asset.meta
+            projectPath: Assets\Resources\Tiles\IronOre.asset.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\IronOre.asset
+          label: IronOre.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\IronOre.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\IronOre.asset
+            projectPath: Assets\Resources\Tiles\IronOre.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\GrassTile.asset.meta
+          label: GrassTile.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\GrassTile.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\GrassTile.asset.meta
+            projectPath: Assets\Resources\Tiles\GrassTile.asset.meta
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Resources\Tiles\GrassTile.asset
+          label: GrassTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\GrassTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\GrassTile.asset
+            projectPath: Assets\Resources\Tiles\GrassTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Resources\Tiles\Grass.asset.meta
+          label: Grass.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Grass.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Grass.asset.meta
+            projectPath: Assets\Resources\Tiles\Grass.asset.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\Grass.asset
+          label: Grass.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Grass.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Grass.asset
+            projectPath: Assets\Resources\Tiles\Grass.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\DirtTile.asset.meta
+          label: DirtTile.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\DirtTile.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\DirtTile.asset.meta
+            projectPath: Assets\Resources\Tiles\DirtTile.asset.meta
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Resources\Tiles\DirtTile.asset
+          label: DirtTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\DirtTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\DirtTile.asset
+            projectPath: Assets\Resources\Tiles\DirtTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Resources\Tiles\Dirt.asset.meta
+          label: Dirt.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Dirt.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Dirt.asset.meta
+            projectPath: Assets\Resources\Tiles\Dirt.asset.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\Dirt.asset
+          label: Dirt.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Dirt.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Dirt.asset
+            projectPath: Assets\Resources\Tiles\Dirt.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\AltWoodTile.asset.meta
+          label: AltWoodTile.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\AltWoodTile.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AltWoodTile.asset.meta
+            projectPath: Assets\Resources\Tiles\AltWoodTile.asset.meta
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Resources\Tiles\AltWoodTile.asset
+          label: AltWoodTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\AltWoodTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AltWoodTile.asset
+            projectPath: Assets\Resources\Tiles\AltWoodTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Resources\Tiles\AltWood.asset.meta
+          label: AltWood.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\AltWood.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AltWood.asset.meta
+            projectPath: Assets\Resources\Tiles\AltWood.asset.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\AltWood.asset
+          label: AltWood.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\AltWood.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AltWood.asset
+            projectPath: Assets\Resources\Tiles\AltWood.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\AirTile.asset.meta
+          label: AirTile.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\AirTile.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AirTile.asset.meta
+            projectPath: Assets\Resources\Tiles\AirTile.asset.meta
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Resources\Tiles\AirTile.asset
+          label: AirTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\AirTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AirTile.asset
+            projectPath: Assets\Resources\Tiles\AirTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 5
+        - path: Assets\Resources\Tiles\Air.asset.meta
+          label: Air.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Air.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Air.asset.meta
+            projectPath: Assets\Resources\Tiles\Air.asset.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Tiles\Air.asset
+          label: Air.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Tiles\Air.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Air.asset
+            projectPath: Assets\Resources\Tiles\Air.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Items\StoneTile.asset
+          label: StoneTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Items\StoneTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\StoneTile.asset
+            projectPath: Assets\Resources\Items\StoneTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Resources\Items\MagicShard.asset.meta
+          label: MagicShard.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Items\MagicShard.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\MagicShard.asset.meta
+            projectPath: Assets\Resources\Items\MagicShard.asset.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Items\MagicShard.asset
+          label: MagicShard.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Items\MagicShard.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\MagicShard.asset
+            projectPath: Assets\Resources\Items\MagicShard.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Items\IronChunk.asset.meta
+          label: IronChunk.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Items\IronChunk.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\IronChunk.asset.meta
+            projectPath: Assets\Resources\Items\IronChunk.asset.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Items\IronChunk.asset
+          label: IronChunk.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Items\IronChunk.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\IronChunk.asset
+            projectPath: Assets\Resources\Items\IronChunk.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Items\IronBar.asset.meta
+          label: IronBar.asset.meta
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Items\IronBar.asset.meta
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\IronBar.asset.meta
+            projectPath: Assets\Resources\Items\IronBar.asset.meta
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Items\IronBar.asset
+          label: IronBar.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Items\IronBar.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\IronBar.asset
+            projectPath: Assets\Resources\Items\IronBar.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Items\GrassTile.asset
+          label: GrassTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Items\GrassTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\GrassTile.asset
+            projectPath: Assets\Resources\Items\GrassTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Resources\Items\DirtTile.asset
+          label: DirtTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Items\DirtTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\DirtTile.asset
+            projectPath: Assets\Resources\Items\DirtTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Resources\Items\AltWoodTile.asset
+          label: AltWoodTile.asset
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Items\AltWoodTile.asset
+            fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\AltWoodTile.asset
+            projectPath: Assets\Resources\Items\AltWoodTile.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
       title: 
       pathSeparator: \
       displayRootNode: 0
@@ -1004,7 +3322,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -1022,7 +3340,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -1031,6 +3349,816 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: Assets\Resources
+        label: Resources
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Resources\Items
+        label: Items
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Resources\Items\AltWoodTile.asset
+        label: AltWoodTile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Items\AltWoodTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\AltWoodTile.asset
+          projectPath: Assets\Resources\Items\AltWoodTile.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Resources\Items\DirtTile.asset
+        label: DirtTile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Items\DirtTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\DirtTile.asset
+          projectPath: Assets\Resources\Items\DirtTile.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Resources\Items\GrassTile.asset
+        label: GrassTile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Items\GrassTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\GrassTile.asset
+          projectPath: Assets\Resources\Items\GrassTile.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Resources\Items\IronBar.asset
+        label: IronBar.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Items\IronBar.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\IronBar.asset
+          projectPath: Assets\Resources\Items\IronBar.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Items\IronBar.asset.meta
+        label: IronBar.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Items\IronBar.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\IronBar.asset.meta
+          projectPath: Assets\Resources\Items\IronBar.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Items\IronChunk.asset
+        label: IronChunk.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Items\IronChunk.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\IronChunk.asset
+          projectPath: Assets\Resources\Items\IronChunk.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Items\IronChunk.asset.meta
+        label: IronChunk.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Items\IronChunk.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\IronChunk.asset.meta
+          projectPath: Assets\Resources\Items\IronChunk.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Items\MagicShard.asset
+        label: MagicShard.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Items\MagicShard.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\MagicShard.asset
+          projectPath: Assets\Resources\Items\MagicShard.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Items\MagicShard.asset.meta
+        label: MagicShard.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Items\MagicShard.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\MagicShard.asset.meta
+          projectPath: Assets\Resources\Items\MagicShard.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Items\StoneTile.asset
+        label: StoneTile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Items\StoneTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\StoneTile.asset
+          projectPath: Assets\Resources\Items\StoneTile.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Resources\Tiles
+        label: Tiles
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Resources\Tiles\Air.asset
+        label: Air.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\Air.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Air.asset
+          projectPath: Assets\Resources\Tiles\Air.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\Air.asset.meta
+        label: Air.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\Air.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Air.asset.meta
+          projectPath: Assets\Resources\Tiles\Air.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\AirTile.asset
+        label: AirTile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\AirTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AirTile.asset
+          projectPath: Assets\Resources\Tiles\AirTile.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Resources\Tiles\AirTile.asset.meta
+        label: AirTile.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\AirTile.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AirTile.asset.meta
+          projectPath: Assets\Resources\Tiles\AirTile.asset.meta
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Resources\Tiles\AltWood.asset
+        label: AltWood.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\AltWood.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AltWood.asset
+          projectPath: Assets\Resources\Tiles\AltWood.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\AltWood.asset.meta
+        label: AltWood.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\AltWood.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AltWood.asset.meta
+          projectPath: Assets\Resources\Tiles\AltWood.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\AltWoodTile.asset
+        label: AltWoodTile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\AltWoodTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AltWoodTile.asset
+          projectPath: Assets\Resources\Tiles\AltWoodTile.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Resources\Tiles\AltWoodTile.asset.meta
+        label: AltWoodTile.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\AltWoodTile.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AltWoodTile.asset.meta
+          projectPath: Assets\Resources\Tiles\AltWoodTile.asset.meta
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Resources\Tiles\Dirt.asset
+        label: Dirt.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\Dirt.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Dirt.asset
+          projectPath: Assets\Resources\Tiles\Dirt.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\Dirt.asset.meta
+        label: Dirt.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\Dirt.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Dirt.asset.meta
+          projectPath: Assets\Resources\Tiles\Dirt.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\DirtTile.asset
+        label: DirtTile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\DirtTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\DirtTile.asset
+          projectPath: Assets\Resources\Tiles\DirtTile.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Resources\Tiles\DirtTile.asset.meta
+        label: DirtTile.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\DirtTile.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\DirtTile.asset.meta
+          projectPath: Assets\Resources\Tiles\DirtTile.asset.meta
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Resources\Tiles\Grass.asset
+        label: Grass.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\Grass.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Grass.asset
+          projectPath: Assets\Resources\Tiles\Grass.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\Grass.asset.meta
+        label: Grass.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\Grass.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Grass.asset.meta
+          projectPath: Assets\Resources\Tiles\Grass.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\GrassTile.asset
+        label: GrassTile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\GrassTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\GrassTile.asset
+          projectPath: Assets\Resources\Tiles\GrassTile.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Resources\Tiles\GrassTile.asset.meta
+        label: GrassTile.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\GrassTile.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\GrassTile.asset.meta
+          projectPath: Assets\Resources\Tiles\GrassTile.asset.meta
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Resources\Tiles\IronOre.asset
+        label: IronOre.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\IronOre.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\IronOre.asset
+          projectPath: Assets\Resources\Tiles\IronOre.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\IronOre.asset.meta
+        label: IronOre.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\IronOre.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\IronOre.asset.meta
+          projectPath: Assets\Resources\Tiles\IronOre.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\Leaf.asset
+        label: Leaf.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\Leaf.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Leaf.asset
+          projectPath: Assets\Resources\Tiles\Leaf.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\Leaf.asset.meta
+        label: Leaf.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\Leaf.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Leaf.asset.meta
+          projectPath: Assets\Resources\Tiles\Leaf.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\LeafTile.asset
+        label: LeafTile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\LeafTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\LeafTile.asset
+          projectPath: Assets\Resources\Tiles\LeafTile.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Resources\Tiles\LeafTile.asset.meta
+        label: LeafTile.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\LeafTile.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\LeafTile.asset.meta
+          projectPath: Assets\Resources\Tiles\LeafTile.asset.meta
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Resources\Tiles\MagicOre.asset
+        label: MagicOre.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\MagicOre.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\MagicOre.asset
+          projectPath: Assets\Resources\Tiles\MagicOre.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\MagicOre.asset.meta
+        label: MagicOre.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\MagicOre.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\MagicOre.asset.meta
+          projectPath: Assets\Resources\Tiles\MagicOre.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\Stone.asset
+        label: Stone.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\Stone.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Stone.asset
+          projectPath: Assets\Resources\Tiles\Stone.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\Stone.asset.meta
+        label: Stone.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\Stone.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Stone.asset.meta
+          projectPath: Assets\Resources\Tiles\Stone.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\StoneTile.asset
+        label: StoneTile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\StoneTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\StoneTile.asset
+          projectPath: Assets\Resources\Tiles\StoneTile.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Resources\Tiles\StoneTile.asset.meta
+        label: StoneTile.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\StoneTile.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\StoneTile.asset.meta
+          projectPath: Assets\Resources\Tiles\StoneTile.asset.meta
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Resources\Tiles\Wood.asset
+        label: Wood.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\Wood.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Wood.asset
+          projectPath: Assets\Resources\Tiles\Wood.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\Wood.asset.meta
+        label: Wood.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\Wood.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Wood.asset.meta
+          projectPath: Assets\Resources\Tiles\Wood.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Tiles\WoodTile.asset
+        label: WoodTile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\WoodTile.asset
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\WoodTile.asset
+          projectPath: Assets\Resources\Tiles\WoodTile.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Resources\Tiles\WoodTile.asset.meta
+        label: WoodTile.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Tiles\WoodTile.asset.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\WoodTile.asset.meta
+          projectPath: Assets\Resources\Tiles\WoodTile.asset.meta
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
       - path: Assets\Scenes
         label: Scenes
         level: 1
@@ -1040,7 +4168,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -1058,7 +4186,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: Assets\Scenes\SampleScene.meta
@@ -1076,7 +4204,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: Assets\Scenes\SampleScene.unity
@@ -1094,7 +4222,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -1112,7 +4240,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: Assets\Scenes\SampleScene\LightingData.asset
@@ -1130,7 +4258,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: Assets\Scenes\SampleScene\LightingData.asset.meta
@@ -1139,6 +4267,150 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 1
           workTreeStatus: 1
+      - path: Assets\Scripts
+        label: Scripts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scripts\Editor
+        label: Editor
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scripts\Editor\GridManagerUtils.cs
+        label: GridManagerUtils.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Editor\GridManagerUtils.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Editor\GridManagerUtils.cs
+          projectPath: Assets\Scripts\Editor\GridManagerUtils.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\Item.cs
+        label: Item.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Item.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Item.cs
+          projectPath: Assets\Scripts\Item.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\Player
+        label: Player
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scripts\Player\PlayerHand.cs
+        label: PlayerHand.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Player\PlayerHand.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Player\PlayerHand.cs
+          projectPath: Assets\Scripts\Player\PlayerHand.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\WorldGen
+        label: WorldGen
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scripts\WorldGen\WorldGenerator.cs
+        label: WorldGenerator.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\WorldGen\WorldGenerator.cs
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\WorldGenerator.cs
+          projectPath: Assets\Scripts\WorldGen\WorldGenerator.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       - path: Assets\Settings
         label: Settings
         level: 1
@@ -1148,7 +4420,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -1166,7 +4438,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: Assets\Settings\UniversalRP.asset
@@ -1184,7 +4456,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -1193,6 +4465,204 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: Assets\Sprites\Background.jpg
+        label: Background.jpg
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Background.jpg
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Background.jpg
+          projectPath: Assets\Sprites\Background.jpg
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Sprites\Background.jpg.meta
+        label: Background.jpg.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Background.jpg.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Background.jpg.meta
+          projectPath: Assets\Sprites\Background.jpg.meta
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Sprites\Items
+        label: Items
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Sprites\Items\IronBar.png
+        label: IronBar.png
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Items\IronBar.png
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\IronBar.png
+          projectPath: Assets\Sprites\Items\IronBar.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Sprites\Items\IronBar.png.meta
+        label: IronBar.png.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Items\IronBar.png.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\IronBar.png.meta
+          projectPath: Assets\Sprites\Items\IronBar.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Sprites\Items\IronChunk.png
+        label: IronChunk.png
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Items\IronChunk.png
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\IronChunk.png
+          projectPath: Assets\Sprites\Items\IronChunk.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Sprites\Items\IronChunk.png.meta
+        label: IronChunk.png.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Items\IronChunk.png.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\IronChunk.png.meta
+          projectPath: Assets\Sprites\Items\IronChunk.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Sprites\Items\MagicShard.png
+        label: MagicShard.png
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Items\MagicShard.png
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\MagicShard.png
+          projectPath: Assets\Sprites\Items\MagicShard.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Sprites\Items\MagicShard.png.meta
+        label: MagicShard.png.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Items\MagicShard.png.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\MagicShard.png.meta
+          projectPath: Assets\Sprites\Items\MagicShard.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Sprites\Items\Pickaxe.png
+        label: Pickaxe.png
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Items\Pickaxe.png
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\Pickaxe.png
+          projectPath: Assets\Sprites\Items\Pickaxe.png
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Sprites\Items\Pickaxe.png.meta
+        label: Pickaxe.png.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Items\Pickaxe.png.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\Pickaxe.png.meta
+          projectPath: Assets\Sprites\Items\Pickaxe.png.meta
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       - path: Assets\Sprites\Tiles
         label: Tiles
         level: 2
@@ -1202,7 +4672,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -1220,7 +4690,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: Assets\Sprites\Tiles\AltWoodTile.jpg
@@ -1238,7 +4708,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: Assets\Sprites\Tiles\AltWoodTile.jpg.meta
@@ -1256,7 +4726,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: Assets\Sprites\Tiles\AltWoodTile.png
@@ -1274,7 +4744,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: Assets\Sprites\Tiles\AltWoodTile.png.meta
@@ -1283,6 +4753,42 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 5
+      - path: Assets\Sprites\Tiles\Crate.jpg
+        label: Crate.jpg
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Tiles\Crate.jpg
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Crate.jpg
+          projectPath: Assets\Sprites\Tiles\Crate.jpg
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Sprites\Tiles\Crate.jpg.meta
+        label: Crate.jpg.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Tiles\Crate.jpg.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Crate.jpg.meta
+          projectPath: Assets\Sprites\Tiles\Crate.jpg.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
       - path: Assets\Sprites\Tiles\Dirt.jpg
         label: Dirt.jpg
         level: 3
@@ -1292,7 +4798,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: Assets\Sprites\Tiles\Dirt.jpg
@@ -1310,7 +4816,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: Assets\Sprites\Tiles\Grass.jpg
@@ -1319,6 +4825,42 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
+      - path: Assets\Sprites\Tiles\IronOre.jpg
+        label: IronOre.jpg
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Tiles\IronOre.jpg
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\IronOre.jpg
+          projectPath: Assets\Sprites\Tiles\IronOre.jpg
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Sprites\Tiles\IronOre.jpg.meta
+        label: IronOre.jpg.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Tiles\IronOre.jpg.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\IronOre.jpg.meta
+          projectPath: Assets\Sprites\Tiles\IronOre.jpg.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
       - path: Assets\Sprites\Tiles\Leaf.jpg
         label: Leaf.jpg
         level: 3
@@ -1328,7 +4870,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: Assets\Sprites\Tiles\Leaf.jpg
@@ -1337,6 +4879,42 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
+      - path: Assets\Sprites\Tiles\MagicOre.jpg
+        label: MagicOre.jpg
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Tiles\MagicOre.jpg
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\MagicOre.jpg
+          projectPath: Assets\Sprites\Tiles\MagicOre.jpg
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Sprites\Tiles\MagicOre.jpg.meta
+        label: MagicOre.jpg.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Tiles\MagicOre.jpg.meta
+          fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\MagicOre.jpg.meta
+          projectPath: Assets\Sprites\Tiles\MagicOre.jpg.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
       - path: Assets\Sprites\Tiles\Stone.jpg
         label: Stone.jpg
         level: 3
@@ -1346,7 +4924,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: Assets\Sprites\Tiles\Stone.jpg
@@ -1364,7 +4942,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: Assets\Sprites\Tiles\Wood.jpg
@@ -1382,7 +4960,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -1400,7 +4978,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: Packages\manifest.json
@@ -1418,7 +4996,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -1436,7 +5014,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: ProjectSettings\PackageManagerSettings.asset
@@ -1454,7 +5032,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -1472,7 +5050,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -1490,7 +5068,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: UserSettings\Layouts\default-2022.dwlt
@@ -1509,7 +5087,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: Assets\Sprites\Tiles\AltWoodTile.jpg
@@ -1519,6 +5097,258 @@ MonoBehaviour:
           indexStatus: 1
           workTreeStatus: 1
     gitStatusEntries:
+    - path: Assets\Resources\Items\AltWoodTile.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\AltWoodTile.asset
+      projectPath: Assets\Resources\Items\AltWoodTile.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Resources\Items\DirtTile.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\DirtTile.asset
+      projectPath: Assets\Resources\Items\DirtTile.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Resources\Items\GrassTile.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\GrassTile.asset
+      projectPath: Assets\Resources\Items\GrassTile.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Resources\Items\IronBar.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\IronBar.asset
+      projectPath: Assets\Resources\Items\IronBar.asset
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Items\IronBar.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\IronBar.asset.meta
+      projectPath: Assets\Resources\Items\IronBar.asset.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Items\IronChunk.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\IronChunk.asset
+      projectPath: Assets\Resources\Items\IronChunk.asset
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Items\IronChunk.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\IronChunk.asset.meta
+      projectPath: Assets\Resources\Items\IronChunk.asset.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Items\MagicShard.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\MagicShard.asset
+      projectPath: Assets\Resources\Items\MagicShard.asset
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Items\MagicShard.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\MagicShard.asset.meta
+      projectPath: Assets\Resources\Items\MagicShard.asset.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Items\StoneTile.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Items\StoneTile.asset
+      projectPath: Assets\Resources\Items\StoneTile.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Resources\Tiles\Air.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Air.asset
+      projectPath: Assets\Resources\Tiles\Air.asset
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\Air.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Air.asset.meta
+      projectPath: Assets\Resources\Tiles\Air.asset.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\AirTile.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AirTile.asset
+      projectPath: Assets\Resources\Tiles\AirTile.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Resources\Tiles\AirTile.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AirTile.asset.meta
+      projectPath: Assets\Resources\Tiles\AirTile.asset.meta
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Resources\Tiles\AltWood.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AltWood.asset
+      projectPath: Assets\Resources\Tiles\AltWood.asset
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\AltWood.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AltWood.asset.meta
+      projectPath: Assets\Resources\Tiles\AltWood.asset.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\AltWoodTile.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AltWoodTile.asset
+      projectPath: Assets\Resources\Tiles\AltWoodTile.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Resources\Tiles\AltWoodTile.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\AltWoodTile.asset.meta
+      projectPath: Assets\Resources\Tiles\AltWoodTile.asset.meta
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Resources\Tiles\Dirt.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Dirt.asset
+      projectPath: Assets\Resources\Tiles\Dirt.asset
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\Dirt.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Dirt.asset.meta
+      projectPath: Assets\Resources\Tiles\Dirt.asset.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\DirtTile.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\DirtTile.asset
+      projectPath: Assets\Resources\Tiles\DirtTile.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Resources\Tiles\DirtTile.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\DirtTile.asset.meta
+      projectPath: Assets\Resources\Tiles\DirtTile.asset.meta
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Resources\Tiles\Grass.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Grass.asset
+      projectPath: Assets\Resources\Tiles\Grass.asset
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\Grass.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Grass.asset.meta
+      projectPath: Assets\Resources\Tiles\Grass.asset.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\GrassTile.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\GrassTile.asset
+      projectPath: Assets\Resources\Tiles\GrassTile.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Resources\Tiles\GrassTile.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\GrassTile.asset.meta
+      projectPath: Assets\Resources\Tiles\GrassTile.asset.meta
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Resources\Tiles\IronOre.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\IronOre.asset
+      projectPath: Assets\Resources\Tiles\IronOre.asset
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\IronOre.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\IronOre.asset.meta
+      projectPath: Assets\Resources\Tiles\IronOre.asset.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\Leaf.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Leaf.asset
+      projectPath: Assets\Resources\Tiles\Leaf.asset
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\Leaf.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Leaf.asset.meta
+      projectPath: Assets\Resources\Tiles\Leaf.asset.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\LeafTile.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\LeafTile.asset
+      projectPath: Assets\Resources\Tiles\LeafTile.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Resources\Tiles\LeafTile.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\LeafTile.asset.meta
+      projectPath: Assets\Resources\Tiles\LeafTile.asset.meta
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Resources\Tiles\MagicOre.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\MagicOre.asset
+      projectPath: Assets\Resources\Tiles\MagicOre.asset
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\MagicOre.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\MagicOre.asset.meta
+      projectPath: Assets\Resources\Tiles\MagicOre.asset.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\Stone.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Stone.asset
+      projectPath: Assets\Resources\Tiles\Stone.asset
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\Stone.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Stone.asset.meta
+      projectPath: Assets\Resources\Tiles\Stone.asset.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\StoneTile.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\StoneTile.asset
+      projectPath: Assets\Resources\Tiles\StoneTile.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Resources\Tiles\StoneTile.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\StoneTile.asset.meta
+      projectPath: Assets\Resources\Tiles\StoneTile.asset.meta
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Resources\Tiles\Wood.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Wood.asset
+      projectPath: Assets\Resources\Tiles\Wood.asset
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\Wood.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\Wood.asset.meta
+      projectPath: Assets\Resources\Tiles\Wood.asset.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Tiles\WoodTile.asset
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\WoodTile.asset
+      projectPath: Assets\Resources\Tiles\WoodTile.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Resources\Tiles\WoodTile.asset.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Resources\Tiles\WoodTile.asset.meta
+      projectPath: Assets\Resources\Tiles\WoodTile.asset.meta
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
     - path: Assets\Scenes\SampleScene.meta
       fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scenes\SampleScene.meta
       projectPath: Assets\Scenes\SampleScene.meta
@@ -1543,9 +5373,93 @@ MonoBehaviour:
       originalPath: 
       indexStatus: 1
       workTreeStatus: 1
+    - path: Assets\Scripts\Editor\GridManagerUtils.cs
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Editor\GridManagerUtils.cs
+      projectPath: Assets\Scripts\Editor\GridManagerUtils.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Item.cs
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Item.cs
+      projectPath: Assets\Scripts\Item.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Player\PlayerHand.cs
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\Player\PlayerHand.cs
+      projectPath: Assets\Scripts\Player\PlayerHand.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\WorldGen\WorldGenerator.cs
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Scripts\WorldGen\WorldGenerator.cs
+      projectPath: Assets\Scripts\WorldGen\WorldGenerator.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
     - path: Assets\Settings\UniversalRP.asset
       fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Settings\UniversalRP.asset
       projectPath: Assets\Settings\UniversalRP.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Sprites\Background.jpg
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Background.jpg
+      projectPath: Assets\Sprites\Background.jpg
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Sprites\Background.jpg.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Background.jpg.meta
+      projectPath: Assets\Sprites\Background.jpg.meta
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Sprites\Items\IronBar.png
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\IronBar.png
+      projectPath: Assets\Sprites\Items\IronBar.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Sprites\Items\IronBar.png.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\IronBar.png.meta
+      projectPath: Assets\Sprites\Items\IronBar.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Sprites\Items\IronChunk.png
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\IronChunk.png
+      projectPath: Assets\Sprites\Items\IronChunk.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Sprites\Items\IronChunk.png.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\IronChunk.png.meta
+      projectPath: Assets\Sprites\Items\IronChunk.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Sprites\Items\MagicShard.png
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\MagicShard.png
+      projectPath: Assets\Sprites\Items\MagicShard.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Sprites\Items\MagicShard.png.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\MagicShard.png.meta
+      projectPath: Assets\Sprites\Items\MagicShard.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Sprites\Items\Pickaxe.png
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\Pickaxe.png
+      projectPath: Assets\Sprites\Items\Pickaxe.png
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Sprites\Items\Pickaxe.png.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Items\Pickaxe.png.meta
+      projectPath: Assets\Sprites\Items\Pickaxe.png.meta
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
@@ -1573,6 +5487,18 @@ MonoBehaviour:
       originalPath: 
       indexStatus: 0
       workTreeStatus: 5
+    - path: Assets\Sprites\Tiles\Crate.jpg
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Crate.jpg
+      projectPath: Assets\Sprites\Tiles\Crate.jpg
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Sprites\Tiles\Crate.jpg.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Crate.jpg.meta
+      projectPath: Assets\Sprites\Tiles\Crate.jpg.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
     - path: Assets\Sprites\Tiles\Dirt.jpg
       fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Dirt.jpg
       projectPath: Assets\Sprites\Tiles\Dirt.jpg
@@ -1585,12 +5511,36 @@ MonoBehaviour:
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
+    - path: Assets\Sprites\Tiles\IronOre.jpg
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\IronOre.jpg
+      projectPath: Assets\Sprites\Tiles\IronOre.jpg
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Sprites\Tiles\IronOre.jpg.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\IronOre.jpg.meta
+      projectPath: Assets\Sprites\Tiles\IronOre.jpg.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
     - path: Assets\Sprites\Tiles\Leaf.jpg
       fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Leaf.jpg
       projectPath: Assets\Sprites\Tiles\Leaf.jpg
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
+    - path: Assets\Sprites\Tiles\MagicOre.jpg
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\MagicOre.jpg
+      projectPath: Assets\Sprites\Tiles\MagicOre.jpg
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Sprites\Tiles\MagicOre.jpg.meta
+      fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\MagicOre.jpg.meta
+      projectPath: Assets\Sprites\Tiles\MagicOre.jpg.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
     - path: Assets\Sprites\Tiles\Stone.jpg
       fullPath: C:\Users\coolk\Documents\Projects\TerraRun\Assets\Sprites\Tiles\Stone.jpg
       projectPath: Assets\Sprites\Tiles\Stone.jpg
@@ -1621,12 +5571,12 @@ MonoBehaviour:
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    changedFilesText: 17 changed files
+    changedFilesText: 79 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-08-10T14:38:45.375+02:00
+      updatedTimeString: 2023-08-10T20:50:43.850+02:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-08-10T15:17:20.225+02:00
+      updatedTimeString: 2023-08-10T21:07:59.258+02:00
       cacheType: 6
     lastLocksChangedEvent:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
@@ -11811,7 +15761,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Editor
+    - Assets/Resources/Items
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -11819,16 +15769,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Editor
+  - Assets/Resources/Items
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\coolk\Documents\Projects\TerraRun
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 120}
-    m_SelectedIDs: 1a4c0100
-    m_LastClickedID: 85018
-    m_ExpandedIDs: 000000004c4a01004e4a0100504a0100524a0100544a010000ca9a3b
+    m_SelectedIDs: 305d0100
+    m_LastClickedID: 89392
+    m_ExpandedIDs: 00000000685b01006a5b01006c5b01006e5b0100705b010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -11856,7 +15806,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004c4a01004e4a0100504a0100524a0100544a0100
+    m_ExpandedIDs: 00000000685b01006a5b01006c5b01006e5b0100705b0100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -11996,9 +15946,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 10070000
-      m_LastClickedID: 0
-      m_ExpandedIDs: f2faffff
+      m_SelectedIDs: c0380100
+      m_LastClickedID: 80064
+      m_ExpandedIDs: defaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -12430,9 +16380,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 52.385845, y: 116.3069, z: -0.72971946}
+    m_Target: {x: 29.09215, y: 89.622925, z: -0.7804505}
     speed: 2
-    m_Value: {x: 52.385845, y: 116.3069, z: -0.72971946}
+    m_Value: {x: 29.09215, y: 89.622925, z: -0.7804505}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -12482,9 +16432,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 17.1903
+    m_Target: 25.546423
     speed: 2
-    m_Value: 17.1903
+    m_Value: 25.546423
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -12628,9 +16578,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 514.4
+    y: 512.8
     width: 724.6
-    height: 261
+    height: 262.59998
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0

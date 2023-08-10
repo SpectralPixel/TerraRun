@@ -26,18 +26,19 @@ public static class GameUtilities
             AllItems.Add(item.ItemID, item);
         }
 
+        DropConversion[] _allConversions = Resources.LoadAll<DropConversion>("Item Drop Conversions");
+        ItemDropConversions = new Dictionary<string, string>();
+        foreach (DropConversion _conversion in _allConversions)
+        {
+            ItemDropConversions.Add(_conversion.brokenTile.TileID, _conversion.droppedItem.ItemID);
+        }
+
         CheckDirections = new List<Vector2Int>()
         {
             Vector2Int.up,
             Vector2Int.down,
             Vector2Int.left,
             Vector2Int.right
-        };
-
-        ItemDropConversions = new Dictionary<string, string>()
-        {
-            { "WoodTile", "AltWoodTile" },
-            { "GrassTile", "DirtTile" },
         };
     }
 

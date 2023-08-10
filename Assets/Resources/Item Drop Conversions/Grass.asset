@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd65ba88c87d7b468d21110e4afcb03, type: 3}
+  m_Name: Grass
+  m_EditorClassIdentifier: 
+  brokenTile: {fileID: 11400000, guid: 0b9036eeda5f1414ab48f3d3d622e251, type: 2}
+  droppedItem: {fileID: 11400000, guid: 45656d77b9d20b9489e0ce4dd6974fb4, type: 2}
