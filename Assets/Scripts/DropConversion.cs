@@ -4,7 +4,7 @@ using UnityEngine;
 public class DropConversion : ScriptableObject
 {
 
-    public Tile brokenTile;
-    public Item droppedItem;
+    public string brokenTileID;
+    public string droppedItemID;
 
 }

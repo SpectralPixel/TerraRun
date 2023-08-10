@@ -27,27 +27,27 @@ public class Tree
 
         Tiles = new Dictionary<Vector2Int, Tile>()
         {
-            { new Vector2Int(-2, TreeHeight), GameUtilities.AllTiles["LeafTile"] },
-            { new Vector2Int(-1, TreeHeight), GameUtilities.AllTiles["LeafTile"] },
-            { new Vector2Int(0, TreeHeight), GameUtilities.AllTiles["LeafTile"] },
-            { new Vector2Int(1, TreeHeight), GameUtilities.AllTiles["LeafTile"] },
-            { new Vector2Int(2, TreeHeight), GameUtilities.AllTiles["LeafTile"] },
-            { new Vector2Int(-2, TreeHeight + 1), GameUtilities.AllTiles["LeafTile"] },
-            { new Vector2Int(-1, TreeHeight + 1), GameUtilities.AllTiles["LeafTile"] },
-            { new Vector2Int(0, TreeHeight + 1), GameUtilities.AllTiles["LeafTile"] },
-            { new Vector2Int(1, TreeHeight + 1), GameUtilities.AllTiles["LeafTile"] },
-            { new Vector2Int(2, TreeHeight + 1), GameUtilities.AllTiles["LeafTile"] },
-            { new Vector2Int(-1, TreeHeight + 2), GameUtilities.AllTiles["LeafTile"] },
-            { new Vector2Int(0, TreeHeight + 2), GameUtilities.AllTiles["LeafTile"] },
-            { new Vector2Int(1, TreeHeight + 2), GameUtilities.AllTiles["LeafTile"] },
-            { new Vector2Int(-1, TreeHeight + 3), GameUtilities.AllTiles["LeafTile"] },
-            { new Vector2Int(0, TreeHeight + 3), GameUtilities.AllTiles["LeafTile"] },
-            { new Vector2Int(1, TreeHeight + 3), GameUtilities.AllTiles["LeafTile"] }
+            { new Vector2Int(-2, TreeHeight), GameUtilities.AllTiles["Leaves"] },
+            { new Vector2Int(-1, TreeHeight), GameUtilities.AllTiles["Leaves"] },
+            { new Vector2Int(0, TreeHeight), GameUtilities.AllTiles["Leaves"] },
+            { new Vector2Int(1, TreeHeight), GameUtilities.AllTiles["Leaves"] },
+            { new Vector2Int(2, TreeHeight), GameUtilities.AllTiles["Leaves"] },
+            { new Vector2Int(-2, TreeHeight + 1), GameUtilities.AllTiles["Leaves"] },
+            { new Vector2Int(-1, TreeHeight + 1), GameUtilities.AllTiles["Leaves"] },
+            { new Vector2Int(0, TreeHeight + 1), GameUtilities.AllTiles["Leaves"] },
+            { new Vector2Int(1, TreeHeight + 1), GameUtilities.AllTiles["Leaves"] },
+            { new Vector2Int(2, TreeHeight + 1), GameUtilities.AllTiles["Leaves"] },
+            { new Vector2Int(-1, TreeHeight + 2), GameUtilities.AllTiles["Leaves"] },
+            { new Vector2Int(0, TreeHeight + 2), GameUtilities.AllTiles["Leaves"] },
+            { new Vector2Int(1, TreeHeight + 2), GameUtilities.AllTiles["Leaves"] },
+            { new Vector2Int(-1, TreeHeight + 3), GameUtilities.AllTiles["Leaves"] },
+            { new Vector2Int(0, TreeHeight + 3), GameUtilities.AllTiles["Leaves"] },
+            { new Vector2Int(1, TreeHeight + 3), GameUtilities.AllTiles["Leaves"] }
         };
 
         for (int i = 0; i < TreeHeight; i++)
         {
-            Tiles[new Vector2Int(0, i)] = GameUtilities.AllTiles["WoodTile"];
+            Tiles[new Vector2Int(0, i)] = GameUtilities.AllTiles["Wood"];
         }
 
         foreach (KeyValuePair<Vector2Int, Tile> _currentTile in Tiles)

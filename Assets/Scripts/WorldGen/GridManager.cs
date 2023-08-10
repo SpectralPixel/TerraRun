@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class GridManager : MonoBehaviour
 {
@@ -118,13 +116,13 @@ public class GridManager : MonoBehaviour
         {
             if (_pos.y <= FloorHeights[_pos.x])
             {
-                if (_pos.y == FloorHeights[_pos.x]) WorldTiles[_pos] = GameUtilities.AllTiles["GrassTile"];
+                if (_pos.y == FloorHeights[_pos.x]) WorldTiles[_pos] = GameUtilities.AllTiles["Grass"];
                 else
                 {
                     float value = Mathf.PerlinNoise(_pos.x / 2f, _pos.y / 2f) - (Mathf.Cos(_pos.x / 2f + _pos.y / 3f) + Mathf.Sin(_pos.x / 5f + _pos.y / 3f)) / 6f;
                     float condition = 0.5f - 0.25f * (FloorHeights[_pos.x] - _pos.y - 4);
-                    if (value > condition) WorldTiles[_pos] = GameUtilities.AllTiles["StoneTile"];
-                    else WorldTiles[_pos] = GameUtilities.AllTiles["DirtTile"];
+                    if (value > condition) WorldTiles[_pos] = GameUtilities.AllTiles["Stone"];
+                    else WorldTiles[_pos] = GameUtilities.AllTiles["Dirt"];
                 }
             }
         }
@@ -165,7 +163,7 @@ public class GridManager : MonoBehaviour
             _newTile.name = $"Tile {_pos.x} {_pos.y}";
             _newTile.transform.position = new Vector3(_pos.x + 0.5f, _pos.y + 0.5f);
 
-            _newTile.GetComponent<SpriteRenderer>().sprite = _tile.Sprite;
+            _newTile.GetComponent<SpriteRenderer>().sprite = GameUtilities.GetSprite(_tile.TileID);
 
             if (Application.isPlaying) RecheckCollider(_pos, _newTile);
             else DestroyImmediate(_newTile.GetComponent<BoxCollider2D>());

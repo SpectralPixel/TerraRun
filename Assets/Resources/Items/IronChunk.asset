@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 3
   ItemID: IronChunk
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 32969ff6b42e7ac43a2e783e2cd26896, type: 3}
   Damage: 0
   Power: 0
   tile: {fileID: 0}

@@ -122,7 +122,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void UpdateInventoryUI()
     {
-        tileInHandObj.sprite = Inventory[currentInventorySlot].Item.Icon;
+        tileInHandObj.sprite = GameUtilities.GetSprite(Inventory[currentInventorySlot].Item.ItemID);
         tileInHandObj.color = Inventory[currentInventorySlot].Count > 0 ? Color.white : colorIfStackEmpty;
     }
 

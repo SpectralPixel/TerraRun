@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 3
   ItemID: IronBar
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: cbce148cc2b887d4b9845db02fa7fed5, type: 3}
   Damage: 0
   Power: 0
   tile: {fileID: 0}
