@@ -21,7 +21,7 @@ public class Tree
 
         if (_nearbyTreePos != Vector2Int.zero)
         {
-            GridManager.UpdateGrid(BasePosition, GameUtilities.AllTiles["AirTile"]);
+            WorldGenerator.Instance.UpdateGrid(BasePosition, GameUtilities.AllTiles["AirTile"]);
             return;
         }
 
@@ -53,7 +53,7 @@ public class Tree
         foreach (KeyValuePair<Vector2Int, Tile> _currentTile in Tiles)
         {
             Tile _tile = _currentTile.Value;
-            GridManager.WorldTiles[BasePosition + _currentTile.Key] = _tile;
+            WorldGenerator.Instance.WorldTiles[BasePosition + _currentTile.Key] = _tile;
         }
     }
 
@@ -61,10 +61,10 @@ public class Tree
     {
         foreach (KeyValuePair<Vector2Int, Tile> tile in Tiles)
         {
-            GridManager.UpdateGrid(tile.Key + BasePosition, GameUtilities.AllTiles["AirTile"]);
+            WorldGenerator.Instance.UpdateGrid(tile.Key + BasePosition, GameUtilities.AllTiles["AirTile"]);
         }
 
-        GridManager.Trees.Remove(BasePosition);
+        WorldGenerator.Instance.Trees.Remove(BasePosition);
     }
 
     public Vector2Int CheckForNearbyTrees()
@@ -75,7 +75,7 @@ public class Tree
             {
                 Vector2Int _pos = new Vector2Int(BasePosition.x + x, BasePosition.y + y);
 
-                GridManager.Trees.TryGetValue(_pos, out Tree _tree);
+                WorldGenerator.Instance.Trees.TryGetValue(_pos, out Tree _tree);
                 if (_tree != null) return _pos;
             }
         }
@@ -88,7 +88,7 @@ public class Tree
         float value = Mathf.PerlinNoise(_pos.x / 2f, _pos.y / 2f) - (Mathf.Cos(_pos.x / 2f + _pos.y / 3f) + Mathf.Sin(_pos.x / 5f + _pos.y / 3f)) / 6f;
         float condition = 0.6f;
 
-        GridManager.WorldTiles.TryGetValue(_pos, out Tile _tile);
+        WorldGenerator.Instance.WorldTiles.TryGetValue(_pos, out Tile _tile);
 
         return value > condition && _tile == null;
     }

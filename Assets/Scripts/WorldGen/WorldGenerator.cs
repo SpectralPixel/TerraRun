@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,138 +6,181 @@ public class WorldGenerator : MonoBehaviour
 
     public static WorldGenerator Instance;
 
-    public bool UseRandomSeed;
-    public int WorldSeed;
-
-    [Min(1)] public int MapWidth, MapHeight, FloorHeight;
-    [Range(0, 10)] public int FloorSmoothing;
-
-    public List<OctaveSetting> Octaves;
-
-    public GameObject TilePrefab;
-    public PhysicsMaterial2D TilePhysicsMaterial;
+    [HideInInspector] public Dictionary<Vector2Int, Tile> WorldTiles;
+    [HideInInspector] public Dictionary<int, int> RawFloorHeights;
+    [HideInInspector] public Dictionary<int, int> FloorHeights;
+    [HideInInspector] public Dictionary<Vector2Int, Tree> Trees;
 
     [HideInInspector] public int SeedXOffset;
     [HideInInspector] public float[] SeedVariationMultipliers;
 
+    [SerializeField] private bool UseRandomSeed;
+    public int WorldSeed;
     [Space]
-    [SerializeField] private Transform trackedObject;
-    [SerializeField] [Min(1)] private int renderDistance;
-    [Tooltip("This value will be added to the render distance")] [SerializeField] [Min(1)] private int tileGenerationDistance;
-    [Tooltip("This value will be added to the tile generation distance")] [SerializeField] [Min(1)] private int floorGenerationDistance;
+    public List<OctaveSetting> Octaves;
+    [Range(0, 10)] public int FloorSmoothing;
+    public int FloorHeight;
 
-    private List<Vector2Int> tilesToRemove;
+    [HideInInspector] public Vector2Int PreviewStartCoordinate;
+    [HideInInspector] public Vector2Int PreviewEndCoordinate;
 
+    public int PreviewYBias;
+    [HideInInspector] public Vector2Int PreviewMapSize;
+    [HideInInspector] public int PreviewMapResolution;
+    [HideInInspector] public bool ConservePreviewXSize;
+    [HideInInspector] public bool ConservePreviewYSize;
+
+    #region Singleton + GameManager subscription
     private void Awake()
     {
-        Instance = this;
+        EnsureSingleton();
+
         GameManager.OnGameStateChanged += OnGameStateChanged;
+    }
+
+    public void EnsureSingleton()
+    {
+        if (Instance != null && Instance != this) Destroy(this);
+        else Instance = this;
     }
 
     private void OnGameStateChanged(GameManager.GameState newState)
     {
-        if (newState == GameManager.GameState.GeneratingTerrain) GenerateWorld();
+        if (newState == GameManager.GameState.GeneratingTerrain) InitializeWorld();
     }
 
     private void OnDestroy()
     {
         GameManager.OnGameStateChanged -= OnGameStateChanged;
     }
+    #endregion
 
-    private void Start()
+    public void InitializeWorld()
     {
-        tilesToRemove = new List<Vector2Int>();
-    }
-
-    public void GenerateWorld()
-    {
-        CancelInvoke("UpdateWorld");
-
         // signed 32-bit integer limits are -2,147,483,647 and 2,147,483,647 (you can't get any higher numbers with Int32, which should always be used for whole numbers)
-        if (UseRandomSeed) WorldSeed = UnityEngine.Random.Range(-9999, 10000); // floating point errors happen with high seed values
+        if (UseRandomSeed) WorldSeed = Random.Range(-9999, 10000); // floating point errors happen with high seed values
 
-        if (!Application.isPlaying) GridManager.InitializeWorld(WorldSeed, Octaves, FloorSmoothing, TilePrefab, TilePhysicsMaterial, true, MapWidth, MapHeight, FloorHeight);
-        else (SeedXOffset, SeedVariationMultipliers) = GridManager.InitializeWorld(WorldSeed, Octaves, FloorSmoothing, TilePrefab, TilePhysicsMaterial);
+        Random.InitState(WorldSeed);
+        float _seedVariation = 0.03999f;
 
-        if (Application.isPlaying)
-        {
-            InvokeRepeating("UpdateWorld", 0f, 0.1f);
-            GameManager.instance.UpdateGameState(GameManager.GameState.GameStart);
-        }
+        SeedVariationMultipliers = new float[11];
+        SeedVariationMultipliers[0] = Mathf.RoundToInt(Random.Range(1 - _seedVariation, 1 + _seedVariation) * 1000); // formerly known as seedXOffset
+        for (int m = 1; m < 8; m++) SeedVariationMultipliers[m] = Random.Range(1 - _seedVariation, 1 + _seedVariation);
+        for (int m = 8; m < 11; m++) SeedVariationMultipliers[m] = Random.Range(-1000, 1000);
+
+        WorldTiles = new Dictionary<Vector2Int, Tile>();
+        RawFloorHeights = new Dictionary<int, int>();
+        FloorHeights = new Dictionary<int, int>();
+        Trees = new Dictionary<Vector2Int, Tree>();
+
+        PreviewStartCoordinate = Vector2Int.zero;
+        PreviewEndCoordinate = Vector2Int.zero;
     }
 
-    private void UpdateWorld()
+    public void GeneratePreviewWorld()
     {
-        tilesToRemove.Clear();
-        foreach (Vector2Int pos in GridManager.ActiveTiles.Keys)
+        int _width = PreviewMapSize.x * (ConservePreviewXSize ? PreviewMapResolution : 1);
+        int _height = PreviewMapSize.y * (ConservePreviewYSize ? PreviewMapResolution : 1);
+
+        int _generationStartY = FloorHeight - _height / 2;
+        int _generationEndY = FloorHeight + _height / 2;
+
+        PreviewStartCoordinate = new Vector2Int(0, _generationStartY);
+        PreviewEndCoordinate = new Vector2Int(_width, _generationEndY);
+
+        for (int x = -FloorSmoothing; x < _width + FloorSmoothing; x++)
         {
-            tilesToRemove.Add(pos);
+            GenerateFloorHeight(x);
         }
 
-        // Generate floor heights within render distance + tile generation distance + floor generation distance
-        for (int x = -renderDistance - tileGenerationDistance - floorGenerationDistance + (int)trackedObject.position.x; x < renderDistance + tileGenerationDistance + floorGenerationDistance + (int)trackedObject.position.x; x++)
+        for (int x = 0; x < _width; x++)
         {
-            GridManager.RawFloorHeights.TryGetValue(x, out int _height);
-            if (_height == 0)
-            {
-                GridManager.GenerateFloorHeight(x);
-            }
-        }
+            SmoothFloorHeight(x);
 
-        // Smooth out floor tiles and generate trees within render distance + tile generation distance + floor generation distance - floor smoothing radius
-        for (int x = -renderDistance - tileGenerationDistance - floorGenerationDistance + FloorSmoothing + (int)trackedObject.position.x; x < renderDistance + tileGenerationDistance + floorGenerationDistance - FloorSmoothing + (int)trackedObject.position.x; x++)
-        {
-            GridManager.FloorHeights.TryGetValue(x, out int _height);
-            if (_height == 0)
-            {
-                GridManager.SmoothFloorHeight(x);
-            }
-
-            Vector2Int _newTreeBasePos = new Vector2Int(x, GridManager.FloorHeights[x] + 1);
+            Vector2Int _newTreeBasePos = new Vector2Int(x, FloorHeights[x] + 1);
             if (Tree.CanGenerateTree(_newTreeBasePos))
             {
-                GridManager.Trees[_newTreeBasePos] = new Tree(_newTreeBasePos);
+                Trees[_newTreeBasePos] = new Tree(_newTreeBasePos);
             }
-        }
 
-        // Generate tiles within render distance + tile generation distance
-        for (int x = -renderDistance - tileGenerationDistance + (int)trackedObject.position.x; x < renderDistance + tileGenerationDistance + (int)trackedObject.position.x; x++)
-        {
-            for (int y = -renderDistance - tileGenerationDistance + (int)trackedObject.position.y; y < renderDistance + tileGenerationDistance + (int)trackedObject.position.y; y++)
+            for (int y = _generationStartY; y < _generationEndY; y++)
             {
-                Vector2Int pos = new Vector2Int(x, y);
-
-                GridManager.WorldTiles.TryGetValue(pos, out Tile _tile);
-                if (_tile == null && pos.y <= GridManager.FloorHeights[x])
-                {
-                    GridManager.GenerateTile(pos);
-                }
+                GenerateTile(new Vector2Int(x, y));
             }
-        }
-
-        // Render tiles within render distance
-        for (int x = -renderDistance + (int)trackedObject.position.x; x < renderDistance + (int)trackedObject.position.x; x++)
-        {
-            for (int y = -renderDistance + (int)trackedObject.position.y; y < renderDistance + (int)trackedObject.position.y; y++)
-            {
-                Vector2Int pos = new Vector2Int(x, y);
-
-                GridManager.ActiveTiles.TryGetValue(pos, out GameObject _obj);
-                if (_obj == null)
-                {
-                    GridManager.WorldTiles.TryGetValue(pos, out Tile _tile);
-                    if (_tile != null) GridManager.CreateTileObject(pos, _tile);
-                }
-
-                tilesToRemove.Remove(pos);
-            }
-        }
-
-        for (int i = 0; i < tilesToRemove.Count; i++)
-        {
-            Vector2Int pos = tilesToRemove[i];
-            Destroy(GridManager.ActiveTiles[pos]);
-            GridManager.ActiveTiles.Remove(pos);
         }
     }
+
+    public void GenerateFloorHeight(int x)
+    {
+        GenerateFloorHeight(x, FloorHeight, Octaves, SeedVariationMultipliers);
+    }
+
+    public void GenerateFloorHeight(int _x, int _worldFloorHeight, List<OctaveSetting> _octaves, float[] _seedVariationMultipliers)
+    {
+        RawFloorHeights[_x] = Mathf.RoundToInt(NoiseGenerator.GetHeight(_x, _worldFloorHeight, _octaves, _seedVariationMultipliers));
+    }
+
+    public void SmoothFloorHeight(int _x)
+    {
+        if (FloorSmoothing > 0)
+        {
+            float _floorHeightsAverage = 0;
+            for (int i = -FloorSmoothing; i <= FloorSmoothing; i++)
+            {
+                RawFloorHeights.TryGetValue(_x + i, out int _currentHeight);
+                if (_currentHeight == 0) GenerateFloorHeight(_x + i);
+
+                _floorHeightsAverage += RawFloorHeights[_x + i];
+            }
+
+            int _floorHeight = Mathf.RoundToInt(_floorHeightsAverage / ((FloorSmoothing * 2) + 1));
+            FloorHeights[_x] = _floorHeight;
+        }
+        else FloorHeights[_x] = RawFloorHeights[_x];
+    }
+
+    public void GenerateTile(Vector2Int _pos)
+    {
+        WorldTiles.TryGetValue(_pos, out Tile tile);
+        if (tile == null)
+        {
+            if (_pos.y <= FloorHeights[_pos.x])
+            {
+                if (_pos.y == FloorHeights[_pos.x]) WorldTiles[_pos] = GameUtilities.AllTiles["Grass"];
+                else
+                {
+                    float value = Mathf.PerlinNoise(_pos.x / 2f, _pos.y / 2f) - (Mathf.Cos(_pos.x / 2f + _pos.y / 3f) + Mathf.Sin(_pos.x / 5f + _pos.y / 3f)) / 6f;
+                    float condition = 0.5f - 0.25f * (FloorHeights[_pos.x] - _pos.y - 4);
+                    if (value > condition) WorldTiles[_pos] = GameUtilities.AllTiles["Stone"];
+                    else WorldTiles[_pos] = GameUtilities.AllTiles["Dirt"];
+                }
+            }
+        }
+    }
+
+    public void UpdateGrid(Vector2Int _pos, Tile _newTile)
+    {
+        WorldTiles.TryGetValue(_pos, out Tile tile);
+        if (tile != null) // if the tile exists in the dictionary
+        {
+            GridManager.Instance.ActiveTiles.TryGetValue(_pos, out GameObject _oldTile);
+            if (_oldTile == null) _oldTile = GameObject.Find($"/Grid/Tile {_pos.x} {_pos.y}");
+            if (_oldTile != null) Destroy(_oldTile); // destroy the old copys
+        }
+
+        WorldTiles[_pos] = _newTile;
+        GridManager.Instance.CreateTileObject(_pos, _newTile);
+
+        // check if the neighboring tiles should be/not be a border and change them respectively
+        foreach (Vector2Int _direction in GameUtilities.CheckDirections)
+        {
+            WorldTiles.TryGetValue(_pos + _direction, out Tile _checkedTile);
+            GridManager.Instance.ActiveTiles.TryGetValue(_pos + _direction, out GameObject _obj);
+            if (_checkedTile != null && _checkedTile.Type == TileType.Solid && _obj != null && _obj != GridManager.Instance.AirTile) // check if the tile exists, is solid, is instantiated and IS NOT THE AIRTILE GODDAMNIT
+            {
+                GridManager.Instance.RecheckCollider(_pos + _direction, _obj);
+            }
+        }
+    }
+
 }

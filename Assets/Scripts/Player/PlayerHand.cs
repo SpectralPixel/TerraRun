@@ -53,7 +53,7 @@ public class PlayerHand : MonoBehaviour
         {
             selectedTile = new Vector2Int(Mathf.FloorToInt(mouseCoords.x), Mathf.FloorToInt(mouseCoords.y));
 
-            GridManager.WorldTiles.TryGetValue(selectedTile, out Tile tile);
+            WorldGenerator.Instance.WorldTiles.TryGetValue(selectedTile, out Tile tile);
             if ((tile == null || tile.Type == TileType.Gas || tile.Type == TileType.Background) && inventory.GetCurrentStack().Item.Type == ItemType.Tool)
             {
                 /*
@@ -79,7 +79,7 @@ public class PlayerHand : MonoBehaviour
                 bool _tileFound = false;
                 foreach (Vector2Int direction in directionsToCheck)
                 {
-                    GridManager.WorldTiles.TryGetValue(selectedTile + direction, out tile);
+                    WorldGenerator.Instance.WorldTiles.TryGetValue(selectedTile + direction, out tile);
                     if (tile != null && tile.Type != TileType.Gas && tile.Type != TileType.Background)
                     {
                         selectedTile += direction;
@@ -102,7 +102,7 @@ public class PlayerHand : MonoBehaviour
                                 {
                                     Vector2Int _pos = selectedTile + new Vector2Int(x, y);
 
-                                    GridManager.WorldTiles.TryGetValue(_pos, out Tile _tile);
+                                    WorldGenerator.Instance.WorldTiles.TryGetValue(_pos, out Tile _tile);
                                     if (_tile != null && _tile.Type != TileType.Gas && _tile.Type != TileType.Background)
                                     {
                                         float distance = Mathf.Sqrt(x * x + y * y);
@@ -139,20 +139,20 @@ public class PlayerHand : MonoBehaviour
             case ItemType.Weapon:
                 break;
             case ItemType.Tool:
-                GridManager.WorldTiles.TryGetValue(selectedTile, out Tile _tileToAdd);
+                WorldGenerator.Instance.WorldTiles.TryGetValue(selectedTile, out Tile _tileToAdd);
                 if (_tileToAdd != null && timeClicked * curItem.Power > _tileToAdd.Hardness)
                 {
                     if (_tileToAdd.Type == TileType.Solid)
                     {
                         inventory.AddItems(GameUtilities.TileToItem(_tileToAdd), 1);
-                        GridManager.UpdateGrid(selectedTile, GameUtilities.AllTiles["AirTile"]);
+                        WorldGenerator.Instance.UpdateGrid(selectedTile, GameUtilities.AllTiles["AirTile"]);
                     }
                     else if (_tileToAdd.Type == TileType.Tree)
                     {
-                        GridManager.Trees.TryGetValue(selectedTile, out Tree _tree);
+                        WorldGenerator.Instance.Trees.TryGetValue(selectedTile, out Tree _tree);
                         for (int i = 0; i < 8; i++)
                         {
-                            GridManager.Trees.TryGetValue(new Vector2Int(selectedTile.x, selectedTile.y - i), out _tree);
+                            WorldGenerator.Instance.Trees.TryGetValue(new Vector2Int(selectedTile.x, selectedTile.y - i), out _tree);
                             if (_tree != null) break;
                         }
                         if (_tree != null && timeClicked * curItem.Power > _tileToAdd.Hardness * _tree.TreeHeight)
@@ -168,10 +168,10 @@ public class PlayerHand : MonoBehaviour
             case ItemType.Material:
                 break;
             case ItemType.Tile:
-                GridManager.WorldTiles.TryGetValue(selectedTile, out Tile _tile);
+                WorldGenerator.Instance.WorldTiles.TryGetValue(selectedTile, out Tile _tile);
                 if ((_tile == null || _tile.Type == TileType.Gas) && inventory.GetCurrentStack().Count > 0)
                 {
-                    GridManager.UpdateGrid(selectedTile, GameUtilities.ItemToTile(inventory.GetCurrentStack().Item));
+                    WorldGenerator.Instance.UpdateGrid(selectedTile, GameUtilities.ItemToTile(inventory.GetCurrentStack().Item));
                     inventory.RemoveItems(inventory.GetCurrentStack().Item, 1);
                 }
                 break;

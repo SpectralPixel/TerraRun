@@ -4,7 +4,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public static GameManager instance;
+    public static GameManager Instance;
 
     public GameState state;
 
@@ -12,9 +12,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
-
-        GameUtilities.SetupVariables();
+        if (Instance != null && Instance != this) Destroy(this);
+        else Instance = this;
     }
 
     private void Start()
@@ -29,13 +28,23 @@ public class GameManager : MonoBehaviour
         switch (state)
         {
             case GameState.GeneratingTerrain:
+                GameUtilities.SetupVariables();
+
+                if (WorldGenerator.Instance == null) FindObjectOfType<WorldGenerator>().EnsureSingleton();
+                if (GridManager.Instance == null) FindObjectOfType<GridManager>().EnsureSingleton();
+
+                WorldGenerator.Instance.InitializeWorld();
+                GridManager.Instance.InitializeGrid();
+
+                UpdateGameState(GameState.GameStart);
+
                 break;
             case GameState.GameStart:
 
                 // Set the player's position to the floor procedurally
                 Vector2 _startPosition = transform.position;
-                GridManager.GenerateFloorHeight((int)_startPosition.x);
-                _startPosition.y = GridManager.RawFloorHeights[(int)transform.position.x] + transform.localScale.y * 2;
+                WorldGenerator.Instance.GenerateFloorHeight((int)_startPosition.x);
+                _startPosition.y = WorldGenerator.Instance.FloorHeights[(int)transform.position.x] + transform.localScale.y * 2;
                 _startPosition.x = Mathf.RoundToInt(_startPosition.x) + 0.5f;
 
                 GameObject.FindWithTag("Player").transform.position = _startPosition;
@@ -52,9 +61,9 @@ public class GameManager : MonoBehaviour
     }
 
     public enum GameState
-{
-    GeneratingTerrain,
-    GameStart,
-    GameEnd
-}
+    {
+        GeneratingTerrain,
+        GameStart,
+        GameEnd
+    }
 }
