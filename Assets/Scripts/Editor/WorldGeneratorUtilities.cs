@@ -47,7 +47,7 @@ public class WorldGeneratorUtilities : Editor
         }
         else AutoUpdate = false;
 
-        if (GUILayout.Button("Generate World"))
+        if (GUILayout.Button("Generate Preview"))
         {
             GenerateWorld();
         }
@@ -69,12 +69,12 @@ public class WorldGeneratorUtilities : Editor
         oldFloorSmoothing = worldGenerator.FloorSmoothing;
     }
 
-    private void GenerateWorld()
+    private async void GenerateWorld()
     {
         GameUtilities.InitializeUtilities();
 
-        worldGenerator.InitializeWorld();
-        gridManager.InitializeGrid();
+        await worldGenerator.InitializeWorld();
+        await gridManager.InitializeGrid();
 
         worldGenerator.GeneratePreviewWorld();
         gridManager.CreateWorldPreview();

@@ -140,7 +140,7 @@ public class WorldGenerator : MonoBehaviour
                 if (_pos.y == FloorHeights[_pos.x]) WorldTiles[_pos] = GameUtilities.AllTiles["Grass"];
                 else
                 {
-                    float value = Mathf.PerlinNoise(_pos.x / 2f, _pos.y / 2f) - (Mathf.Cos(_pos.x / 2f + _pos.y / 3f) + Mathf.Sin(_pos.x / 5f + _pos.y / 3f)) / 6f;
+                    float value = Mathf.PerlinNoise(_pos.x / 2f + 200, _pos.y / 2f + 200) - (Mathf.Cos(_pos.x / 2f + _pos.y / 3f) + Mathf.Sin(_pos.x / 5f + _pos.y / 3f)) / 6f;
                     float condition = 0.5f - 0.25f * (FloorHeights[_pos.x] - _pos.y - 4);
                     if (value > condition) WorldTiles[_pos] = GameUtilities.AllTiles["Stone"];
                     else WorldTiles[_pos] = GameUtilities.AllTiles["Dirt"];

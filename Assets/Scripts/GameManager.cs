@@ -75,11 +75,11 @@ public class GameManager : MonoBehaviour
 
         OnGameStateChanged?.Invoke(newState);
     }
+}
 
-    public enum GameState
-    {
-        GeneratingTerrain,
-        GameStart,
-        GameEnd
-    }
+public enum GameState
+{
+    GeneratingTerrain,
+    GameStart,
+    GameEnd
 }

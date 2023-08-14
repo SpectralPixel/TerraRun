@@ -14,7 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 1
   ItemID: Pickaxe
-  Icon: {fileID: 21300000, guid: 6b27146b5f4f5a74cb5dde1101592b07, type: 3}
   Damage: 0
   Power: 20
-  tile: {fileID: 0}

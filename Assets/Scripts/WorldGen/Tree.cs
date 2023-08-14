@@ -85,7 +85,7 @@ public class Tree
 
     public static bool CanGenerateTree(Vector2Int _pos)
     {
-        float value = Mathf.PerlinNoise(_pos.x / 2f, _pos.y / 2f) - (Mathf.Cos(_pos.x / 2f + _pos.y / 3f) + Mathf.Sin(_pos.x / 5f + _pos.y / 3f)) / 6f;
+        float value = Mathf.PerlinNoise(_pos.x / 2f + 100, _pos.y / 2f + 100) - (Mathf.Cos(_pos.x / 2f + _pos.y / 3f) + Mathf.Sin(_pos.x / 5f + _pos.y / 3f)) / 6f;
         float condition = 0.6f;
 
         WorldGenerator.Instance.WorldTiles.TryGetValue(_pos, out Tile _tile);

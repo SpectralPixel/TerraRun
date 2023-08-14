@@ -26,10 +26,10 @@ public class WorldLoader : MonoBehaviour
         else Instance = this;
     }
 
-    private void OnGameStateChanged(GameManager.GameState newState)
+    private void OnGameStateChanged(GameState newState)
     {
         CancelInvoke("UpdateWorld");
-        if (newState == GameManager.GameState.GameStart && Application.isPlaying) InvokeRepeating("UpdateWorld", 0f, 0.1f);
+        if (newState == GameState.GameStart && Application.isPlaying) InvokeRepeating("UpdateWorld", 0f, 0.1f);
     }
 
     private void OnDestroy()
@@ -117,4 +117,30 @@ public class WorldLoader : MonoBehaviour
             GridManager.Instance.ActiveTiles.Remove(pos);
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        if (!Application.isPlaying) return;
+
+        // Raw Heights
+        Gizmos.color = Color.red;
+        List<Vector3> rawHeights = new List<Vector3>();
+        foreach (KeyValuePair<int, int> keyValuePair in WorldGenerator.Instance.RawFloorHeights)
+        {
+            rawHeights.Add(new Vector3(keyValuePair.Key, keyValuePair.Value));
+        }
+
+        Gizmos.DrawLineStrip(rawHeights.ToArray(), false);
+
+        // Real Heights
+        Gizmos.color = Color.green;
+        List<Vector3> heights = new List<Vector3>();
+        foreach (KeyValuePair<int, int> keyValuePair in WorldGenerator.Instance.FloorHeights)
+        {
+            heights.Add(new Vector3(keyValuePair.Key, keyValuePair.Value));
+        }
+
+        Gizmos.DrawLineStrip(heights.ToArray(), false);
+    }
+
 }

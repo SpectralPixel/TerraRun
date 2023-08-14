@@ -84,6 +84,8 @@ public class GridManager : MonoBehaviour
         }
         _previewTexture.Apply();
 
+        _previewTexture.filterMode = FilterMode.Point;
+
         Material _previewMaterial = Resources.Load<Material>("Unlit Material");
         _previewMaterial.mainTexture = _previewTexture;
         _gridPreview.GetComponent<MeshRenderer>().material = _previewMaterial;
