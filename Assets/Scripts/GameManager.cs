@@ -1,14 +1,15 @@
 using System;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
 
     public static GameManager Instance;
-
-    public GameState state;
-
     public static event Action<GameState> OnGameStateChanged;
+
+    public GameState State;
+    private GameState nextState;
 
     private void Awake()
     {
@@ -19,24 +20,39 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UpdateGameState(GameState.GeneratingTerrain);
+
+        OnGameStateChanged += GameStateChangeCompleted;
     }
 
-    public void UpdateGameState(GameState newState)
+    private void GameStateChangeCompleted(GameState newState)
     {
-        state = newState;
+        if (nextState != newState) UpdateGameState(nextState);
+    }
 
-        switch (state)
+    private void OnDestroy()
+    {
+        OnGameStateChanged -= GameStateChangeCompleted;
+    }
+
+    public async void UpdateGameState(GameState newState)
+    {
+        State = newState;
+
+        switch (State)
         {
             case GameState.GeneratingTerrain:
-                GameUtilities.SetupVariables();
+                GameUtilities.InitializeUtilities();
 
                 if (WorldGenerator.Instance == null) FindObjectOfType<WorldGenerator>().EnsureSingleton();
                 if (GridManager.Instance == null) FindObjectOfType<GridManager>().EnsureSingleton();
 
-                WorldGenerator.Instance.InitializeWorld();
-                GridManager.Instance.InitializeGrid();
+                Task[] tasks = new Task[2];
+                tasks[0] = WorldGenerator.Instance.InitializeWorld();
+                tasks[1] = GridManager.Instance.InitializeGrid();
 
-                UpdateGameState(GameState.GameStart);
+                await Task.WhenAll(tasks);
+
+                nextState = GameState.GameStart;
 
                 break;
             case GameState.GameStart:
@@ -44,7 +60,7 @@ public class GameManager : MonoBehaviour
                 // Set the player's position to the floor procedurally
                 Vector2 _startPosition = transform.position;
                 WorldGenerator.Instance.GenerateFloorHeight((int)_startPosition.x);
-                _startPosition.y = WorldGenerator.Instance.FloorHeights[(int)transform.position.x] + transform.localScale.y * 2;
+                _startPosition.y = WorldGenerator.Instance.RawFloorHeights[(int)transform.position.x] + transform.localScale.y * 2;
                 _startPosition.x = Mathf.RoundToInt(_startPosition.x) + 0.5f;
 
                 GameObject.FindWithTag("Player").transform.position = _startPosition;

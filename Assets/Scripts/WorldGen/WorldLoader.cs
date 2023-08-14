@@ -6,7 +6,6 @@ public class WorldLoader : MonoBehaviour
 
     public static WorldLoader Instance;
 
-    [SerializeField] private Transform trackedObject;
     [SerializeField] [Min(1)] private int renderDistance;
     [Tooltip("This value will be added to the render distance")] [SerializeField] [Min(1)] private int tileGenerationDistance;
     [Tooltip("This value will be added to the tile generation distance")] [SerializeField] [Min(1)] private int floorGenerationDistance;
@@ -44,7 +43,7 @@ public class WorldLoader : MonoBehaviour
         tilesToRemove = new List<Vector2Int>();
     }
 
-    private void UpdateWorld()
+    public void UpdateWorld()
     {
         tilesToRemove.Clear();
         foreach (Vector2Int pos in GridManager.Instance.ActiveTiles.Keys)
@@ -53,7 +52,7 @@ public class WorldLoader : MonoBehaviour
         }
 
         // Generate floor heights within render distance + tile generation distance + floor generation distance
-        for (int x = -renderDistance - tileGenerationDistance - floorGenerationDistance + (int)trackedObject.position.x; x < renderDistance + tileGenerationDistance + floorGenerationDistance + (int)trackedObject.position.x; x++)
+        for (int x = -renderDistance - tileGenerationDistance - floorGenerationDistance + (int)base.transform.position.x; x < renderDistance + tileGenerationDistance + floorGenerationDistance + (int)transform.position.x; x++)
         {
             WorldGenerator.Instance.RawFloorHeights.TryGetValue(x, out int _height);
             if (_height == 0)
@@ -63,7 +62,7 @@ public class WorldLoader : MonoBehaviour
         }
 
         // Smooth out floor tiles and generate trees within render distance + tile generation distance + floor generation distance - floor smoothing radius
-        for (int x = -renderDistance - tileGenerationDistance - floorGenerationDistance + WorldGenerator.Instance.FloorSmoothing + (int)trackedObject.position.x; x < renderDistance + tileGenerationDistance + floorGenerationDistance - WorldGenerator.Instance.FloorSmoothing + (int)trackedObject.position.x; x++)
+        for (int x = -renderDistance - tileGenerationDistance - floorGenerationDistance + WorldGenerator.Instance.FloorSmoothing + (int)transform.position.x; x < renderDistance + tileGenerationDistance + floorGenerationDistance - WorldGenerator.Instance.FloorSmoothing + (int)transform.position.x; x++)
         {
             WorldGenerator.Instance.FloorHeights.TryGetValue(x, out int _height);
             if (_height == 0)
@@ -79,9 +78,9 @@ public class WorldLoader : MonoBehaviour
         }
 
         // Generate tiles within render distance + tile generation distance
-        for (int x = -renderDistance - tileGenerationDistance + (int)trackedObject.position.x; x < renderDistance + tileGenerationDistance + (int)trackedObject.position.x; x++)
+        for (int x = -renderDistance - tileGenerationDistance + (int)transform.position.x; x < renderDistance + tileGenerationDistance + (int)transform.position.x; x++)
         {
-            for (int y = -renderDistance - tileGenerationDistance + (int)trackedObject.position.y; y < renderDistance + tileGenerationDistance + (int)trackedObject.position.y; y++)
+            for (int y = -renderDistance - tileGenerationDistance + (int)transform.position.y; y < renderDistance + tileGenerationDistance + (int)transform.position.y; y++)
             {
                 Vector2Int pos = new Vector2Int(x, y);
 
@@ -94,9 +93,9 @@ public class WorldLoader : MonoBehaviour
         }
 
         // Render tiles within render distance
-        for (int x = -renderDistance + (int)trackedObject.position.x; x < renderDistance + (int)trackedObject.position.x; x++)
+        for (int x = -renderDistance + (int)transform.position.x; x < renderDistance + (int)transform.position.x; x++)
         {
-            for (int y = -renderDistance + (int)trackedObject.position.y; y < renderDistance + (int)trackedObject.position.y; y++)
+            for (int y = -renderDistance + (int)transform.position.y; y < renderDistance + (int)transform.position.y; y++)
             {
                 Vector2Int pos = new Vector2Int(x, y);
 

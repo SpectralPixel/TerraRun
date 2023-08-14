@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public static class GameUtilities
     public static Dictionary<string, string> ItemDropConversions; // when an item is dropped, the player gets another item instead (e.g. player breaks generated wood, gets placeable wood)
     public static List<Vector2Int> CheckDirections;
 
-    public static void SetupVariables()
+    public static void InitializeUtilities()
     {
         Sprite[] _allSprites = Resources.LoadAll<Sprite>("Sprites");
         AllSprites = new Dictionary<string, Sprite>();

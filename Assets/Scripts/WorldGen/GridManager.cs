@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class GridManager : MonoBehaviour
@@ -15,12 +16,10 @@ public class GridManager : MonoBehaviour
     [SerializeField] private GameObject TilePrefab;
     [SerializeField] private PhysicsMaterial2D TilePhysicsMaterial;
 
-    #region Singleton + GameManager subscription
+    #region Singleton
     private void Awake()
     {
         EnsureSingleton();
-
-        GameManager.OnGameStateChanged += OnGameStateChanged;
     }
 
     public void EnsureSingleton()
@@ -28,19 +27,9 @@ public class GridManager : MonoBehaviour
         if (Instance != null && Instance != this) Destroy(this);
         else Instance = this;
     }
-
-    private void OnGameStateChanged(GameManager.GameState newState)
-    {
-        if (newState == GameManager.GameState.GeneratingTerrain) InitializeGrid();
-    }
-
-    private void OnDestroy()
-    {
-        GameManager.OnGameStateChanged -= OnGameStateChanged;
-    }
     #endregion
 
-    public void InitializeGrid()
+    public async Task InitializeGrid()
     {
         ActiveTiles = new Dictionary<Vector2Int, GameObject>();
 
@@ -50,6 +39,8 @@ public class GridManager : MonoBehaviour
 
         GameObject oldGridPreview = GameObject.Find(GridPreviewName);
         if (oldGridPreview != null) DestroyImmediate(oldGridPreview);
+
+        await Task.Yield();
     }
 
     public void CreateWorldPreview()

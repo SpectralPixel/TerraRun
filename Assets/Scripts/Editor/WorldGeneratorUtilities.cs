@@ -71,7 +71,7 @@ public class WorldGeneratorUtilities : Editor
 
     private void GenerateWorld()
     {
-        GameUtilities.SetupVariables();
+        GameUtilities.InitializeUtilities();
 
         worldGenerator.InitializeWorld();
         gridManager.InitializeGrid();

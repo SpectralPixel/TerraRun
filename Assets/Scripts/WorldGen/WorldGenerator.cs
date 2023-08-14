@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class WorldGenerator : MonoBehaviour
@@ -30,12 +31,10 @@ public class WorldGenerator : MonoBehaviour
     [HideInInspector] public bool ConservePreviewXSize;
     [HideInInspector] public bool ConservePreviewYSize;
 
-    #region Singleton + GameManager subscription
+    #region Singleton
     private void Awake()
     {
         EnsureSingleton();
-
-        GameManager.OnGameStateChanged += OnGameStateChanged;
     }
 
     public void EnsureSingleton()
@@ -43,19 +42,9 @@ public class WorldGenerator : MonoBehaviour
         if (Instance != null && Instance != this) Destroy(this);
         else Instance = this;
     }
-
-    private void OnGameStateChanged(GameManager.GameState newState)
-    {
-        if (newState == GameManager.GameState.GeneratingTerrain) InitializeWorld();
-    }
-
-    private void OnDestroy()
-    {
-        GameManager.OnGameStateChanged -= OnGameStateChanged;
-    }
     #endregion
 
-    public void InitializeWorld()
+    public async Task InitializeWorld()
     {
         // signed 32-bit integer limits are -2,147,483,647 and 2,147,483,647 (you can't get any higher numbers with Int32, which should always be used for whole numbers)
         if (UseRandomSeed) WorldSeed = Random.Range(-9999, 10000); // floating point errors happen with high seed values
@@ -75,6 +64,8 @@ public class WorldGenerator : MonoBehaviour
 
         PreviewStartCoordinate = Vector2Int.zero;
         PreviewEndCoordinate = Vector2Int.zero;
+
+        await Task.Yield();
     }
 
     public void GeneratePreviewWorld()
