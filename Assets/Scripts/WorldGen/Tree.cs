@@ -21,7 +21,7 @@ public class Tree
 
         if (_nearbyTreePos != Vector2Int.zero)
         {
-            WorldGenerator.Instance.UpdateGrid(BasePosition, GameUtilities.AllTiles["AirTile"]);
+            WorldGenerator.Instance.UpdateGrid(BasePosition, GameUtilities.AllTiles["Air"]);
             return;
         }
 
@@ -61,7 +61,7 @@ public class Tree
     {
         foreach (KeyValuePair<Vector2Int, Tile> tile in Tiles)
         {
-            WorldGenerator.Instance.UpdateGrid(tile.Key + BasePosition, GameUtilities.AllTiles["AirTile"]);
+            WorldGenerator.Instance.UpdateGrid(tile.Key + BasePosition, GameUtilities.AllTiles["Air"]);
         }
 
         WorldGenerator.Instance.Trees.Remove(BasePosition);
@@ -89,8 +89,9 @@ public class Tree
         float condition = 0.6f;
 
         WorldGenerator.Instance.WorldTiles.TryGetValue(_pos, out Tile _tile);
+        WorldGenerator.Instance.WorldTiles.TryGetValue(_pos - new Vector2Int(0, -1), out Tile _tileBelow);
 
-        return value > condition && _tile == null;
+        return value > condition && _tile == null && !(_tileBelow != null && _tileBelow.Type == TileType.Gas);
     }
 
 }

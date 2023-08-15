@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class WorldLoader : MonoBehaviour
 {
@@ -51,24 +52,23 @@ public class WorldLoader : MonoBehaviour
             tilesToRemove.Add(pos);
         }
 
-        // Generate floor heights within render distance + tile generation distance + floor generation distance
-        for (int x = -renderDistance - tileGenerationDistance - floorGenerationDistance + (int)base.transform.position.x; x < renderDistance + tileGenerationDistance + floorGenerationDistance + (int)transform.position.x; x++)
-        {
-            WorldGenerator.Instance.RawFloorHeights.TryGetValue(x, out int _height);
-            if (_height == 0)
-            {
-                WorldGenerator.Instance.GenerateFloorHeight(x);
-            }
-        }
-
-        // Smooth out floor tiles and generate trees within render distance + tile generation distance + floor generation distance - floor smoothing radius
-        for (int x = -renderDistance - tileGenerationDistance - floorGenerationDistance + WorldGenerator.Instance.FloorSmoothing + (int)transform.position.x; x < renderDistance + tileGenerationDistance + floorGenerationDistance - WorldGenerator.Instance.FloorSmoothing + (int)transform.position.x; x++)
+        // Smooth out floor tiles and generate trees within render distance + tile generation distance + floor generation distance
+        for (int x = -renderDistance - tileGenerationDistance - floorGenerationDistance + (int)transform.position.x; x < renderDistance + tileGenerationDistance + floorGenerationDistance + (int)transform.position.x; x++)
         {
             WorldGenerator.Instance.FloorHeights.TryGetValue(x, out int _height);
             if (_height == 0)
             {
-                WorldGenerator.Instance.SmoothFloorHeight(x);
+                WorldGenerator.Instance.GenerateFloorHeight(x);
             }
+
+            /*
+            for (int y = -renderDistance - tileGenerationDistance - floorGenerationDistance + (int)transform.position.y; y < renderDistance + tileGenerationDistance + floorGenerationDistance + (int)transform.position.y; y++)
+            {
+                Vector2Int _pos = new Vector2Int(x, y);
+                WorldGenerator.Instance.WorldTiles.TryGetValue(_pos, out Tile _tile);
+                if (_tile == null && !WorldGenerator.Instance.CaveTiles.Contains(_pos)) WorldGenerator.Instance.GenerateCave(_pos);
+            }
+            */
 
             Vector2Int _newTreeBasePos = new Vector2Int(x, WorldGenerator.Instance.FloorHeights[x] + 1);
             if (Tree.CanGenerateTree(_newTreeBasePos))
@@ -116,31 +116,6 @@ public class WorldLoader : MonoBehaviour
             Destroy(GridManager.Instance.ActiveTiles[pos]);
             GridManager.Instance.ActiveTiles.Remove(pos);
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        if (!Application.isPlaying) return;
-
-        // Raw Heights
-        Gizmos.color = Color.red;
-        List<Vector3> rawHeights = new List<Vector3>();
-        foreach (KeyValuePair<int, int> keyValuePair in WorldGenerator.Instance.RawFloorHeights)
-        {
-            rawHeights.Add(new Vector3(keyValuePair.Key, keyValuePair.Value));
-        }
-
-        Gizmos.DrawLineStrip(rawHeights.ToArray(), false);
-
-        // Real Heights
-        Gizmos.color = Color.green;
-        List<Vector3> heights = new List<Vector3>();
-        foreach (KeyValuePair<int, int> keyValuePair in WorldGenerator.Instance.FloorHeights)
-        {
-            heights.Add(new Vector3(keyValuePair.Key, keyValuePair.Value));
-        }
-
-        Gizmos.DrawLineStrip(heights.ToArray(), false);
     }
 
 }

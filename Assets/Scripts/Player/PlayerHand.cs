@@ -145,7 +145,7 @@ public class PlayerHand : MonoBehaviour
                     if (_tileToAdd.Type == TileType.Solid)
                     {
                         inventory.AddItems(GameUtilities.TileToItem(_tileToAdd), 1);
-                        WorldGenerator.Instance.UpdateGrid(selectedTile, GameUtilities.AllTiles["AirTile"]);
+                        WorldGenerator.Instance.UpdateGrid(selectedTile, GameUtilities.AllTiles["Air"]);
                     }
                     else if (_tileToAdd.Type == TileType.Tree)
                     {

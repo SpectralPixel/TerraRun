@@ -3,6 +3,7 @@ using UnityEngine;
 
 public static class NoiseGenerator
 {
+
     public static float GetHeight(int x, int baseHeight, List<OctaveSetting> octaves, float[] variation)
     {
         double newHeight = baseHeight;
@@ -27,4 +28,12 @@ public static class NoiseGenerator
 
         return (float)newHeight;
     }
+
+    public static Tile DetermineTile(string _tile1, string _tile2, Vector2Int _pos, float _condition)
+    {
+        float _value = Mathf.PerlinNoise(_pos.x / 2f + 200, _pos.y / 2f + 200) - ((Mathf.Cos(_pos.x / 2f + _pos.y / 3f) + Mathf.Sin(_pos.x / 5f + _pos.y / 3f)) / 6f);
+        if (_value > _condition) return GameUtilities.AllTiles[_tile1];
+        else return GameUtilities.AllTiles[_tile2];
+    }
+
 }

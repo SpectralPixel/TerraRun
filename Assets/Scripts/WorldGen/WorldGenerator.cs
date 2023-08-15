@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class WorldGenerator : MonoBehaviour
 {
@@ -11,9 +12,13 @@ public class WorldGenerator : MonoBehaviour
     [HideInInspector] public Dictionary<int, int> RawFloorHeights;
     [HideInInspector] public Dictionary<int, int> FloorHeights;
     [HideInInspector] public Dictionary<Vector2Int, Tree> Trees;
+    [HideInInspector] public List<Vector2Int> CaveTiles;
 
     [HideInInspector] public int SeedXOffset;
     [HideInInspector] public float[] SeedVariationMultipliers;
+
+    [HideInInspector] public Vector2Int PreviewStartCoordinate;
+    [HideInInspector] public Vector2Int PreviewEndCoordinate;
 
     [SerializeField] private bool UseRandomSeed;
     public int WorldSeed;
@@ -21,9 +26,12 @@ public class WorldGenerator : MonoBehaviour
     public List<OctaveSetting> Octaves;
     [Range(0, 10)] public int FloorSmoothing;
     public int FloorHeight;
+    public int DirtHeight;
+    [Min(0.06f)] public float CaveSize;
+    [Range(0f, 1f)] public float CaveSpawnThreshold;
+    [Range(0f, 1f)] public float CaveExpansionThreshold;
 
-    [HideInInspector] public Vector2Int PreviewStartCoordinate;
-    [HideInInspector] public Vector2Int PreviewEndCoordinate;
+    [Space]
 
     public int PreviewYBias;
     [HideInInspector] public Vector2Int PreviewMapSize;
@@ -79,14 +87,14 @@ public class WorldGenerator : MonoBehaviour
         PreviewStartCoordinate = new Vector2Int(0, _generationStartY);
         PreviewEndCoordinate = new Vector2Int(_width, _generationEndY);
 
-        for (int x = -FloorSmoothing; x < _width + FloorSmoothing; x++)
-        {
-            GenerateFloorHeight(x);
-        }
-
         for (int x = 0; x < _width; x++)
         {
-            SmoothFloorHeight(x);
+            GenerateFloorHeight(x);
+
+            for (int y = _generationStartY; y < _generationEndY; y++)
+            {
+                GenerateCave(new Vector2Int(x, y));
+            }
 
             Vector2Int _newTreeBasePos = new Vector2Int(x, FloorHeights[x] + 1);
             if (Tree.CanGenerateTree(_newTreeBasePos))
@@ -101,17 +109,17 @@ public class WorldGenerator : MonoBehaviour
         }
     }
 
-    public void GenerateFloorHeight(int x)
+    private void GenerateRawFloorHeight(int x)
     {
-        GenerateFloorHeight(x, FloorHeight, Octaves, SeedVariationMultipliers);
+        GenerateRawFloorHeight(x, FloorHeight, Octaves, SeedVariationMultipliers);
     }
 
-    public void GenerateFloorHeight(int _x, int _worldFloorHeight, List<OctaveSetting> _octaves, float[] _seedVariationMultipliers)
+    private void GenerateRawFloorHeight(int _x, int _worldFloorHeight, List<OctaveSetting> _octaves, float[] _seedVariationMultipliers)
     {
         RawFloorHeights[_x] = Mathf.RoundToInt(NoiseGenerator.GetHeight(_x, _worldFloorHeight, _octaves, _seedVariationMultipliers));
     }
 
-    public void SmoothFloorHeight(int _x)
+    public void GenerateFloorHeight(int _x)
     {
         if (FloorSmoothing > 0)
         {
@@ -119,7 +127,7 @@ public class WorldGenerator : MonoBehaviour
             for (int i = -FloorSmoothing; i <= FloorSmoothing; i++)
             {
                 RawFloorHeights.TryGetValue(_x + i, out int _currentHeight);
-                if (_currentHeight == 0) GenerateFloorHeight(_x + i);
+                if (_currentHeight == 0) GenerateRawFloorHeight(_x + i);
 
                 _floorHeightsAverage += RawFloorHeights[_x + i];
             }
@@ -140,10 +148,34 @@ public class WorldGenerator : MonoBehaviour
                 if (_pos.y == FloorHeights[_pos.x]) WorldTiles[_pos] = GameUtilities.AllTiles["Grass"];
                 else
                 {
-                    float value = Mathf.PerlinNoise(_pos.x / 2f + 200, _pos.y / 2f + 200) - (Mathf.Cos(_pos.x / 2f + _pos.y / 3f) + Mathf.Sin(_pos.x / 5f + _pos.y / 3f)) / 6f;
-                    float condition = 0.5f - 0.25f * (FloorHeights[_pos.x] - _pos.y - 4);
-                    if (value > condition) WorldTiles[_pos] = GameUtilities.AllTiles["Stone"];
-                    else WorldTiles[_pos] = GameUtilities.AllTiles["Dirt"];
+                    WorldTiles[_pos] = NoiseGenerator.DetermineTile("Stone", "Dirt", _pos, 0.5f - 0.25f * (FloorHeights[_pos.x] - _pos.y - DirtHeight));
+                }
+            }
+        }
+    }
+
+    public void GenerateCave(Vector2Int _pos)
+    {
+        WorldTiles.TryGetValue(_pos, out Tile tile);
+        if (tile == null && !CaveTiles.Contains(_pos))
+        {
+            if (_pos.y <= FloorHeights[_pos.x])
+            {
+                float _caveValue = Mathf.PerlinNoise(_pos.x / CaveSize + 300f, _pos.y / CaveSize + 300f);
+                if (_caveValue < CaveSpawnThreshold)
+                {
+                    
+                    for (int x = -5; x < 5; x++)
+                    {
+                        for (int y = -5; y < 5; y++)
+                        {
+                            if (Mathf.PerlinNoise((_pos.x + x) / CaveSize + 300f, (_pos.y + y) / CaveSize + 300f) < CaveExpansionThreshold)
+                            {
+                                WorldTiles[_pos + new Vector2Int(x, y)] = GameUtilities.AllTiles["Air"];
+                                CaveTiles.Add(_pos + new Vector2Int(x, y));
+                            }
+                        }
+                    }
                 }
             }
         }
